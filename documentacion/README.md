@@ -9,9 +9,9 @@ Se recomienda encarecidamente combinar esta documentación con los conceptos bá
 [_Volver al Inicio_][inicio]
 ***
 
-## [Siguiente Documento: Instalación de Java y Configuración del Entorno][siguiente]
+## [Siguiente: Instalación de Java y Configuración del Entorno][siguiente]
 
-[inicio]: #titulo
+[inicio]: #introducción
 [siguiente]: instalacionYConfiguracion.md
 [l1]: https://www.anep.edu.uy/sites/default/files/images/te-programas/2024/2-3-EM/DGETP/2do/tecnologias-informacion/Programaci%C3%B3n%20Avanzada%20DGETP2do.pdf
 [l2]: https://www.utu.edu.uy/
