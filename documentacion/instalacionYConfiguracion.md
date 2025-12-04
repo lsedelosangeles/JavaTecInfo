@@ -59,12 +59,12 @@ sudo apt install openjdk-25-jdk openjdk-25-jre openjdk-25-doc
 
 Si la distribución de tu sistema no utiliza `apt`, una rápida búsqueda en Internet te debería permitir encontrar fácilmente los comandos equivalentes para tu caso.
 
-En caso de que no quieras utilizar los paquetes *OpenJDK*, también se puede descargar el instalador correspondiente del [sitio de descargas de *Oracle*][l1].
+En caso de que no quieras utilizar los paquetes *OpenJDK*, también se puede descargar el instalador correspondiente del [sitio oficial de descargas de *Oracle*][l1], seleccionando *Linux* en el listado de opciones de descarga, y teniendo cuidado de elegir el paquete correspondiente para nuestra distribución.
 Una vez descargado, bastará con seguir los pasos del gestor de instalación de paquetes para instalarlo.
 
 ### En Windows
 
-Para instalar el JDK en Windows, deberemos descargar los instaladores correspondientes. En general resulta más sencillo utilizar los paquetes de instalación de Oracle, ya que estos 
+Para instalar el JDK en Windows, deberemos descargar los instaladores correspondientes. En general resulta más sencillo utilizar los paquetes de instalación de Oracle, ya que estos establecen toda la configuración necesaria automáticamente. Para descargarlos se los puede obtener del [sitio oficial de descargas de Oracle][l1], seleccionando *Windows* en el listado de opciones de descarga. Tanto el instalador *EXE* como el *MSI* deberían funcionar sin problemas en una instalación "normal" de Windows.
 
 Contenido del elemento 1
 
