@@ -5,7 +5,7 @@
 1. [Instalación del Kit de Desarrollo de Java (JDK)](#instalación-del-kit-de-desarrollo-de-java-jdk)
     1. [En GNU/Linux](#en-gnulinux)
     1. [En Windows](#en-windows)
-1. [Instalación del IDE](#elemento-2)
+1. [Instalación del IDE](#instalación-del-ide)
     1. [IDEs Recomendadas](#sub-elemento)
     1. [Instalación de Apache NetBeans]()
 
@@ -64,20 +64,29 @@ Una vez descargado, bastará con seguir los pasos del gestor de instalación de 
 
 ### En Windows
 
-Para instalar el JDK en Windows, deberemos descargar los instaladores correspondientes. En general resulta más sencillo utilizar los paquetes de instalación de Oracle, ya que estos establecen toda la configuración necesaria automáticamente. Para descargarlos se los puede obtener del [sitio oficial de descargas de Oracle][l1], seleccionando *Windows* en el listado de opciones de descarga. Tanto el instalador *EXE* como el *MSI* deberían funcionar sin problemas en una instalación "normal" de Windows.
+Para instalar el JDK en Windows, deberemos descargar los instaladores correspondientes. En general resulta más sencillo utilizar los paquetes de instalación de Oracle, ya que estos establecen toda la configuración necesaria automáticamente, y además instalan el JRE. Para descargarlos se los puede obtener del [sitio oficial de descargas de Oracle][l1], seleccionando *Windows* en el listado de opciones de descarga. Tanto el instalador *EXE* como el *MSI* deberían funcionar sin problemas en una instalación "normal" de Windows.
 
-Contenido del elemento 1
+En caso de **no poder instalar estos paquetes**, existen versiones "*portables*" tanto del JDK como del JRE que pueden ayudar a solucionar este problema.
 
-Esto es un `detalle de código`
-
-```lang
-Esto es un bloque de código
-```
-
-[_Volver al Inicio_][inicio]
+[*Volver al Inicio*][inicio]
 ***
 
-## Elemento 2
+## Instalación del IDE
+
+Un **IDE** o **Entorno Integrado de Desarrollo**, es un conjunto de aplicaciones diseñadas para facilitar la tarea de desarrollar software.
+Suelen incluír:
+
+- Un editor de texto con resaltado de sintaxis y detección de errores
+- Herramientas para crear y administrar proyectos
+- Herramientas para probar el software desarrollado y detectar errores durante su ejecución.
+
+En el contexto de esta documentación, se utilizará **Apache NetBeans** en una versión reciente. Sin perjuicio de esto, es perfectamente viable utilizar otros entornos de desarrollo como ser:
+
+- Visual Studio Code
+- IntelliJ Idea
+- Eclipse
+
+No cubriremos el proceso de instalación y configuración de estos IDE's en esta documentaciṕn.
 
 Contenido del elemento 2
 
