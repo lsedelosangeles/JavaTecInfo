@@ -84,25 +84,60 @@ En el contexto de esta documentación, se utilizará **Apache NetBeans** en una 
 
 - Visual Studio Code
 - IntelliJ Idea
-- Eclipse
+- Eclipse IDE for Java
 
-No cubriremos el proceso de instalación y configuración de estos IDE's en esta documentaciṕn.
+No cubriremos el proceso de instalación y configuración de estos IDE's en esta documentación, y lo dejamos a criterio del lector, ya que es muy fácil encontrar guías al respecto en la web.
 
-Contenido del elemento 2
+### Descarga de Apache NetBeans
 
-> **Nota: _Esto es una nota informativa_**
+Para descargar este IDE, nos dirigiremos a la [página oficial de descargas del mismo][l3]. Hay varias opciones disponibles:
 
-### Sub Elemento
+- **Paquete comprimido en ZIP:** esta opción es la más "portable". No requiere instalación, y debería funcionar en cualquier sistema que tenga JRE y JDK instalados. Simplemente se descomprime el paquete, y se busca el directorio `bin` dentro del directorio `netbeans` que extrajimos. Dentro encontraremos tres archivos ejecutables:
 
-Contenido del sub elemento.
+  - `netbeans`: un shell script ejecutable que usaremos para iniciar el IDE en GNU/Linux
+        > **Nota:** chequear que esté habilitado el bit de ejecución en el archivo
+  - `netbeans.exe`: un ejecutable para para iniciar el IDE en sistemas Windows de 32 bits
+  - `netbeans64.exe`: un ejecutable para iniciar el IDE en sistemas Windows de 64 bits.
 
-[_Volver al Inicio_][inicio]
+Para abrir NetBeans, usaremos el ejecutable que corresponda a nuestro sistema operativo.
+
+- **Instalador específico:** esta opción puede resultar más cómoda en un sistema propio. Para obtenerla vamos a la sección [*Installers and Packages*][l4], y allí vamos al sitio de [*Codelerity*][l5], donde podremos descargar el instalador adecuado para nuestro sistema operativo.
+
+Una vez culminada la instalación deberíamos poder iniciar el IDE desde el menú de nuestro sistema operativo.
+
+### Configuración y Activación de NetBeans
+
+Para usarse para desarrollar aplicaciones con Java, NetBeans debe activar las funcionalidades adecuadas.
+
+Inicialmente veremos una ventana semejante a la siguiente:
+
+![i2]
+
+Para activar las funcionalidades de desarrollo con Java, iremos al menú `Tools` > `Options`. Esto abrirá un cuadro de opciones como el siguiente:
+
+![i3]
+
+En el mismo eligiremos la opción **Java** (con el ícono de la taza de café), que aparece desactivada. Al hacerlo, se iniciará un proceso de activación con una barra de progreso, durante el cual NetBeans debería detectar el JRE y el JDK instalados en nuestro sistema. Una vez terminado el proceso, veremos que la ventana principal se habrá modificado, mostrando nuevas herramientas:
+
+![i4]
+
+  >**Nota:** Es recomendable revisar las opciones de apariencia y visualización disponibles en las secciones `Fonts and Colors` (aparece luego de activar la funcionalidad básica) y `Appearence`.
+
+Ahora podemos cerrar el cuadro de opciones, y comenzar a trabajar con Java.
+
+[*Volver al Inicio*][inicio]
 ***
 
-## [Siguiente Documento: ...][siguiente]
+## [Siguiente: Creación de un proyecto nuevo de Java][siguiente]
 
 [inicio]: #instalación-de-java-y-configuración-del-entorno-de-desarrollo
-[siguiente]: siguienteDoc.md
+[siguiente]: crearProyectoNuevo.md
 [l1]: https://www.oracle.com/java/technologies/downloads/
 [l2]: https://openjdk.org/
+[l3]: https://netbeans.apache.org/front/main/download/nb28/
+[l4]: https://netbeans.apache.org/front/main/download/nb28/#_installers_and_packages
+[l5]: https://www.codelerity.com/netbeans/
 [i1]: img/apt_search_openjdk.png
+[i2]: img/netbeans_inicio.png
+[i3]: img/netbeans_options.png
+[i4]: img/netbeans_activado.png
