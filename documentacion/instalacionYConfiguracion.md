@@ -6,8 +6,8 @@
     1. [En GNU/Linux](#en-gnulinux)
     1. [En Windows](#en-windows)
 1. [Instalación del IDE](#instalación-del-ide)
-    1. [IDEs Recomendadas](#sub-elemento)
-    1. [Instalación de Apache NetBeans]()
+    1. [IDEs Recomendados](#ides-recomendados)
+    1. [Descarga e Instalación de Apache NetBeans](#descarga-e-instalación-de-apache-netbeans)
 
 ***
 
@@ -73,6 +73,8 @@ En caso de **no poder instalar estos paquetes**, existen versiones "*portables*"
 
 ## Instalación del IDE
 
+### IDEs Recomendados
+
 Un **IDE** o **Entorno Integrado de Desarrollo**, es un conjunto de aplicaciones diseñadas para facilitar la tarea de desarrollar software.
 Suelen incluír:
 
@@ -88,7 +90,7 @@ En el contexto de esta documentación, se utilizará **Apache NetBeans** en una 
 
 No cubriremos el proceso de instalación y configuración de estos IDE's en esta documentación, y lo dejamos a criterio del lector, ya que es muy fácil encontrar guías al respecto en la web.
 
-### Descarga de Apache NetBeans
+### Descarga e Instalación de Apache NetBeans
 
 Para descargar este IDE, nos dirigiremos a la [página oficial de descargas del mismo][l3]. Hay varias opciones disponibles:
 
