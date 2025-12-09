@@ -10,9 +10,11 @@
 
 ## Organización del código en un proyecto de Java
 
-Para desarrollar en Java, el código debe organizarse 
+Para desarrollar en Java, el código debe organizarse en una estructura de directorios llamada *Proyecto*. 
 
+Esta estructura, en general, tiene la siguiente forma:
 
+![i1]
 
 Contenido del elemento 1
 
@@ -42,3 +44,4 @@ Contenido del sub elemento.
 
 [inicio]: #titulo
 [siguiente]: siguienteDoc.md
+[i1]: img/java_proyecto_estructura.drawio.png
