@@ -10,13 +10,25 @@
 
 ## Organización del código en un proyecto de Java
 
-Para desarrollar en Java, el código debe organizarse en una estructura de directorios llamada *Proyecto*. 
+Para desarrollar en Java, el código debe organizarse en una estructura de directorios llamada **Proyecto**, que contiene nuestro código fuente, librerías, y configuraciones de ejecución y compilación requeridas por el mismo.
 
 Esta estructura, en general, tiene la siguiente forma:
 
 ![i1]
 
-Contenido del elemento 1
+- `Proyecto` es el directorio principal donde esta contenido todo el código y configuración de nuestro trabajo. Tendrá el mismo nombre que indiquemos al crear el proyecto con el IDE.
+- `src` es donde encontraremos los archivos de nuestro código fuente propiamente dichos, por lo general organizados en **paquetes**.
+- `lib` contiene las librerías extras que agreguemos a nuestro proyecto.
+
+Dependiendo del gestor de proyectos que usemos, esta estructura puede variar un poco y contener otros directorios.
+
+Para crear un nuevo proyecto con NetBeans, usaremos el comando `File`>`New Project...`...
+
+![i2]
+
+...O el botón `New Project...` de la barra de herramientas (su ícono es una caja naranja con un símbolo de "+")
+
+![i3]
 
 Esto es un `detalle de código`
 
@@ -45,3 +57,5 @@ Contenido del sub elemento.
 [inicio]: #titulo
 [siguiente]: siguienteDoc.md
 [i1]: img/java_proyecto_estructura.drawio.png
+[i2]: img/netbeans_file_newProject.png
+[i3]: img/netbeans_boton_newProject.png
