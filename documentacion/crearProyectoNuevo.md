@@ -3,8 +3,7 @@
 ## Lista de contenido
 
 1. [Organización del código en un proyecto de Java](#organización-del-código-en-un-proyecto-de-java)
-1. [Elemento 2](#elemento-2)
-    1. [Sub elemento](#sub-elemento)
+1. [Iniciando un nuevo proyecto](#iniciando-un-nuevo-proyecto)
 
 ***
 
@@ -21,6 +20,9 @@ Esta estructura, en general, tiene la siguiente forma:
 - `lib` contiene las librerías extras que agreguemos a nuestro proyecto.
 
 Dependiendo del gestor de proyectos que usemos, esta estructura puede variar un poco y contener otros directorios.
+***
+
+## Iniciando un nuevo proyecto
 
 Para crear un nuevo proyecto con NetBeans, usaremos el comando `File`>`New Project...`...
 
@@ -62,32 +64,17 @@ Por descarte, se abrirá el archivo principal de nuestro proyecto (*que por lo g
 
 >**Nota:** Esto puede modificarse más adelante, como veremos, en la configuración del proyecto.
 
-Esto es un `detalle de código`
+Todo el manejo de contenido de nuestro proyecto lo realizaremos desde la pestaña `Projects` del navegador lateral, como iremos viendo.
 
-```lang
-Esto es un bloque de código
-```
+![i8]
 
-[_Volver al Inicio_][inicio]
+[*Volver al Inicio*][inicio]
 ***
 
-## Elemento 2
-
-Contenido del elemento 2
-
-> **Nota: _Esto es una nota informativa_**
-
-### Sub Elemento
-
-Contenido del sub elemento.
-
-[_Volver al Inicio_][inicio]
-***
-
-## [Siguiente Documento: ...][siguiente]
+## [Siguiente: Estructuras Básicas de Java][siguiente]
 
 [inicio]: #creación-de-un-proyecto-nuevo-de-java
-[siguiente]: siguienteDoc.md
+[siguiente]: estructurasBasicasDeJava.md
 [i1]: img/java_proyecto_estructura.drawio.png
 [i2]: img/netbeans_file_newProject.png
 [i3]: img/netbeans_boton_newProject.png
@@ -95,3 +82,4 @@ Contenido del sub elemento.
 [i5]: img/netbeans_newProject_2.png
 [i6]: img/netbeans_estructura_proyecto.png
 [i7]: img/netbeans_proyecto_creado_1.png
+[i8]: img/netbeans_projects_tab.png
