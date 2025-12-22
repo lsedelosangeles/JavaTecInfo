@@ -68,6 +68,8 @@ Todo el manejo de contenido de nuestro proyecto lo realizaremos desde la pestañ
 
 ![i8]
 
+Ahora estamos en condiciones de comenzar a programar en nuestro proyecto.
+
 [*Volver al Inicio*][inicio]
 ***
 
