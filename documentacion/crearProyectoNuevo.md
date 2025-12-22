@@ -30,6 +30,38 @@ Para crear un nuevo proyecto con NetBeans, usaremos el comando `File`>`New Proje
 
 ![i3]
 
+Al abrirse la ventana de diálogo `New Project`, en el cuadro `Categories` elegimos `Java with Ant`, y en el cuadro `Projects` elegimos `Java Application`. Una vez hecho esto damos click en `Next`.
+
+![i4]
+
+> **Nota:** `Ant` es un gestor de proyectos de Java. En este curso lo usaremos bastante, ya que resulta muy versátil. Más adelante usaremos otros como ser `Maven` o `Gradle`, que, además, cuentan con un sistema de repositorio de librerías.
+
+Luego veremos la ventana de diálogo `New Java Application`, donde agregaremos el nombre de nuestro proyecto en el campo `Project Name`.
+
+![i5]
+
+En general, se recomienda que el nombre del proyecto tenga las siguientes características:
+
+- Comience por una letra mayúscula.
+- **No contenga**:
+  - espacios
+  - caracteres con tilde o la letra `Ñ`
+  - caracteres especiales como ser `@`, `#`, `*`, etc.
+
+En el campo `Project Location`, se indica la ruta donde queremos que se cree nuestro proyecto, y el campo `Project Folder`, nos indica el directorio donde se almacenará.
+
+De momento, no es necesario modificar ninguna otra opción, por lo que podemos dar click en el botón `Finish` para que comience a crearse nuestro proyecto.
+
+Al terminar este proceso, se habrá creado esta estructura de directorios:
+
+![i6]
+
+Por descarte, se abrirá el archivo principal de nuestro proyecto (*que por lo general lleva el mismo nombre que nuestro proyecto*).
+
+![i7]
+
+>**Nota:** Esto puede modificarse más adelante, como veremos, en la configuración del proyecto.
+
 Esto es un `detalle de código`
 
 ```lang
@@ -54,8 +86,12 @@ Contenido del sub elemento.
 
 ## [Siguiente Documento: ...][siguiente]
 
-[inicio]: #titulo
+[inicio]: #creación-de-un-proyecto-nuevo-de-java
 [siguiente]: siguienteDoc.md
 [i1]: img/java_proyecto_estructura.drawio.png
 [i2]: img/netbeans_file_newProject.png
 [i3]: img/netbeans_boton_newProject.png
+[i4]: img/netbeans_newProject_1.png
+[i5]: img/netbeans_newProject_2.png
+[i6]: img/netbeans_estructura_proyecto.png
+[i7]: img/netbeans_proyecto_creado_1.png
