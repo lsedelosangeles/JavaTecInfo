@@ -1,4 +1,4 @@
-# Creación de un proyecto nuevo de Java
+# Creación de un Proyecto Nuevo de Java
 
 ## Lista de contenido
 
@@ -68,15 +68,15 @@ Todo el manejo de contenido de nuestro proyecto lo realizaremos desde la pestañ
 
 ![i8]
 
-Ahora estamos en condiciones de comenzar a programar en nuestro proyecto.
+Ahora nuestro proyecto básico esta pronto y podemos comenzar a programar en el mismo.
 
 [*Volver al Inicio*][inicio]
 ***
 
-## [Siguiente: Estructuras Básicas de Java][siguiente]
+## [Siguiente: Estructuras Básicas dentro de un Proyecto de Java][siguiente]
 
 [inicio]: #creación-de-un-proyecto-nuevo-de-java
-[siguiente]: estructurasBasicasDeJava.md
+[siguiente]: estructurasBasicasDeUnProyectoJava.md
 [i1]: img/java_proyecto_estructura.drawio.png
 [i2]: img/netbeans_file_newProject.png
 [i3]: img/netbeans_boton_newProject.png
