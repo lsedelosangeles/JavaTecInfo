@@ -13,12 +13,11 @@ Se recomienda encarecidamente combinar esta documentación con los conceptos bá
 
 1. [Instalación de Java y Configuración del Entorno de Desarrollo][siguiente]
 1. Gestión de Proyectos de Java
-    1. Creación de un Proyecto Nuevo de Java
-    1. Estructuras Básicas dentro de un Proyecto de Java
+    1. [Creación de un Proyecto Nuevo de Java][i1]
+    1. [Estructuras Básicas dentro de un Proyecto de Java][i2]
 1. Diseño de Aplicaciones en Java
-    1. Diseño de Clases
-    1. Diseño de Diagramas de Clases
-    
+    1. [Diseño de Clases][i3]
+    1. [Diseño de Diagramas de Clases][i4]
 
 ## [Siguiente: Instalación de Java y Configuración del Entorno][siguiente]
 
@@ -27,3 +26,8 @@ Se recomienda encarecidamente combinar esta documentación con los conceptos bá
 [l1]: https://www.anep.edu.uy/sites/default/files/images/te-programas/2024/2-3-EM/DGETP/2do/tecnologias-informacion/Programaci%C3%B3n%20Avanzada%20DGETP2do.pdf
 [l2]: https://www.utu.edu.uy/
 [l3]: https://docs.google.com/document/d/1ugzyqNtsgjWWQnuIRFpN_YpB_clXWFdvtsTNZmrzVBE/edit?usp=sharing
+[i1]:crearProyectoNuevo.md
+[i2]:estructurasBasicasDeUnProyectoJava.md
+[i3]:diseñoDeClases.md
+[i4]:diseñoDeClasesConPlantuml.md
+
