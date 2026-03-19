@@ -1,0 +1,22 @@
+@startuml Juego_17mar2026
+    class Jugador{
+        id : int
+        nombreU : String
+        nombreP : String
+        apellidoP : String
+
+        crearPersonaje() : Personaje
+        
+    }
+    class Personaje
+    class Mapa
+    class Obstáculo
+    class NPC
+    class Partida
+
+    Jugador "1" *-- "1" Personaje
+    Partida "1" --* "1" Personaje
+    Partida "1" *-- "1" Mapa
+    Mapa "n" *-- "n" Obstáculo
+    Mapa "n" *-- "n" NPC 
+@enduml

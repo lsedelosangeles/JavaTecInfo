@@ -20,7 +20,17 @@ El resultado de este análisis se detalla en un **Diagrama de Clases**, que se d
 
 ***
 
-En esta documentación utilizaremos una herramienta llamada [**PlantUML**][l4], que permite el desarrollo de estos diagramas a partir de 
+En esta documentación utilizaremos una herramienta llamada [**PlantUML**][l4], que permite el desarrollo de estos diagramas a partir de archivos de texto con una sintaxis sencilla y clara, que puede interpretarse al leerse directamente, o, al ser procesados por el software, un diagrama en un archivo de imágen.
+
+## Desarrollo de un Diagrama de Clases: El Análisis de Realidad
+
+Para comenzar, debemos considerar el **contexto** en el cual existen los elementos que **aportan información relevante** al propósito de la aplicación que queremos desarrollar.
+
+Por ejemplo, si vamos a desarrollar una aplicación para una biblioteca, por ejemplo, tendremos que considerar:
+
+- Los libros de la biblioteca
+- Los usuarios de la biblioteca
+- Los encargados de la biblioteca
 
 [l1]:https://inkscape.app/es/
 [l2]:https://www.drawio.com/
