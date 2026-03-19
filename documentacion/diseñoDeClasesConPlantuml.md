@@ -32,6 +32,8 @@ Por ejemplo, si vamos a desarrollar una aplicación para una biblioteca, por eje
 - Los usuarios de la biblioteca
 - Los encargados de la biblioteca
 
+Cada uno de esos elementos deberán describirse y analizarse para incorporarlos en el proyecto como **clases**.
+
 [l1]:https://inkscape.app/es/
 [l2]:https://www.drawio.com/
 [l3]:http://dia-installer.de/index.html.en
