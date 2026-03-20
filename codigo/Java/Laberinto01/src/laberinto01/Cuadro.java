@@ -5,13 +5,29 @@
 package laberinto01;
 
 import java.awt.Color;
+import java.awt.Image;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 
 /**
  *
  * @author sebastian
  */
 public class Cuadro extends javax.swing.JPanel {
-
+    
+    
+    private int valor = 0;
+    private int tam = 0;
+    private JLabel lblImagen;
+    private JLabel lblPersonaje;
+    private int posX;
+    private int posY;
+    private boolean ocupado = false;
+    
+    
+    
     /**
      * Creates new form Cuadro
      */
@@ -19,32 +35,95 @@ public class Cuadro extends javax.swing.JPanel {
         initComponents();
     }
     
-    public Cuadro(int ancho, int alto, int x, int y) {
+    public Cuadro(int tam, int x, int y) {
         initComponents();
-        //this.setSize(ancho, alto);
-        this.setBounds(x, y, ancho, alto);
         
+        
+        
+        this.posX = x;
+        this.posY = y;
+        //this.setSize(ancho, alto);
+        this.tam = tam;
+        this.setBounds(x, y, tam, tam);
+        
+        
+        //JLabels para las imágenes
+        //1 - Fondo
+        lblImagen = new JLabel();
+        lblImagen.setBounds(0, 0, tam, tam);
+        this.add(lblImagen);
+        //2 - Personaje
+        lblPersonaje = new JLabel();
+        lblPersonaje.setBounds(0, 0, tam, tam);
+        this.add(lblPersonaje);
+//        cambiarImagen();
+//        
     }
     
     public void cambiarColor(int color){
+        this.valor = color;
+        
         switch (color) {
+            case 0:
+                this.setBackground(new Color(4, 28, 117));
+                break;
             case 1:
-                this.setBackground(Color.white);
+                this.setBackground(new Color(47, 89, 245));
                 break;
-            case 2:
-                this.setBackground(Color.black);
+            case 10:
+                this.setBackground(new Color(54, 217, 92));
                 break;
-            case 3:
-                this.setBackground(Color.orange);
+            case 20:
+                this.setBackground(new Color(18, 161, 51));
                 break;
-            case 4:
-                this.setBackground(Color.GREEN);
+            case 21:
+                this.setBackground(new Color(12, 79, 27));
+                break;
+            case 30:
+                this.setBackground(new Color(194, 183, 138));
+                break;
+            case 31:
+                this.setBackground(new Color(120, 114, 91));
                 break;
             default:
                 throw new AssertionError();
         }
     }
 
+    public void cambiarImagen(){
+        int imagen;
+        imagen=this.valor;
+       
+        
+        String ruta = "/imagen/"+imagen+".png";
+        //System.out.println(ruta);
+        try {
+            Image img = ImageIO.read(
+                    getClass().getResource(ruta)
+            );
+            
+            img = img.
+                    getScaledInstance(tam, tam, 
+                            Image.SCALE_SMOOTH);
+            lblImagen.setIcon( new ImageIcon(img) );
+            
+        } catch (Exception e) {
+            cambiarImagen(0);
+            
+            System.out.println("ERROR:" + e.getMessage());
+        }
+    }
+    
+    public void cambiarImagen(int valor){
+        this.valor = valor;
+        cambiarImagen();
+    }
+    
+    
+    
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,6 +146,64 @@ public class Cuadro extends javax.swing.JPanel {
             .addGap(0, 80, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * @return the posX
+     */
+    public int getPosX() {
+        return posX;
+    }
+
+    /**
+     * @return the posY
+     */
+    public int getPosY() {
+        return posY;
+    }
+
+    /**
+     * @return the valor
+     */
+    public int getValor() {
+        return valor;
+    }
+
+    /**
+     * @return the ocupado
+     */
+    public boolean isOcupado() {
+        return ocupado;
+    }
+
+    /**
+     * @param ocupado the ocupado to set
+     */
+    public void setOcupado(boolean ocupado) {
+        this.ocupado = ocupado;
+        
+        if (ocupado) {
+            String ruta = "/imagen/100.png";
+            //System.out.println(ruta);
+            try {
+                Image img = ImageIO.read(
+                        getClass().getResource(ruta)
+                );
+
+                img = img.
+                        getScaledInstance(tam, tam, 
+                                Image.SCALE_SMOOTH);
+                lblPersonaje.setIcon( new ImageIcon(img) );
+
+            } catch (Exception e) {
+                cambiarImagen(0);
+
+                System.out.println("ERROR:" + e.getMessage());
+            }
+        }
+        else{
+            lblPersonaje.setIcon(null);
+        }
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
