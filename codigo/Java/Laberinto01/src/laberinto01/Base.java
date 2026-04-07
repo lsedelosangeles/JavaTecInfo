@@ -7,9 +7,6 @@ package laberinto01;
 import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import javax.swing.JPanel;
 
 /**
  *
@@ -22,8 +19,8 @@ public class Base extends javax.swing.JFrame {
     int ancho_pantalla = 0;
     int alto_cuadros = 0;
     
-    int cuadros_alto = 30;
-    int cuadros_largo = 50;
+    int cuadros_alto = 23;
+    int cuadros_largo = 40;
     
     Cuadro[][] casilleros;  
     double[][] elevaciones;

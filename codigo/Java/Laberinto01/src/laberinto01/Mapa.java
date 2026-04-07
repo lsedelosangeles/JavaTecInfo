@@ -5,7 +5,6 @@
 package laberinto01;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
 import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.InputMap;
@@ -19,16 +18,24 @@ import javax.swing.KeyStroke;
  */
 public class Mapa extends JPanel {
     
-    Cuadro[][] casilleros;    
-    double[][] elevaciones;
+    Cuadro[][] casilleros;  //Array de casilleros del mapa    
+    double[][] elevaciones; //Array de elevaciones del mapa
     
+    //Variables de configuración de los casilleros y la grilla
     int max_cuadros_y = 30;
     int max_cuadros_x = 50;
     int alto_cuadros = 0;
     
+    //Variables de posicionamiento del jugador
     int posicionJugadorX = 0;
     int posicionJugadorY = 0;
     
+    /**
+     * Método constructor del mapa
+     * @param dimX tamaño horizontal del mapa, en pixeles
+     * @param dimY tamaño vertical del mapa, en pixeles
+     * @param altoCuadros tamaño de los casilleros del mapa, en pixeles
+     */
     public Mapa(int dimX, int dimY, int altoCuadros) {
         this.setBounds(0, 0, dimX, dimY);
         this.setLayout(null);
@@ -145,7 +152,7 @@ public class Mapa extends JPanel {
                     casilleros[x][y].cambiarColor(Terreno.MONTANIA);
                 }
                 
-                casilleros[x][y].cambiarImagen();
+                //casilleros[x][y].cambiarImagen();
             }
         }
     }
