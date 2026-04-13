@@ -1,0 +1,39 @@
+@startuml "Ejercicio 13 abril 2026"
+    class Usuario{
+        -nombre
+        -contrasenia
+        +verNombre()
+        +verPersonaje()
+        -iniciarSesion()
+        -cerrarSesion()
+    }
+
+    class Sesion{
+        -estado
+        -hora
+        -fecha
+        +verEstado()
+    }
+
+    class Personaje{
+        -nombre
+        -raza
+        -nivel
+        +verNombre()
+        +verRaza()
+        +verNivel()
+        -usarObjeto()
+        -hablar()
+        -atacar()
+    }
+
+    class Objeto{
+        -nombre
+        -id
+        verNombre()
+    }
+
+    Usuario "1" *-r- "1" Personaje
+    Usuario "1" *-- "n" Sesion
+    Personaje "1" *-- "n" Objeto
+@enduml
