@@ -1,0 +1,32 @@
+@startuml Ejemplo de Herencia
+
+class NPC{
+}
+
+class Humano{
+}
+
+class Criatura{
+}
+
+class Aldeano{
+}
+
+class Caballo{
+}
+
+class Soldado{
+}
+
+class Dragon{
+}
+
+NPC <|-- Humano
+Humano <|-- Aldeano
+Humano <|-- Soldado
+NPC <|-- Criatura
+Criatura <|-- Caballo
+Criatura <|-- Dragon
+
+
+@enduml
