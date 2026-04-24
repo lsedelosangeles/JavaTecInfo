@@ -30,7 +30,7 @@
     class Objeto{
         -nombre
         -id
-        verNombre()
+        +verNombre()
     }
 
     Usuario "1" *-r- "1" Personaje

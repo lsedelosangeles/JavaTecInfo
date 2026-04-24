@@ -2,22 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package uno_ets_2026_base;
+package pet.pkg20abr2026.encapsulamiento;
 
 /**
  *
  * @author sebastian
  */
-public class UNO_ETS_2026_Base {
+public class PET20abr2026Encapsulamiento {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Baraja b = new Baraja();
-        //b.barajar();
-        b.verCartas();
+        NPC p1 = new NPC(10, 5, 20, "Johan");
+        NPC p2 = new NPC(9, 8, 22, "Ibrahim");
+        
+        System.out.println(p2.getVida());
+        p1.atacar(p2);
+        System.out.println(p2.getVida());
     }
     
 }

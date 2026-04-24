@@ -10,12 +10,6 @@ package uno_ets_2026_base;
  */
 public class Carta {
 
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
     private int id = 0;
     private int numero = 0;
     private int color = 0;
@@ -25,20 +19,79 @@ public class Carta {
         this.color = color;
         this.id = id;
     }
+    
+    /**
+     * @return the id
+     */
+    public int verId() {
+        return id;
+    }
 
     /**
      * @return the numero
      */
-    public int getNumero() {
+    public int verNumero() {
         return numero;
     }
 
     /**
      * @return the color
      */
-    public int getColor() {
+    public int verColor() {
         return color;
     }
     
+    
+    public String verCarta(){
+        String tipo="";
+        String color_="";
+        String resultado="";
+        
+        switch (this.color) {
+            case Juego.COLOR_ROJO:
+                color_ = "Rojo";
+                break;
+            case Juego.COLOR_AZUL:
+                color_ = "Azul";
+                break;
+            case Juego.COLOR_NEGRO:
+                color_ = "Negro";
+                break;
+            case Juego.COLOR_AMARILLO:
+                color_ = "Amarillo";
+                break;
+            case Juego.COLOR_VERDE:
+                color_ = "Verde";
+                break;
+        }
+        
+        switch (this.numero) {
+            case 10:
+                tipo = "Bloqueo";
+                break;
+            case 11:
+                tipo = "Reversa";
+                break;
+            case 12:
+                tipo = "Más 2";
+                break;
+            case 13:
+                tipo = "Cambia Color";
+                break;
+            case 14:
+                tipo = "Más 4, Cambia Color";
+                break;
+            default:
+                tipo = "" + numero;
+        }
+        
+        resultado = tipo + " - " + color_;
+        //System.out.println(resultado);
+        return resultado;
+    }
+    
+    public String verCartaTodo(){
+        return this.id + " - " + verCarta();
+    }
     
 }

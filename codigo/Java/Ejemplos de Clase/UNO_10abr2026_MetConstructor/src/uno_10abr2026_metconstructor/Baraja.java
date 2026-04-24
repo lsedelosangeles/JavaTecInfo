@@ -2,20 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package uno_ets_2026_base;
+package uno_10abr2026_metconstructor;
 
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Collections;
 
 /**
  *
  * @author sebastian
  */
 public class Baraja {
-    private ArrayList<Carta> cartas = new ArrayList<>();
+    private ArrayList<Carta> cartas 
+            = new ArrayList<>();
     
     public Baraja(){
-        
-        int id= 0;
         int color = 0;
         int numero = 0;
 
@@ -27,10 +28,10 @@ public class Baraja {
             //Chequeamos su número para ver si debe ser negra
             if (numero < 13) {
                 x = new Carta
-                    (numero, color,contador);
+                    (numero, color);
             } else {
                 x = new Carta
-                    (numero, Juego.COLOR_NEGRO, contador);
+                    (numero, Valores.COLOR_NEGRO);
             }
 
             //Agregamos la carta a la baraja
@@ -55,7 +56,7 @@ public class Baraja {
         
         for (int i = 60; i < 108; i++) {
             Carta x = 
-               new Carta(numero, color, i);
+               new Carta(numero, color);
             
             if (numero < 12) {
                 numero++;
@@ -70,25 +71,13 @@ public class Baraja {
             //baraja[i] = x;
             cartas.add(x);
         }
-
-        
-    }
-    
-    public void verCartas(){
-        for (Carta carta : cartas) {
-            System.out.println(carta.verCartaTodo());
-        }
     }
     
     public void barajar(){
-        Juego j = new Juego();
+        Collections.shuffle(cartas);
+    }
+    
+    public void verCartas(){
         
-        for (int i = 0; i < 108; i++) {
-            int posAzar = j.NumeroAlAzar(108);
-            Carta carta1 = this.cartas.get(i);
-            Carta carta2 = this.cartas.get(posAzar);
-            this.cartas.set(i, carta2);
-            this.cartas.set(posAzar, carta1);
-        }
     }
 }
