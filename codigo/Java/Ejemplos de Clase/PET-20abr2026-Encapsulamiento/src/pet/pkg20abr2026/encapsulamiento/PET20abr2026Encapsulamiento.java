@@ -16,7 +16,7 @@ public class PET20abr2026Encapsulamiento {
     public static void main(String[] args) {
         // TODO code application logic here
         NPC p1 = new NPC(10, 5, 20, "Johan");
-        NPC p2 = new NPC(9, 8, 22, "Ibrahim");
+        NPC p2 = new NPC(9, 18, 22, "Ibrahim");
         
         System.out.println(p2.getVida());
         p1.atacar(p2);
