@@ -35,17 +35,20 @@ public class MesaDeJuego extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1210, 720));
         setPreferredSize(new java.awt.Dimension(1210, 720));
 
-        pnlControles.setPreferredSize(new java.awt.Dimension(150, 100));
+        pnlControles.setMaximumSize(new java.awt.Dimension(250, 720));
+        pnlControles.setMinimumSize(new java.awt.Dimension(250, 720));
+        pnlControles.setName(""); // NOI18N
+        pnlControles.setPreferredSize(new java.awt.Dimension(250, 720));
 
         javax.swing.GroupLayout pnlControlesLayout = new javax.swing.GroupLayout(pnlControles);
         pnlControles.setLayout(pnlControlesLayout);
         pnlControlesLayout.setHorizontalGroup(
             pnlControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addGap(0, 250, Short.MAX_VALUE)
         );
         pnlControlesLayout.setVerticalGroup(
             pnlControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 720, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -54,13 +57,13 @@ public class MesaDeJuego extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlControles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 960, Short.MAX_VALUE))
+                .addGap(0, 860, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlControles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 620, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();

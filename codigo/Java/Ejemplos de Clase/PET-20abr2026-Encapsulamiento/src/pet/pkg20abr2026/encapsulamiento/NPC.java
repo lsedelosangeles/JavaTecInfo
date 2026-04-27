@@ -80,17 +80,23 @@ public class NPC {
             //Si curamos...
             if (vidaMax - vida > 0) { //¿Podemos curar algo?
                 // ¿Cuánto podemos curar?
+                
                 if (valor <= (vidaMax - vida)) { 
                     vida = vida + valor;
+                    System.out.println(nombre + " recupera " + valor + " puntos de daño");
                 }
                 else{
+                    int cura = vidaMax - vida;
                     vida = vidaMax;
+                    System.out.println(nombre + " recupera " + cura + " puntos de daño");
                 }
             }
         }
         // Si dañamos
         else{
-            vida = vida + (defensa + valor);
+            int lesion = Math.min(0, defensa + valor);
+            vida = vida + lesion;
+            System.out.println(nombre + " recibe " + lesion + " puntos de daño");
         }
     }
     

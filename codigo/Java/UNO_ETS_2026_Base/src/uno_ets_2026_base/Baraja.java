@@ -5,6 +5,7 @@
 package uno_ets_2026_base;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -81,14 +82,26 @@ public class Baraja {
     }
     
     public void barajar(){
-        Juego j = new Juego();
-        
-        for (int i = 0; i < 108; i++) {
-            int posAzar = j.NumeroAlAzar(108);
-            Carta carta1 = this.cartas.get(i);
-            Carta carta2 = this.cartas.get(posAzar);
-            this.cartas.set(i, carta2);
-            this.cartas.set(posAzar, carta1);
-        }
+        Collections.shuffle(cartas);
+//        Juego j = new Juego();
+//        
+//        for (int i = 0; i < 108; i++) {
+//            int posAzar = j.NumeroAlAzar(108);
+//            Carta carta1 = this.cartas.get(i);
+//            Carta carta2 = this.cartas.get(posAzar);
+//            this.cartas.set(i, carta2);
+//            this.cartas.set(posAzar, carta1);
+//        }
+    }
+    
+    public Carta darCarta(){
+        Carta c = cartas.getFirst();
+        cartas.removeFirst();
+        return c;
+    }
+    
+    public int verCantidad(){
+        System.out.println("Cartas: " + cartas.size() );
+        return cartas.size();
     }
 }
