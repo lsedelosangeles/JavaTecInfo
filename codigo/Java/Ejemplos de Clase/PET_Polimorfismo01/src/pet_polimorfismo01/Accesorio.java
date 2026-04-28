@@ -20,13 +20,20 @@ public class Accesorio extends Objeto{
     }
     
     public void efecto(Personaje p){
+        String resultado = "";
+        
         if (modAtaque != 0) {
             p.setModAtaque(modAtaque);
+            resultado = "Ataque: " + p.getAtaque() + "+" + p.getModAtaque();
         }
         
         if (modDefensa != 0) {
             p.setModDefensa(modDefensa);
+            resultado = "Defensa: " + p.getDefensa() + "+" + p.getModDefensa();
         }
         
+        
+        System.out.println(p.getNombre() +" esta usando " + this.getNombre());
+        System.out.println(resultado + "\n");
     }
 }

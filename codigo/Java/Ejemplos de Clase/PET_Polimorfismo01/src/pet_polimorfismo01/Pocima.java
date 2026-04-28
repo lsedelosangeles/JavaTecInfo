@@ -18,7 +18,8 @@ public class Pocima extends Objeto {
     }
     
     public void efecto(Personaje p){
-        p.cambiarVida(cura);
+        System.out.println(p.getNombre() + " ha usado " + this.getNombre());
+        p.cambiarVida(cura);        
     }
     
     

@@ -4,11 +4,15 @@
  */
 package pet_polimorfismo01;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author sebastian
  */
 public class Personaje {
+    
+    //Datos del personaje
     private String nombre;
     private int ataque;
     private int modAtaque = 0;
@@ -18,6 +22,8 @@ public class Personaje {
     private int vidaMax;
     private int vidaMin = 1;
 
+    private ArrayList<Objeto> inventario = new ArrayList<>();
+    
     public Personaje(String nombre, int ataque, int defensa, int vida) {
         this.nombre = nombre;
         this.ataque = ataque;
@@ -35,13 +41,7 @@ public class Personaje {
         System.out.println("  ");
     }
     
-    public void usarObjeto(Accesorio a){
-        a.efecto(this);
-    }
     
-    public void usarObjeto(Pocima p){
-        p.efecto(this);
-    }
 
     /**
      * @return the nombre
@@ -105,6 +105,19 @@ public class Personaje {
     public void setModDefensa(int modDefensa) {
         this.modDefensa = modDefensa;
     }
+
+    public int getVida() {
+        return vida;
+    }
+
+    public int getVidaMax() {
+        return vidaMax;
+    }
+    
+    public String getVidaActual() {
+        return "Vida: " + vida + "/" + vidaMax + "\n";
+    }
+    
     
      /**
      * @param vida the vida to set
@@ -128,10 +141,42 @@ public class Personaje {
         }
         // Si dañamos
         else{
-            int lesion = Math.min(0, defensa + valor);
+            int lesion = Math.min(0, defensa + modDefensa + valor);
             vida = vida + lesion;
             System.out.println(nombre + " recibe " + lesion + " puntos de daño");
         }
+        
+        System.out.println(getVidaActual());
     }
+    
+    /* Manejo del Inventario */
+    
+    
+    public void usarObjeto(Accesorio a){
+        a.efecto(this);
+    }
+    
+    public void usarObjeto(Pocima p){
+        p.efecto(this);
+    }
+    
+    /**
+     * Muestra el contenido del inventario
+     */
+    public void listarInventario(){
+        System.out.println("Inventario:");
+        
+        if (inventario.size() > 0) {
+            for (int i = 0; i < inventario.size(); i++) {
+                System.out.println((i+1) + " - " + inventario.get(i).getNombre());
+            }
+        }
+        else{
+            System.out.println("El inventario esta vacío");
+        }
+        
+        System.out.println("");
+    }
+    
     
 }

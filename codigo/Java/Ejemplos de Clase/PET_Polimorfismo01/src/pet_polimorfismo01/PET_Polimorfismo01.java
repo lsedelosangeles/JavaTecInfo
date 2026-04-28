@@ -20,11 +20,12 @@ public class PET_Polimorfismo01 {
         Accesorio b = new Accesorio("Daga", 8, 0);
         Pocima c = new Pocima("Poción básica", 10);
         
-        
+        p.listarInventario();
         
         p.verDatos();
         p.cambiarVida(-45);
         p.usarObjeto(a);
+        p.cambiarVida(-45);
         p.usarObjeto(b);
         p.verDatos();
         p.usarObjeto(c);
