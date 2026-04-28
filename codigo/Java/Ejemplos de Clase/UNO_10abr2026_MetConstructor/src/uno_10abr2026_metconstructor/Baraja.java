@@ -13,6 +13,7 @@ import java.util.Collections;
  * @author sebastian
  */
 public class Baraja {
+    
     private ArrayList<Carta> cartas 
             = new ArrayList<>();
     
@@ -75,9 +76,39 @@ public class Baraja {
     
     public void barajar(){
         Collections.shuffle(cartas);
+        verCartas();
     }
     
+    /**
+     * Permite ver todas las cartas de la 
+     * baraja en orden
+     */
     public void verCartas(){
+        for (Carta carta : cartas) {
+            carta.verCarta();
+        }
+    }
+    
+    /**
+     * Permite obtener el número de cartas 
+     * que contiene la baraja en este momento
+     * @return el número de cartas
+     */
+    public int cantidadCartas(){
+        int cantidad = cartas.size();
+        return cantidad;
+    }
+    
+    
+    public Carta obtenerCarta(){
+        Carta c = cartas.getFirst();
+        cartas.removeFirst();
         
+        System.out.print("Da la carta ");
+        c.verCarta();
+        System.out.println
+            ("Quedan "+ cantidadCartas());
+        
+        return c;
     }
 }
