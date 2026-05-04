@@ -1,0 +1,21 @@
+@startuml 04mayo2026
+
+Class Soldado{
+    -nombre
+    -ataque
+
+    +atacar()
+}
+
+Class Lancero
+Class Paladín
+Class Arquero
+Class Ballestero
+
+Soldado <|-- Lancero
+Soldado <|-- Arquero
+Lancero <|-- Paladín
+Arquero <|-- Ballestero
+
+
+@enduml
