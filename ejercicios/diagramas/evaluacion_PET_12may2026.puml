@@ -1,0 +1,23 @@
+@startuml Evaluación
+
+    class Partida{}
+    class Usuario{}
+    class Sesion{}
+    
+    class NPC{}
+
+    'clases del Personaje
+    class Personaje{}
+    class Guerrero{}
+        class Soldado{}
+            class Caballero{}
+                class Paladín{}
+                class Templario{}
+        class Arquero{}
+            class Ballestero{}
+            class Cazador{}
+        class Monje{}
+            class 
+    
+
+@enduml
