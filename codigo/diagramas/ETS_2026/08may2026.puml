@@ -1,0 +1,18 @@
+@startuml 08may2026
+
+Class Carta{
+    +efecto()
+}
+
+Class CartaColor
+Class CartaNegra
+Class CartaComun
+Class CartaEspecial
+
+Carta <|-- CartaColor
+Carta <|-- CartaNegra
+CartaColor <|-- CartaComun
+CartaColor <|-- CartaEspecial
+
+
+@enduml
