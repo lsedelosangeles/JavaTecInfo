@@ -20,5 +20,8 @@ Notar que:
 - Las clases identificadas con una letra **A** son **abstractas**
 - Los métodos identificados con un **círculo negro** son **abstractos**
 
+Subir los archivos .java a una carpeta compartida en Google Drive y agregar el link de la misma a la tarea en CREA, indicando los miembros del equipo (**Máximo 2 Personas, Mínimo 1 Persona, Todos envían los archivos**).
+Alternativamente enviar al mail provisto por el docente.
+
 [i1]:../out/ejercicios/diagramas/evaluacion_PET_12may2026/Evaluación.png
 [l1]:Evaluación_PET_12may2026.pdf
