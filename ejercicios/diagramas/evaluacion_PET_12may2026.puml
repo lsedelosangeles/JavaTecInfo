@@ -1,23 +1,184 @@
 @startuml Evaluación
 
-    class Partida{}
-    class Usuario{}
-    class Sesion{}
+    class Partida{
+        -id:int
+        -marcaDeTiempo:Date
+    }
+    class Usuario{
+        -id:int
+        -nombre:String
+        -contraseña:String
+        -CrearPersonaje():Personaje
+        -IniciarSesion():Sesion
+        -CerrarSesion():void
+        -enviarMensaje(mensaje:String, destinatario:Usuario)
+    }
+    class Sesion{
+        -id:int
+        -estado:boolean
+    }
+    class Mapa{
+        -id:int
+    }
+    class Ubicación{
+        -id:int
+        -posX:int
+        -posY:int
+        +verPosicionX():int
+        +verPosicionY():int
+    }
     
-    class NPC{}
+    abstract class Objeto{
+        -id:int
+        -rareza:int
+        -nombre:String
 
+        *aplicarEfecto(Personaje):void
+    }
+        class Arma{
+            -modAtaque:int
+        }
+        class Armadura{
+            -modDefensa:int
+        }
+        class Accesorio{
+            -modAtaque:int
+            -modDefensa:int
+            -modAgilidad:int
+            -modVidaMax:int
+            -modMagiaMax:int
+        }
+        class Medicina{
+            -modVida:int
+            -modMagia:int
+        }
+
+    class Equipamiento{
+        listaObjetos():void
+    }
+
+    class Inventario{
+        listaObjetos():void
+    }
+
+    'clases de los NPC
+    abstract class NPC{
+
+    }
+        class Toro{}
+            class Uro{}
+                class Minotauro{}
+        class Lagarto{}
+            class Salamandra{}
+                class Dragón{}
+                    class DragónAlado{
+                        volar(X:int, Y:int):void
+                    }
+        class Quetzal{
+            volar(X:int, Y:int):void
+        }
+            class Quetzalcoatl{}
+            class Roc{}
+            class Fénix{}
+        
     'clases del Personaje
-    class Personaje{}
-    class Guerrero{}
-        class Soldado{}
-            class Caballero{}
-                class Paladín{}
-                class Templario{}
-        class Arquero{}
-            class Ballestero{}
-            class Cazador{}
-        class Monje{}
-            class 
-    
+    abstract class Personaje{
+        -id:int
+        -nombre:String
+        -nivel:int
+        -vida:int
+        -vidaMax:int
+        -ataque:int
+        -defensa:int
+        -magia:int
+        -magiaMax:int
+        -modAtaque:int
+        -modDefensa:int
+        -modVidaMax:int
+        -modMagiaMax:int
+        *atacarCerca():int
+        *atacarADistancia():int
+        -usarObjeto(Objeto,Personaje):void
+        -moverse(X:int,Y:int):void
+    }
+        class Guerrero{}
+            class Soldado{}
+                class Caballero{}
+                    class Paladín{}
+                    class Templario{}
+            class Arquero{
+                
+            }
+                class Ballestero{}
+                class Cazador{}
+            class Monje{}
+                class Elementalista{}
+                class Ninja{}
+        class Bardo{}
+            class Ilusionista{}
+            class Curandero{}
+                class Shaman{}
+            class Hechicero{}
+                class Nigromante{}
+            
+
+    Usuario "1" *-- "n" Sesion
+    Sesion "1" *-- "1" Partida
+    Usuario "1" *-- "3" Partida
+    Usuario "1" *-- "3" Personaje
+    Partida "1" *-- "1" Mapa
+    Mapa "1" *-- "n" Personaje
+    Mapa "1" *-- "n" NPC
+    Personaje "1" *-- "1" Ubicación
+    Personaje "1" *-- "1" Inventario
+    Personaje "1" *-- "1" Equipamiento
+    Inventario "1" *-- "20" Objeto
+    Equipamiento "1" *-- "1" Arma
+    Equipamiento "1" *-- "1" Armadura
+    Equipamiento "1" *-- "1" Accesorio
+
+    Objeto <|-- Arma
+    Objeto <|-- Armadura
+    Objeto <|-- Accesorio
+    Objeto <|-- Medicina
+
+    Personaje <|-- Guerrero
+    Personaje <|-- Bardo
+    Personaje <|-- NPC
+
+    Guerrero <|-- Soldado
+    Guerrero <|-- Monje
+    Guerrero <|-- Arquero
+
+    Soldado <|-- Caballero
+    Caballero <|-- Paladín
+    Caballero <|-- Templario
+
+    Monje <|-- Elementalista
+    Monje <|-- Ninja
+
+    Arquero <|-- Ballestero
+    Arquero <|-- Cazador
+
+    Bardo <|-- Ilusionista
+    Bardo <|-- Curandero
+    Bardo <|-- Hechicero
+    Curandero <|-- Shaman
+    Hechicero <|-- Nigromante
+
+    NPC <|-- Toro
+    NPC <|-- Lagarto
+    NPC <|-- Quetzal
+
+    Toro <|-- Uro
+    Uro <|-- Minotauro
+
+    Lagarto <|-- Salamandra
+    Salamandra <|-- Dragón
+    Dragón <|-- DragónAlado
+
+    Quetzal <|-- Quetzalcoatl
+    Quetzal <|-- Roc
+    Quetzal <|-- Fénix
 
 @enduml
