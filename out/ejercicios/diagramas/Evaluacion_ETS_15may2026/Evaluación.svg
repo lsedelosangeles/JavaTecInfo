@@ -1,0 +1,2804 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   contentStyleType="text/css"
+   height="1504px"
+   preserveAspectRatio="none"
+   style="width:1548px;height:1504px;background:#FFFFFF;"
+   version="1.1"
+   viewBox="0 0 1548 1504"
+   width="1548px"
+   zoomAndPan="magnify"
+   id="svg669"
+   sodipodi:docname="Evaluación.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview671"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.44382234"
+     inkscape:cx="1134.4629"
+     inkscape:cy="675.94614"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg669" />
+  <defs
+     id="defs2" />
+  <rect
+     style="fill:#ffffff;stroke:none"
+     id="rect952"
+     width="1548"
+     height="1504"
+     x="0"
+     y="0"
+     ry="55.522156" />
+  <g
+     id="g667">
+    <!--class Juego-->
+    <g
+       id="elem_Juego">
+      <rect
+         codeLine="1"
+         fill="#F1F1F1"
+         height="124.2717"
+         id="Juego"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="203"
+         x="1097"
+         y="7" />
+      <ellipse
+         cx="1175.25"
+         cy="23"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse5" />
+      <path
+         d="M1178.2188,28.6406 Q1177.6406,28.9375 1177,29.0781 Q1176.3594,29.2344 1175.6563,29.2344 Q1173.1563,29.2344 1171.8281,27.5938 Q1170.5156,25.9375 1170.5156,22.8125 Q1170.5156,19.6875 1171.8281,18.0313 Q1173.1563,16.375 1175.6563,16.375 Q1176.3594,16.375 1177,16.5313 Q1177.6563,16.6875 1178.2188,16.9844 L1178.2188,19.7031 Q1177.5938,19.125 1177,18.8594 Q1176.4063,18.5781 1175.7813,18.5781 Q1174.4375,18.5781 1173.75,19.6563 Q1173.0625,20.7188 1173.0625,22.8125 Q1173.0625,24.9063 1173.75,25.9844 Q1174.4375,27.0469 1175.7813,27.0469 Q1176.4063,27.0469 1177,26.7813 Q1177.5938,26.5 1178.2188,25.9219 L1178.2188,28.6406 Z "
+         fill="#000000"
+         id="path7" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="38"
+         x="1195.75"
+         y="28.432"
+         id="text9">Juego</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1098"
+         x2="1299"
+         y1="39"
+         y2="39"
+         id="line11" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1098"
+         x2="1299"
+         y1="47"
+         y2="47"
+         id="line13" />
+      <ellipse
+         cx="1108"
+         cy="62.034"
+         fill="#84BE84"
+         rx="3"
+         ry="3"
+         style="stroke:#038048;stroke-width:1.0;"
+         id="ellipse15" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="177"
+         x="1117"
+         y="65.9659"
+         id="text17">registrarJugador():Jugador</text>
+      <ellipse
+         cx="1108"
+         cy="81.1019"
+         fill="#84BE84"
+         rx="3"
+         ry="3"
+         style="stroke:#038048;stroke-width:1.0;"
+         id="ellipse19" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="116"
+         x="1117"
+         y="85.0339"
+         id="text21">verPartidas():void</text>
+      <ellipse
+         cx="1108"
+         cy="100.1698"
+         fill="#84BE84"
+         rx="3"
+         ry="3"
+         style="stroke:#038048;stroke-width:1.0;"
+         id="ellipse23" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="129"
+         x="1117"
+         y="104.1018"
+         id="text25">verJugadores():void</text>
+      <ellipse
+         cx="1108"
+         cy="119.2377"
+         fill="#84BE84"
+         rx="3"
+         ry="3"
+         style="stroke:#038048;stroke-width:1.0;"
+         id="ellipse27" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="176"
+         x="1117"
+         y="123.1697"
+         id="text29">verTableroDePuntos():void</text>
+    </g>
+    <!--class Partida-->
+    <g
+       id="elem_Partida">
+      <rect
+         codeLine="8"
+         fill="#F1F1F1"
+         height="200.5433"
+         id="Partida"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="316"
+         x="1225.5"
+         y="567" />
+      <ellipse
+         cx="1355.25"
+         cy="583"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse33" />
+      <path
+         d="M1358.2188,588.6406 Q1357.6406,588.9375 1357,589.0781 Q1356.3594,589.2344 1355.6563,589.2344 Q1353.1563,589.2344 1351.8281,587.5938 Q1350.5156,585.9375 1350.5156,582.8125 Q1350.5156,579.6875 1351.8281,578.0313 Q1353.1563,576.375 1355.6563,576.375 Q1356.3594,576.375 1357,576.5313 Q1357.6563,576.6875 1358.2188,576.9844 L1358.2188,579.7031 Q1357.5938,579.125 1357,578.8594 Q1356.4063,578.5781 1355.7813,578.5781 Q1354.4375,578.5781 1353.75,579.6563 Q1353.0625,580.7188 1353.0625,582.8125 Q1353.0625,584.9063 1353.75,585.9844 Q1354.4375,587.0469 1355.7813,587.0469 Q1356.4063,587.0469 1357,586.7813 Q1357.5938,586.5 1358.2188,585.9219 L1358.2188,588.6406 Z "
+         fill="#000000"
+         id="path35" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="48"
+         x="1375.75"
+         y="588.432"
+         id="text37">Partida</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1226.5"
+         x2="1540.5"
+         y1="599"
+         y2="599"
+         id="line39" />
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1233.5"
+         y="611.034"
+         id="rect41" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="35"
+         x="1245.5"
+         y="617.9659"
+         id="text43">id:int</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1233.5"
+         y="630.1019"
+         id="rect45" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="145"
+         x="1245.5"
+         y="637.0339"
+         id="text47">marcaDeTiempo:Date</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1233.5"
+         y="649.1698"
+         id="rect49" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="67"
+         x="1245.5"
+         y="656.1018"
+         id="text51">estado:int</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1226.5"
+         x2="1540.5"
+         y1="664.2038"
+         y2="664.2038"
+         id="line53" />
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1233.5"
+         y="676.2377"
+         id="rect55" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="207"
+         x="1245.5"
+         y="683.1697"
+         id="text57">cambiarEstado(estado:int):void</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1233.5"
+         y="695.3056"
+         id="rect59" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="135"
+         x="1245.5"
+         y="702.2376"
+         id="text61">repartirCartas():void</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1233.5"
+         y="714.3735"
+         id="rect63" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="129"
+         x="1245.5"
+         y="721.3055"
+         id="text65">verJugadores():void</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1233.5"
+         y="733.4415"
+         id="rect67" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="286"
+         x="1245.5"
+         y="740.3734"
+         id="text69">agregarJugador(participante:Jugador):void</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1233.5"
+         y="752.5094"
+         id="rect71" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="290"
+         x="1245.5"
+         y="759.4414"
+         id="text73">expulsarJugador(participante:Jugador):void</text>
+    </g>
+    <!--class Jugador-->
+    <g
+       id="elem_Jugador">
+      <rect
+         codeLine="18"
+         fill="#F1F1F1"
+         height="295.8829"
+         id="Jugador"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="442"
+         x="769.5"
+         y="192" />
+      <ellipse
+         cx="959.75"
+         cy="208"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse77" />
+      <path
+         d="M962.7188,213.6406 Q962.1406,213.9375 961.5,214.0781 Q960.8594,214.2344 960.1563,214.2344 Q957.6563,214.2344 956.3281,212.5938 Q955.0156,210.9375 955.0156,207.8125 Q955.0156,204.6875 956.3281,203.0313 Q957.6563,201.375 960.1563,201.375 Q960.8594,201.375 961.5,201.5313 Q962.1563,201.6875 962.7188,201.9844 L962.7188,204.7031 Q962.0938,204.125 961.5,203.8594 Q960.9063,203.5781 960.2813,203.5781 Q958.9375,203.5781 958.25,204.6563 Q957.5625,205.7188 957.5625,207.8125 Q957.5625,209.9063 958.25,210.9844 Q958.9375,212.0469 960.2813,212.0469 Q960.9063,212.0469 961.5,211.7813 Q962.0938,211.5 962.7188,210.9219 L962.7188,213.6406 Z "
+         fill="#000000"
+         id="path79" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="53"
+         x="980.25"
+         y="213.432"
+         id="text81">Jugador</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="770.5"
+         x2="1210.5"
+         y1="224"
+         y2="224"
+         id="line83" />
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="236.034"
+         id="rect85" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="35"
+         x="789.5"
+         y="242.9659"
+         id="text87">id:int</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="255.1019"
+         id="rect89" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="98"
+         x="789.5"
+         y="262.0339"
+         id="text91">nombre:String</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="274.1698"
+         id="rect93" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="120"
+         x="789.5"
+         y="281.1018"
+         id="text95">contraseña:String</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="293.2377"
+         id="rect97" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="69"
+         x="789.5"
+         y="300.1697"
+         id="text99">puntos:int</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="770.5"
+         x2="1210.5"
+         y1="308.2717"
+         y2="308.2717"
+         id="line101" />
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="320.3056"
+         id="rect103" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="143"
+         x="789.5"
+         y="327.2376"
+         id="text105">crearPartida():Partida</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="339.3735"
+         id="rect107" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="240"
+         x="789.5"
+         y="346.3055"
+         id="text109">entrarAPartida(partida:Partida):void</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="358.4415"
+         id="rect111" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="162"
+         x="789.5"
+         y="365.3734"
+         id="text113">abandonarPartida():void</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="377.5094"
+         id="rect115" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="142"
+         x="789.5"
+         y="384.4414"
+         id="text117">iniciarSesion():Sesion</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="396.5773"
+         id="rect119" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="125"
+         x="789.5"
+         y="403.5093"
+         id="text121">cerrarSesion():void</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="415.6452"
+         id="rect123" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="416"
+         x="789.5"
+         y="422.5772"
+         id="text125">enviarMensaje(mensaje:String, destinatario:Jugador):Mensaje</text>
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="777.5"
+         y="434.7131"
+         id="rect127" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="201"
+         x="789.5"
+         y="441.6451"
+         id="text129">aplicarPuntos(puntos:int):void</text>
+      <ellipse
+         cx="780.5"
+         cy="456.781"
+         fill="#84BE84"
+         rx="3"
+         ry="3"
+         style="stroke:#038048;stroke-width:1.0;"
+         id="ellipse131" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="106"
+         x="789.5"
+         y="460.713"
+         id="text133">verLogros():void</text>
+      <ellipse
+         cx="780.5"
+         cy="475.849"
+         fill="#84BE84"
+         rx="3"
+         ry="3"
+         style="stroke:#038048;stroke-width:1.0;"
+         id="ellipse135" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="104"
+         x="789.5"
+         y="479.7809"
+         id="text137">verRango():void</text>
+    </g>
+    <!--class Participante-->
+    <g
+       id="elem_Participante">
+      <rect
+         codeLine="33"
+         fill="#F1F1F1"
+         height="48"
+         id="Participante"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="113"
+         x="411"
+         y="643.5" />
+      <ellipse
+         cx="426"
+         cy="659.5"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse141" />
+      <path
+         d="M428.9688,665.1406 Q428.3906,665.4375 427.75,665.5781 Q427.1094,665.7344 426.4063,665.7344 Q423.9063,665.7344 422.5781,664.0938 Q421.2656,662.4375 421.2656,659.3125 Q421.2656,656.1875 422.5781,654.5313 Q423.9063,652.875 426.4063,652.875 Q427.1094,652.875 427.75,653.0313 Q428.4063,653.1875 428.9688,653.4844 L428.9688,656.2031 Q428.3438,655.625 427.75,655.3594 Q427.1563,655.0781 426.5313,655.0781 Q425.1875,655.0781 424.5,656.1563 Q423.8125,657.2188 423.8125,659.3125 Q423.8125,661.4063 424.5,662.4844 Q425.1875,663.5469 426.5313,663.5469 Q427.1563,663.5469 427.75,663.2813 Q428.3438,663 428.9688,662.4219 L428.9688,665.1406 Z "
+         fill="#000000"
+         id="path143" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="81"
+         x="440"
+         y="664.932"
+         id="text145">Participante</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="412"
+         x2="523"
+         y1="675.5"
+         y2="675.5"
+         id="line147" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="412"
+         x2="523"
+         y1="683.5"
+         y2="683.5"
+         id="line149" />
+    </g>
+    <!--class Mensaje-->
+    <g
+       id="elem_Mensaje">
+      <rect
+         codeLine="37"
+         fill="#F1F1F1"
+         height="143.3396"
+         id="Mensaje"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="233"
+         x="793"
+         y="596" />
+      <ellipse
+         cx="876.75"
+         cy="612"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse153" />
+      <path
+         d="M879.7188,617.6406 Q879.1406,617.9375 878.5,618.0781 Q877.8594,618.2344 877.1563,618.2344 Q874.6563,618.2344 873.3281,616.5938 Q872.0156,614.9375 872.0156,611.8125 Q872.0156,608.6875 873.3281,607.0313 Q874.6563,605.375 877.1563,605.375 Q877.8594,605.375 878.5,605.5313 Q879.1563,605.6875 879.7188,605.9844 L879.7188,608.7031 Q879.0938,608.125 878.5,607.8594 Q877.9063,607.5781 877.2813,607.5781 Q875.9375,607.5781 875.25,608.6563 Q874.5625,609.7188 874.5625,611.8125 Q874.5625,613.9063 875.25,614.9844 Q875.9375,616.0469 877.2813,616.0469 Q877.9063,616.0469 878.5,615.7813 Q879.0938,615.5 879.7188,614.9219 L879.7188,617.6406 Z "
+         fill="#000000"
+         id="path155" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="57"
+         x="897.25"
+         y="617.432"
+         id="text157">Mensaje</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="794"
+         x2="1025"
+         y1="628"
+         y2="628"
+         id="line159" />
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="801"
+         y="640.034"
+         id="rect161" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="35"
+         x="813"
+         y="646.9659"
+         id="text163">id:int</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="801"
+         y="659.1019"
+         id="rect165" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="145"
+         x="813"
+         y="666.0339"
+         id="text167">marcaDeTiempo:Date</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="801"
+         y="678.1698"
+         id="rect169" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="102"
+         x="813"
+         y="685.1018"
+         id="text171">mensaje:String</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="801"
+         y="697.2377"
+         id="rect173" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="67"
+         x="813"
+         y="704.1697"
+         id="text175">estado:int</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="794"
+         x2="1025"
+         y1="712.2717"
+         y2="712.2717"
+         id="line177" />
+      <ellipse
+         cx="804"
+         cy="727.3056"
+         fill="#84BE84"
+         rx="3"
+         ry="3"
+         style="stroke:#038048;stroke-width:1.0;"
+         id="ellipse179" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="207"
+         x="813"
+         y="731.2376"
+         id="text181">cambiarEstado(estado:int):void</text>
+    </g>
+    <!--class Rango-->
+    <g
+       id="elem_Rango">
+      <rect
+         codeLine="45"
+         fill="#F1F1F1"
+         height="105.2038"
+         id="Rango"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="293"
+         x="155"
+         y="287.5" />
+      <ellipse
+         cx="277.25"
+         cy="303.5"
+         fill="#A9DCDF"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse185" />
+      <path
+         d="M277.3594,298.8438 L276.2031,303.9219 L278.5313,303.9219 L277.3594,298.8438 Z M275.875,296.6094 L278.8594,296.6094 L282.2188,309 L279.7656,309 L279,305.9375 L275.7188,305.9375 L274.9688,309 L272.5313,309 L275.875,296.6094 Z "
+         fill="#000000"
+         id="path187" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         font-style="italic"
+         lengthAdjust="spacing"
+         textLength="40"
+         x="297.75"
+         y="308.932"
+         id="text189">Rango</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="156"
+         x2="447"
+         y1="319.5"
+         y2="319.5"
+         id="line191" />
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="163"
+         y="331.534"
+         id="rect193" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="35"
+         x="175"
+         y="338.4659"
+         id="text195">id:int</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="163"
+         y="350.6019"
+         id="rect197" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="98"
+         x="175"
+         y="357.5339"
+         id="text199">nombre:String</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="156"
+         x2="447"
+         y1="365.6358"
+         y2="365.6358"
+         id="line201" />
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="163"
+         y="377.6698"
+         id="rect203" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="267"
+         x="175"
+         y="384.6018"
+         id="text205">otorgarLogro(participante:Jugador):void</text>
+    </g>
+    <!--class Plomo-->
+    <g
+       id="elem_Plomo">
+      <rect
+         codeLine="50"
+         fill="#F1F1F1"
+         height="48"
+         id="Plomo"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="73"
+         x="7"
+         y="643.5" />
+      <ellipse
+         cx="22"
+         cy="659.5"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse209" />
+      <path
+         d="M24.9688,665.1406 Q24.3906,665.4375 23.75,665.5781 Q23.1094,665.7344 22.4063,665.7344 Q19.9063,665.7344 18.5781,664.0938 Q17.2656,662.4375 17.2656,659.3125 Q17.2656,656.1875 18.5781,654.5313 Q19.9063,652.875 22.4063,652.875 Q23.1094,652.875 23.75,653.0313 Q24.4063,653.1875 24.9688,653.4844 L24.9688,656.2031 Q24.3438,655.625 23.75,655.3594 Q23.1563,655.0781 22.5313,655.0781 Q21.1875,655.0781 20.5,656.1563 Q19.8125,657.2188 19.8125,659.3125 Q19.8125,661.4063 20.5,662.4844 Q21.1875,663.5469 22.5313,663.5469 Q23.1563,663.5469 23.75,663.2813 Q24.3438,663 24.9688,662.4219 L24.9688,665.1406 Z "
+         fill="#000000"
+         id="path211" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="41"
+         x="36"
+         y="664.932"
+         id="text213">Plomo</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="8"
+         x2="79"
+         y1="675.5"
+         y2="675.5"
+         id="line215" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="8"
+         x2="79"
+         y1="683.5"
+         y2="683.5"
+         id="line217" />
+    </g>
+    <!--class Esta?o-->
+    <g
+       id="elem_Estaño">
+      <rect
+         codeLine="51"
+         fill="#F1F1F1"
+         height="48"
+         id="Estaño"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="77"
+         x="115"
+         y="643.5" />
+      <ellipse
+         cx="130"
+         cy="659.5"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse221" />
+      <path
+         d="M132.9688,665.1406 Q132.3906,665.4375 131.75,665.5781 Q131.1094,665.7344 130.4063,665.7344 Q127.9063,665.7344 126.5781,664.0938 Q125.2656,662.4375 125.2656,659.3125 Q125.2656,656.1875 126.5781,654.5313 Q127.9063,652.875 130.4063,652.875 Q131.1094,652.875 131.75,653.0313 Q132.4063,653.1875 132.9688,653.4844 L132.9688,656.2031 Q132.3438,655.625 131.75,655.3594 Q131.1563,655.0781 130.5313,655.0781 Q129.1875,655.0781 128.5,656.1563 Q127.8125,657.2188 127.8125,659.3125 Q127.8125,661.4063 128.5,662.4844 Q129.1875,663.5469 130.5313,663.5469 Q131.1563,663.5469 131.75,663.2813 Q132.3438,663 132.9688,662.4219 L132.9688,665.1406 Z "
+         fill="#000000"
+         id="path223" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="45"
+         x="144"
+         y="664.932"
+         id="text225">Estaño</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="116"
+         x2="191"
+         y1="675.5"
+         y2="675.5"
+         id="line227" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="116"
+         x2="191"
+         y1="683.5"
+         y2="683.5"
+         id="line229" />
+    </g>
+    <!--class Cobre-->
+    <g
+       id="elem_Cobre">
+      <rect
+         codeLine="52"
+         fill="#F1F1F1"
+         height="48"
+         id="Cobre"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="72"
+         x="117.5"
+         y="1013" />
+      <ellipse
+         cx="132.5"
+         cy="1029"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse233" />
+      <path
+         d="M135.4688,1034.6406 Q134.8906,1034.9375 134.25,1035.0781 Q133.6094,1035.2344 132.9063,1035.2344 Q130.4063,1035.2344 129.0781,1033.5938 Q127.7656,1031.9375 127.7656,1028.8125 Q127.7656,1025.6875 129.0781,1024.0313 Q130.4063,1022.375 132.9063,1022.375 Q133.6094,1022.375 134.25,1022.5313 Q134.9063,1022.6875 135.4688,1022.9844 L135.4688,1025.7031 Q134.8438,1025.125 134.25,1024.8594 Q133.6563,1024.5781 133.0313,1024.5781 Q131.6875,1024.5781 131,1025.6563 Q130.3125,1026.7188 130.3125,1028.8125 Q130.3125,1030.9063 131,1031.9844 Q131.6875,1033.0469 133.0313,1033.0469 Q133.6563,1033.0469 134.25,1032.7813 Q134.8438,1032.5 135.4688,1031.9219 L135.4688,1034.6406 Z "
+         fill="#000000"
+         id="path235" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="40"
+         x="146.5"
+         y="1034.432"
+         id="text237">Cobre</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="118.5"
+         x2="188.5"
+         y1="1045"
+         y2="1045"
+         id="line239" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="118.5"
+         x2="188.5"
+         y1="1053"
+         y2="1053"
+         id="line241" />
+    </g>
+    <!--class Bronce-->
+    <g
+       id="elem_Bronce">
+      <rect
+         codeLine="53"
+         fill="#F1F1F1"
+         height="48"
+         id="Bronce"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="79"
+         x="114"
+         y="875.5" />
+      <ellipse
+         cx="129"
+         cy="891.5"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse245" />
+      <path
+         d="M131.9688,897.1406 Q131.3906,897.4375 130.75,897.5781 Q130.1094,897.7344 129.4063,897.7344 Q126.9063,897.7344 125.5781,896.0938 Q124.2656,894.4375 124.2656,891.3125 Q124.2656,888.1875 125.5781,886.5313 Q126.9063,884.875 129.4063,884.875 Q130.1094,884.875 130.75,885.0313 Q131.4063,885.1875 131.9688,885.4844 L131.9688,888.2031 Q131.3438,887.625 130.75,887.3594 Q130.1563,887.0781 129.5313,887.0781 Q128.1875,887.0781 127.5,888.1563 Q126.8125,889.2188 126.8125,891.3125 Q126.8125,893.4063 127.5,894.4844 Q128.1875,895.5469 129.5313,895.5469 Q130.1563,895.5469 130.75,895.2813 Q131.3438,895 131.9688,894.4219 L131.9688,897.1406 Z "
+         fill="#000000"
+         id="path247" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="47"
+         x="143"
+         y="896.932"
+         id="text249">Bronce</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="115"
+         x2="192"
+         y1="907.5"
+         y2="907.5"
+         id="line251" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="115"
+         x2="192"
+         y1="915.5"
+         y2="915.5"
+         id="line253" />
+    </g>
+    <!--class Plata-->
+    <g
+       id="elem_Plata">
+      <rect
+         codeLine="54"
+         fill="#F1F1F1"
+         height="48"
+         id="Plata"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="65"
+         x="121"
+         y="1122" />
+      <ellipse
+         cx="136"
+         cy="1138"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse257" />
+      <path
+         d="M138.9688,1143.6406 Q138.3906,1143.9375 137.75,1144.0781 Q137.1094,1144.2344 136.4063,1144.2344 Q133.9063,1144.2344 132.5781,1142.5938 Q131.2656,1140.9375 131.2656,1137.8125 Q131.2656,1134.6875 132.5781,1133.0313 Q133.9063,1131.375 136.4063,1131.375 Q137.1094,1131.375 137.75,1131.5313 Q138.4063,1131.6875 138.9688,1131.9844 L138.9688,1134.7031 Q138.3438,1134.125 137.75,1133.8594 Q137.1563,1133.5781 136.5313,1133.5781 Q135.1875,1133.5781 134.5,1134.6563 Q133.8125,1135.7188 133.8125,1137.8125 Q133.8125,1139.9063 134.5,1140.9844 Q135.1875,1142.0469 136.5313,1142.0469 Q137.1563,1142.0469 137.75,1141.7813 Q138.3438,1141.5 138.9688,1140.9219 L138.9688,1143.6406 Z "
+         fill="#000000"
+         id="path259" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="33"
+         x="150"
+         y="1143.432"
+         id="text261">Plata</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="122"
+         x2="185"
+         y1="1154"
+         y2="1154"
+         id="line263" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="122"
+         x2="185"
+         y1="1162"
+         y2="1162"
+         id="line265" />
+    </g>
+    <!--class Oro-->
+    <g
+       id="elem_Oro">
+      <rect
+         codeLine="55"
+         fill="#F1F1F1"
+         height="48"
+         id="Oro"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="57"
+         x="125"
+         y="1231" />
+      <ellipse
+         cx="140"
+         cy="1247"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse269" />
+      <path
+         d="M142.9688,1252.6406 Q142.3906,1252.9375 141.75,1253.0781 Q141.1094,1253.2344 140.4063,1253.2344 Q137.9063,1253.2344 136.5781,1251.5938 Q135.2656,1249.9375 135.2656,1246.8125 Q135.2656,1243.6875 136.5781,1242.0313 Q137.9063,1240.375 140.4063,1240.375 Q141.1094,1240.375 141.75,1240.5313 Q142.4063,1240.6875 142.9688,1240.9844 L142.9688,1243.7031 Q142.3438,1243.125 141.75,1242.8594 Q141.1563,1242.5781 140.5313,1242.5781 Q139.1875,1242.5781 138.5,1243.6563 Q137.8125,1244.7188 137.8125,1246.8125 Q137.8125,1248.9063 138.5,1249.9844 Q139.1875,1251.0469 140.5313,1251.0469 Q141.1563,1251.0469 141.75,1250.7813 Q142.3438,1250.5 142.9688,1249.9219 L142.9688,1252.6406 Z "
+         fill="#000000"
+         id="path271" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="25"
+         x="154"
+         y="1252.432"
+         id="text273">Oro</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="126"
+         x2="181"
+         y1="1263"
+         y2="1263"
+         id="line275" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="126"
+         x2="181"
+         y1="1271"
+         y2="1271"
+         id="line277" />
+    </g>
+    <!--class Platino-->
+    <g
+       id="elem_Platino">
+      <rect
+         codeLine="56"
+         fill="#F1F1F1"
+         height="48"
+         id="Platino"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="78"
+         x="114.5"
+         y="1340" />
+      <ellipse
+         cx="129.5"
+         cy="1356"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse281" />
+      <path
+         d="M132.4688,1361.6406 Q131.8906,1361.9375 131.25,1362.0781 Q130.6094,1362.2344 129.9063,1362.2344 Q127.4063,1362.2344 126.0781,1360.5938 Q124.7656,1358.9375 124.7656,1355.8125 Q124.7656,1352.6875 126.0781,1351.0313 Q127.4063,1349.375 129.9063,1349.375 Q130.6094,1349.375 131.25,1349.5313 Q131.9063,1349.6875 132.4688,1349.9844 L132.4688,1352.7031 Q131.8438,1352.125 131.25,1351.8594 Q130.6563,1351.5781 130.0313,1351.5781 Q128.6875,1351.5781 128,1352.6563 Q127.3125,1353.7188 127.3125,1355.8125 Q127.3125,1357.9063 128,1358.9844 Q128.6875,1360.0469 130.0313,1360.0469 Q130.6563,1360.0469 131.25,1359.7813 Q131.8438,1359.5 132.4688,1358.9219 L132.4688,1361.6406 Z "
+         fill="#000000"
+         id="path283" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="46"
+         x="143.5"
+         y="1361.432"
+         id="text285">Platino</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="115.5"
+         x2="191.5"
+         y1="1372"
+         y2="1372"
+         id="line287" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="115.5"
+         x2="191.5"
+         y1="1380"
+         y2="1380"
+         id="line289" />
+    </g>
+    <!--class Uranio-->
+    <g
+       id="elem_Uranio">
+      <rect
+         codeLine="57"
+         fill="#F1F1F1"
+         height="48"
+         id="Uranio"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="77"
+         x="115"
+         y="1449" />
+      <ellipse
+         cx="130"
+         cy="1465"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse293" />
+      <path
+         d="M132.9688,1470.6406 Q132.3906,1470.9375 131.75,1471.0781 Q131.1094,1471.2344 130.4063,1471.2344 Q127.9063,1471.2344 126.5781,1469.5938 Q125.2656,1467.9375 125.2656,1464.8125 Q125.2656,1461.6875 126.5781,1460.0313 Q127.9063,1458.375 130.4063,1458.375 Q131.1094,1458.375 131.75,1458.5313 Q132.4063,1458.6875 132.9688,1458.9844 L132.9688,1461.7031 Q132.3438,1461.125 131.75,1460.8594 Q131.1563,1460.5781 130.5313,1460.5781 Q129.1875,1460.5781 128.5,1461.6563 Q127.8125,1462.7188 127.8125,1464.8125 Q127.8125,1466.9063 128.5,1467.9844 Q129.1875,1469.0469 130.5313,1469.0469 Q131.1563,1469.0469 131.75,1468.7813 Q132.3438,1468.5 132.9688,1467.9219 L132.9688,1470.6406 Z "
+         fill="#000000"
+         id="path295" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="45"
+         x="144"
+         y="1470.432"
+         id="text297">Uranio</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="116"
+         x2="191"
+         y1="1481"
+         y2="1481"
+         id="line299" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="116"
+         x2="191"
+         y1="1489"
+         y2="1489"
+         id="line301" />
+    </g>
+    <!--class Sesion-->
+    <g
+       id="elem_Sesion">
+      <rect
+         codeLine="59"
+         fill="#F1F1F1"
+         height="86.1358"
+         id="Sesion"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="129"
+         x="1061"
+         y="624.5" />
+      <ellipse
+         cx="1099.85"
+         cy="640.5"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse305" />
+      <path
+         d="M1102.8188,646.1406 Q1102.2406,646.4375 1101.6,646.5781 Q1100.9594,646.7344 1100.2563,646.7344 Q1097.7563,646.7344 1096.4281,645.0938 Q1095.1156,643.4375 1095.1156,640.3125 Q1095.1156,637.1875 1096.4281,635.5313 Q1097.7563,633.875 1100.2563,633.875 Q1100.9594,633.875 1101.6,634.0313 Q1102.2563,634.1875 1102.8188,634.4844 L1102.8188,637.2031 Q1102.1938,636.625 1101.6,636.3594 Q1101.0063,636.0781 1100.3813,636.0781 Q1099.0375,636.0781 1098.35,637.1563 Q1097.6625,638.2188 1097.6625,640.3125 Q1097.6625,642.4063 1098.35,643.4844 Q1099.0375,644.5469 1100.3813,644.5469 Q1101.0063,644.5469 1101.6,644.2813 Q1102.1938,644 1102.8188,643.4219 L1102.8188,646.1406 Z "
+         fill="#000000"
+         id="path307" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="44"
+         x="1119.15"
+         y="645.932"
+         id="text309">Sesion</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1062"
+         x2="1189"
+         y1="656.5"
+         y2="656.5"
+         id="line311" />
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1069"
+         y="668.534"
+         id="rect313" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="35"
+         x="1081"
+         y="675.4659"
+         id="text315">id:int</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="1069"
+         y="687.6019"
+         id="rect317" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="103"
+         x="1081"
+         y="694.5339"
+         id="text319">estado:boolean</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1062"
+         x2="1189"
+         y1="702.6358"
+         y2="702.6358"
+         id="line321" />
+    </g>
+    <!--class Carta-->
+    <g
+       id="elem_Carta">
+      <rect
+         codeLine="64"
+         fill="#F1F1F1"
+         height="105.2038"
+         id="Carta"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="153"
+         x="616"
+         y="847" />
+      <ellipse
+         cx="670.75"
+         cy="863"
+         fill="#A9DCDF"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse325" />
+      <path
+         d="M670.8594,858.3438 L669.7031,863.4219 L672.0313,863.4219 L670.8594,858.3438 Z M669.375,856.1094 L672.3594,856.1094 L675.7188,868.5 L673.2656,868.5 L672.5,865.4375 L669.2188,865.4375 L668.4688,868.5 L666.0313,868.5 L669.375,856.1094 Z "
+         fill="#000000"
+         id="path327" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         font-style="italic"
+         lengthAdjust="spacing"
+         textLength="35"
+         x="691.25"
+         y="868.432"
+         id="text329">Carta</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="617"
+         x2="768"
+         y1="879"
+         y2="879"
+         id="line331" />
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="624"
+         y="891.034"
+         id="rect333" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="75"
+         x="636"
+         y="897.9659"
+         id="text335">numero:int</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="624"
+         y="910.1019"
+         id="rect337" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="55"
+         x="636"
+         y="917.0339"
+         id="text339">color:int</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="617"
+         x2="768"
+         y1="925.1358"
+         y2="925.1358"
+         id="line341" />
+      <ellipse
+         cx="627"
+         cy="940.1698"
+         fill="#000000"
+         rx="3"
+         ry="3"
+         style="stroke:#000000;stroke-width:1.0;"
+         id="ellipse343" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="127"
+         x="636"
+         y="944.1018"
+         id="text345">aplicarEfecto():void</text>
+    </g>
+    <!--class CartaEspecial-->
+    <g
+       id="elem_CartaEspecial">
+      <rect
+         codeLine="69"
+         fill="#F1F1F1"
+         height="48"
+         id="CartaEspecial"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="123"
+         x="560"
+         y="1122" />
+      <ellipse
+         cx="575"
+         cy="1138"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse349" />
+      <path
+         d="M577.9688,1143.6406 Q577.3906,1143.9375 576.75,1144.0781 Q576.1094,1144.2344 575.4063,1144.2344 Q572.9063,1144.2344 571.5781,1142.5938 Q570.2656,1140.9375 570.2656,1137.8125 Q570.2656,1134.6875 571.5781,1133.0313 Q572.9063,1131.375 575.4063,1131.375 Q576.1094,1131.375 576.75,1131.5313 Q577.4063,1131.6875 577.9688,1131.9844 L577.9688,1134.7031 Q577.3438,1134.125 576.75,1133.8594 Q576.1563,1133.5781 575.5313,1133.5781 Q574.1875,1133.5781 573.5,1134.6563 Q572.8125,1135.7188 572.8125,1137.8125 Q572.8125,1139.9063 573.5,1140.9844 Q574.1875,1142.0469 575.5313,1142.0469 Q576.1563,1142.0469 576.75,1141.7813 Q577.3438,1141.5 577.9688,1140.9219 L577.9688,1143.6406 Z "
+         fill="#000000"
+         id="path351" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="91"
+         x="589"
+         y="1143.432"
+         id="text353">CartaEspecial</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="561"
+         x2="682"
+         y1="1154"
+         y2="1154"
+         id="line355" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="561"
+         x2="682"
+         y1="1162"
+         y2="1162"
+         id="line357" />
+    </g>
+    <!--class CartaNegra-->
+    <g
+       id="elem_CartaNegra">
+      <rect
+         codeLine="70"
+         fill="#F1F1F1"
+         height="48"
+         id="CartaNegra"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="110"
+         x="708.5"
+         y="1013" />
+      <ellipse
+         cx="723.5"
+         cy="1029"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse361" />
+      <path
+         d="M726.4688,1034.6406 Q725.8906,1034.9375 725.25,1035.0781 Q724.6094,1035.2344 723.9063,1035.2344 Q721.4063,1035.2344 720.0781,1033.5938 Q718.7656,1031.9375 718.7656,1028.8125 Q718.7656,1025.6875 720.0781,1024.0313 Q721.4063,1022.375 723.9063,1022.375 Q724.6094,1022.375 725.25,1022.5313 Q725.9063,1022.6875 726.4688,1022.9844 L726.4688,1025.7031 Q725.8438,1025.125 725.25,1024.8594 Q724.6563,1024.5781 724.0313,1024.5781 Q722.6875,1024.5781 722,1025.6563 Q721.3125,1026.7188 721.3125,1028.8125 Q721.3125,1030.9063 722,1031.9844 Q722.6875,1033.0469 724.0313,1033.0469 Q724.6563,1033.0469 725.25,1032.7813 Q725.8438,1032.5 726.4688,1031.9219 L726.4688,1034.6406 Z "
+         fill="#000000"
+         id="path363" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="78"
+         x="737.5"
+         y="1034.432"
+         id="text365">CartaNegra</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="709.5"
+         x2="817.5"
+         y1="1045"
+         y2="1045"
+         id="line367" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="709.5"
+         x2="817.5"
+         y1="1053"
+         y2="1053"
+         id="line369" />
+    </g>
+    <!--class CartaColor-->
+    <g
+       id="elem_CartaColor">
+      <rect
+         codeLine="71"
+         fill="#F1F1F1"
+         height="48"
+         id="CartaColor"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="103"
+         x="570"
+         y="1013" />
+      <ellipse
+         cx="585"
+         cy="1029"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse373" />
+      <path
+         d="M587.9688,1034.6406 Q587.3906,1034.9375 586.75,1035.0781 Q586.1094,1035.2344 585.4063,1035.2344 Q582.9063,1035.2344 581.5781,1033.5938 Q580.2656,1031.9375 580.2656,1028.8125 Q580.2656,1025.6875 581.5781,1024.0313 Q582.9063,1022.375 585.4063,1022.375 Q586.1094,1022.375 586.75,1022.5313 Q587.4063,1022.6875 587.9688,1022.9844 L587.9688,1025.7031 Q587.3438,1025.125 586.75,1024.8594 Q586.1563,1024.5781 585.5313,1024.5781 Q584.1875,1024.5781 583.5,1025.6563 Q582.8125,1026.7188 582.8125,1028.8125 Q582.8125,1030.9063 583.5,1031.9844 Q584.1875,1033.0469 585.5313,1033.0469 Q586.1563,1033.0469 586.75,1032.7813 Q587.3438,1032.5 587.9688,1031.9219 L587.9688,1034.6406 Z "
+         fill="#000000"
+         id="path375" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="71"
+         x="599"
+         y="1034.432"
+         id="text377">CartaColor</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="571"
+         x2="672"
+         y1="1045"
+         y2="1045"
+         id="line379" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="571"
+         x2="672"
+         y1="1053"
+         y2="1053"
+         id="line381" />
+    </g>
+    <!--class Baraja-->
+    <g
+       id="elem_Baraja">
+      <rect
+         codeLine="73"
+         fill="#F1F1F1"
+         height="105.2038"
+         id="Baraja"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="199"
+         x="559"
+         y="615" />
+      <ellipse
+         cx="633.25"
+         cy="631"
+         fill="#A9DCDF"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse385" />
+      <path
+         d="M633.3594,626.3438 L632.2031,631.4219 L634.5313,631.4219 L633.3594,626.3438 Z M631.875,624.1094 L634.8594,624.1094 L638.2188,636.5 L635.7656,636.5 L635,633.4375 L631.7188,633.4375 L630.9688,636.5 L628.5313,636.5 L631.875,624.1094 Z "
+         fill="#000000"
+         id="path387" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         font-style="italic"
+         lengthAdjust="spacing"
+         textLength="42"
+         x="653.75"
+         y="636.432"
+         id="text389">Baraja</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="560"
+         x2="757"
+         y1="647"
+         y2="647"
+         id="line391" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="560"
+         x2="757"
+         y1="655"
+         y2="655"
+         id="line393" />
+      <ellipse
+         cx="570"
+         cy="670.034"
+         fill="#000000"
+         rx="3"
+         ry="3"
+         style="stroke:#000000;stroke-width:1.0;"
+         id="ellipse395" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="89"
+         x="579"
+         y="673.9659"
+         id="text397">barajar():void</text>
+      <ellipse
+         cx="570"
+         cy="689.1019"
+         fill="#000000"
+         rx="3"
+         ry="3"
+         style="stroke:#000000;stroke-width:1.0;"
+         id="ellipse399" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="120"
+         x="579"
+         y="693.0339"
+         id="text401">sacarCarta():Carta</text>
+      <ellipse
+         cx="570"
+         cy="708.1698"
+         fill="#84BE84"
+         rx="3"
+         ry="3"
+         style="stroke:#038048;stroke-width:1.0;"
+         id="ellipse403" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="173"
+         x="579"
+         y="712.1018"
+         id="text405">verCantidadDeCartas():int</text>
+    </g>
+    <!--class Mazo-->
+    <g
+       id="elem_Mazo">
+      <rect
+         codeLine="78"
+         fill="#F1F1F1"
+         height="48"
+         id="Mazo"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="68"
+         x="1237.5"
+         y="875.5" />
+      <ellipse
+         cx="1252.5"
+         cy="891.5"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse409" />
+      <path
+         d="M1255.4688,897.1406 Q1254.8906,897.4375 1254.25,897.5781 Q1253.6094,897.7344 1252.9063,897.7344 Q1250.4063,897.7344 1249.0781,896.0938 Q1247.7656,894.4375 1247.7656,891.3125 Q1247.7656,888.1875 1249.0781,886.5313 Q1250.4063,884.875 1252.9063,884.875 Q1253.6094,884.875 1254.25,885.0313 Q1254.9063,885.1875 1255.4688,885.4844 L1255.4688,888.2031 Q1254.8438,887.625 1254.25,887.3594 Q1253.6563,887.0781 1253.0313,887.0781 Q1251.6875,887.0781 1251,888.1563 Q1250.3125,889.2188 1250.3125,891.3125 Q1250.3125,893.4063 1251,894.4844 Q1251.6875,895.5469 1253.0313,895.5469 Q1253.6563,895.5469 1254.25,895.2813 Q1254.8438,895 1255.4688,894.4219 L1255.4688,897.1406 Z "
+         fill="#000000"
+         id="path411" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="36"
+         x="1266.5"
+         y="896.932"
+         id="text413">Mazo</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1238.5"
+         x2="1304.5"
+         y1="907.5"
+         y2="907.5"
+         id="line415" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1238.5"
+         x2="1304.5"
+         y1="915.5"
+         y2="915.5"
+         id="line417" />
+    </g>
+    <!--class Pozo-->
+    <g
+       id="elem_Pozo">
+      <rect
+         codeLine="79"
+         fill="#F1F1F1"
+         height="48"
+         id="Pozo"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="63"
+         x="1027"
+         y="875.5" />
+      <ellipse
+         cx="1042"
+         cy="891.5"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse421" />
+      <path
+         d="M1044.9688,897.1406 Q1044.3906,897.4375 1043.75,897.5781 Q1043.1094,897.7344 1042.4063,897.7344 Q1039.9063,897.7344 1038.5781,896.0938 Q1037.2656,894.4375 1037.2656,891.3125 Q1037.2656,888.1875 1038.5781,886.5313 Q1039.9063,884.875 1042.4063,884.875 Q1043.1094,884.875 1043.75,885.0313 Q1044.4063,885.1875 1044.9688,885.4844 L1044.9688,888.2031 Q1044.3438,887.625 1043.75,887.3594 Q1043.1563,887.0781 1042.5313,887.0781 Q1041.1875,887.0781 1040.5,888.1563 Q1039.8125,889.2188 1039.8125,891.3125 Q1039.8125,893.4063 1040.5,894.4844 Q1041.1875,895.5469 1042.5313,895.5469 Q1043.1563,895.5469 1043.75,895.2813 Q1044.3438,895 1044.9688,894.4219 L1044.9688,897.1406 Z "
+         fill="#000000"
+         id="path423" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="31"
+         x="1056"
+         y="896.932"
+         id="text425">Pozo</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1028"
+         x2="1089"
+         y1="907.5"
+         y2="907.5"
+         id="line427" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="1028"
+         x2="1089"
+         y1="915.5"
+         y2="915.5"
+         id="line429" />
+    </g>
+    <!--class Mano-->
+    <g
+       id="elem_Mano">
+      <rect
+         codeLine="80"
+         fill="#F1F1F1"
+         height="86.1358"
+         id="Mano"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="227"
+         x="354"
+         y="856.5" />
+      <ellipse
+         cx="444.25"
+         cy="872.5"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse433" />
+      <path
+         d="M447.2188,878.1406 Q446.6406,878.4375 446,878.5781 Q445.3594,878.7344 444.6563,878.7344 Q442.1563,878.7344 440.8281,877.0938 Q439.5156,875.4375 439.5156,872.3125 Q439.5156,869.1875 440.8281,867.5313 Q442.1563,865.875 444.6563,865.875 Q445.3594,865.875 446,866.0313 Q446.6563,866.1875 447.2188,866.4844 L447.2188,869.2031 Q446.5938,868.625 446,868.3594 Q445.4063,868.0781 444.7813,868.0781 Q443.4375,868.0781 442.75,869.1563 Q442.0625,870.2188 442.0625,872.3125 Q442.0625,874.4063 442.75,875.4844 Q443.4375,876.5469 444.7813,876.5469 Q445.4063,876.5469 446,876.2813 Q446.5938,876 447.2188,875.4219 L447.2188,878.1406 Z "
+         fill="#000000"
+         id="path435" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="38"
+         x="464.75"
+         y="877.932"
+         id="text437">Mano</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="355"
+         x2="580"
+         y1="888.5"
+         y2="888.5"
+         id="line439" />
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="355"
+         x2="580"
+         y1="896.5"
+         y2="896.5"
+         id="line441" />
+      <rect
+         fill="#F24D5C"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="362"
+         y="908.534"
+         id="rect443" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="201"
+         x="374"
+         y="915.4659"
+         id="text445">recibirCarta(nueva:Carta):void</text>
+      <ellipse
+         cx="365"
+         cy="930.6019"
+         fill="#84BE84"
+         rx="3"
+         ry="3"
+         style="stroke:#038048;stroke-width:1.0;"
+         id="ellipse447" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="104"
+         x="374"
+         y="934.5339"
+         id="text449">verCartas():void</text>
+    </g>
+    <!--class Logro-->
+    <g
+       id="elem_Logro">
+      <rect
+         codeLine="85"
+         fill="#F1F1F1"
+         height="105.2038"
+         id="Logro"
+         rx="2.5"
+         ry="2.5"
+         style="stroke:#181818;stroke-width:0.5;"
+         width="149"
+         x="227"
+         y="615" />
+      <ellipse
+         cx="278.25"
+         cy="631"
+         fill="#ADD1B2"
+         rx="11"
+         ry="11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="ellipse453" />
+      <path
+         d="M281.2188,636.6406 Q280.6406,636.9375 280,637.0781 Q279.3594,637.2344 278.6563,637.2344 Q276.1563,637.2344 274.8281,635.5938 Q273.5156,633.9375 273.5156,630.8125 Q273.5156,627.6875 274.8281,626.0313 Q276.1563,624.375 278.6563,624.375 Q279.3594,624.375 280,624.5313 Q280.6563,624.6875 281.2188,624.9844 L281.2188,627.7031 Q280.5938,627.125 280,626.8594 Q279.4063,626.5781 278.7813,626.5781 Q277.4375,626.5781 276.75,627.6563 Q276.0625,628.7188 276.0625,630.8125 Q276.0625,632.9063 276.75,633.9844 Q277.4375,635.0469 278.7813,635.0469 Q279.4063,635.0469 280,634.7813 Q280.5938,634.5 281.2188,633.9219 L281.2188,636.6406 Z "
+         fill="#000000"
+         id="path455" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="38"
+         x="298.75"
+         y="636.432"
+         id="text457">Logro</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="228"
+         x2="375"
+         y1="647"
+         y2="647"
+         id="line459" />
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="235"
+         y="659.034"
+         id="rect461" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="35"
+         x="247"
+         y="665.9659"
+         id="text463">id:int</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="235"
+         y="678.1019"
+         id="rect465" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="98"
+         x="247"
+         y="685.0339"
+         id="text467">nombre:String</text>
+      <rect
+         fill="none"
+         height="6"
+         style="stroke:#C82930;stroke-width:1.0;"
+         width="6"
+         x="235"
+         y="697.1698"
+         id="rect469" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14"
+         lengthAdjust="spacing"
+         textLength="123"
+         x="247"
+         y="704.1018"
+         id="text471">descripcion:String</text>
+      <line
+         style="stroke:#181818;stroke-width:0.5;"
+         x1="228"
+         x2="375"
+         y1="712.2038"
+         y2="712.2038"
+         id="line473" />
+    </g>
+    <!--reverse link Juego to Jugador-->
+    <g
+       id="link_Juego_Jugador">
+      <path
+         codeLine="91"
+         d="M1143.961,140.5342 C1129.761,158.9042 1120.86,170.42 1104.28,191.85 "
+         fill="none"
+         id="Juego-backto-Jugador"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="1151.3,131.04,1144.4658,133.3408,1143.961,140.5342,1150.7952,138.2334,1151.3,131.04"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon477" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="1138.4378"
+         y="153.1183"
+         id="text479">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="8"
+         x="1102.2836"
+         y="180.2027"
+         id="text481">n</text>
+    </g>
+    <!--reverse link Juego to Partida-->
+    <g
+       id="link_Juego_Partida">
+      <path
+         codeLine="92"
+         d="M1222.1019,142.4947 C1250.0219,228.5847 1298.42,379.21 1340.5,518 C1345.29,533.8 1350.26,550.57 1355.05,566.95 "
+         fill="none"
+         id="Juego-backto-Partida"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="1218.4,131.08,1216.4461,138.0213,1222.1019,142.4947,1224.0559,135.5534,1218.4,131.08"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon485" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="1213.2963"
+         y="153.1629"
+         id="text487">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="8"
+         x="1344.4641"
+         y="555.2034"
+         id="text489">n</text>
+    </g>
+    <!--link Rango to Jugador-->
+    <g
+       id="link_Rango_Jugador">
+      <path
+         codeLine="93"
+         d="M448.04,340 C541.39,340 652.09,340 757.17,340 "
+         fill="none"
+         id="Rango-to-Jugador"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="769.17,340,763.17,336,757.17,340,763.17,344,769.17,340"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon493" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="32"
+         x="592.75"
+         y="332.897"
+         id="text495">Tiene</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="455.7764"
+         y="336.4717"
+         id="text497">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="754.7928"
+         y="336.6316"
+         id="text499">1</text>
+    </g>
+    <!--reverse link Jugador to Mensaje-->
+    <g
+       id="link_Jugador_Mensaje">
+      <path
+         codeLine="94"
+         d="M960.6033,499.7679 C956.9433,516.3479 955.61,521.22 951.5,537 C946.49,556.21 940.25,576.76 934.12,595.7 "
+         fill="none"
+         id="Jugador-backto-Mensaje"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="963.19,488.05,957.9907,493.0467,960.6033,499.7679,965.8026,494.7712,963.19,488.05"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon503" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="32"
+         x="956.5"
+         y="532.897"
+         id="text505">Envia</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="954.6976"
+         y="509.5498"
+         id="text507">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="8"
+         x="928.2464"
+         y="584.335"
+         id="text509">n</text>
+    </g>
+    <!--reverse link Jugador to Mensaje-->
+    <g
+       id="g521">
+      <path
+         codeLine="95"
+         d="M907.3288,499.4278 C903.8788,509.3778 904.83,508.06 902.5,518 C896.63,543 896.38,571 898.27,595.89 "
+         fill="none"
+         id="Jugador-backto-Mensaje-1"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="911.26,488.09,905.5151,492.4485,907.3288,499.4278,913.0737,495.0693,911.26,488.09"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon513" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="39"
+         x="903.5"
+         y="532.897"
+         id="text515">Recibe</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="900.2523"
+         y="509.5918"
+         id="text517">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="8"
+         x="888.6042"
+         y="584.045"
+         id="text519">n</text>
+    </g>
+    <!--reverse link Jugador to Sesion-->
+    <g
+       id="link_Jugador_Sesion">
+      <path
+         codeLine="96"
+         d="M1056.0786,499.1239 C1076.6986,548.8239 1093.53,589.41 1107.99,624.28 "
+         fill="none"
+         id="Jugador-backto-Sesion"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="1051.48,488.04,1050.0847,495.1148,1056.0786,499.1239,1057.4739,492.0491,1051.48,488.04"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon524" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="31"
+         x="1070.5"
+         y="532.897"
+         id="text526">Inicia</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="1047.2642"
+         y="509.5394"
+         id="text528">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="8"
+         x="1096.4274"
+         y="612.6581"
+         id="text530">n</text>
+    </g>
+    <!--reverse link Jugador to Partida-->
+    <g
+       id="link_Jugador_Partida">
+      <path
+         codeLine="97"
+         d="M1169.2094,495.9528 C1188.8094,512.5428 1199.44,521.34 1218.5,537 C1230.32,546.71 1242.7,556.72 1255.14,566.67 "
+         fill="none"
+         id="Jugador-backto-Partida"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="1160.05,488.2,1162.0454,495.1295,1169.2094,495.9528,1167.214,489.0233,1160.05,488.2"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon534" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="27"
+         x="1219.5"
+         y="532.897"
+         id="text536">Crea</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="1161.093"
+         y="509.7071"
+         id="text538">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="8"
+         x="1237.0062"
+         y="555.2409"
+         id="text540">n</text>
+    </g>
+    <!--reverse link Partida to Jugador-->
+    <g
+       id="link_Partida_Jugador">
+      <path
+         codeLine="101"
+         d="M1293.0635,558.1382 C1277.2635,541.0882 1268.49,532.9 1251.5,518 C1238.84,506.9 1225.46,495.91 1211.71,485.17 "
+         fill="none"
+         id="Partida-backto-Jugador"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="1301.22,566.94,1300.0757,559.8203,1293.0635,558.1382,1294.2078,565.2579,1301.22,566.94"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon544" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="60"
+         x="1271.5"
+         y="532.897"
+         id="text546">Participan</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="1287.3844"
+         y="555.1926"
+         id="text548">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="20"
+         x="1219.2966"
+         y="486.565"
+         id="text550">2..4</text>
+    </g>
+    <!--reverse link Jugador to Logro-->
+    <g
+       id="link_Jugador_Logro">
+      <path
+         codeLine="98"
+         d="M757.7932,401.4795 C639.9032,438.2095 507.56,490.1 393.5,567 C374.19,580.02 356.05,597.85 341.07,614.82 "
+         fill="none"
+         id="Jugador-backto-Logro"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="769.25,397.91,762.3318,395.8758,757.7932,401.4795,764.7114,403.5137,769.25,397.91"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon554" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="71"
+         x="468.5"
+         y="532.897"
+         id="text556">Desbloquea</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="754.173"
+         y="396.5975"
+         id="text558">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="8"
+         x="338.072"
+         y="603.1489"
+         id="text560">n</text>
+    </g>
+    <!--reverse link Jugador to Participante-->
+    <g
+       id="link_Jugador_Participante">
+      <path
+         codeLine="99"
+         d="M753.6555,488.235 C715.1855,509.205 690.71,520.64 651.5,537 C604.73,556.51 583.36,538.44 541.5,567 C513.05,586.41 491.25,620.43 478.91,643.21 "
+         fill="none"
+         id="Jugador-backto-Participante"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="769.46,479.62,750.7839,482.9669,756.5272,493.5032,769.46,479.62"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon564" />
+    </g>
+    <!--reverse link Participante to Mano-->
+    <g
+       id="link_Participante_Mano">
+      <path
+         codeLine="100"
+         d="M467.5,703.82 C467.5,742.42 467.5,808.13 467.5,856.49 "
+         fill="none"
+         id="Participante-backto-Mano"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="467.5,691.82,463.5,697.82,467.5,703.82,471.5,697.82,467.5,691.82"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon568" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="459.6906"
+         y="713.3883"
+         id="text570">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="459.8984"
+         y="844.5827"
+         id="text572">1</text>
+    </g>
+    <!--reverse link Partida to Mazo-->
+    <g
+       id="link_Partida_Mazo">
+      <path
+         codeLine="102"
+         d="M1329.7775,778.8294 C1310.3875,818.6594 1295.02,850.2 1282.7,875.49 "
+         fill="none"
+         id="Partida-backto-Mazo"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="1335.03,768.04,1328.8073,771.6839,1329.7775,778.8294,1336.0002,775.1855,1335.03,768.04"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon576" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="1324.5383"
+         y="789.3022"
+         id="text578">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="1277.7694"
+         y="863.7448"
+         id="text580">1</text>
+    </g>
+    <!--reverse link Partida to Pozo-->
+    <g
+       id="link_Partida_Pozo">
+      <path
+         codeLine="103"
+         d="M1233.0453,774.9729 C1176.2653,815.1629 1125.65,850.98 1090.04,876.18 "
+         fill="none"
+         id="Partida-backto-Pozo"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="1242.84,768.04,1235.6317,768.2415,1233.0453,774.9729,1240.2536,774.7713,1242.84,768.04"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon584" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="1226.1542"
+         y="789.3022"
+         id="text586">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="1098.143"
+         y="865.8003"
+         id="text588">1</text>
+    </g>
+    <!--reverse link Baraja to Carta-->
+    <g
+       id="link_Baraja_Carta">
+      <path
+         codeLine="104"
+         d="M667.8852,731.9909 C673.4652,769.7309 679.25,808.86 684.84,846.66 "
+         fill="none"
+         id="Baraja-backto-Carta"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="666.13,720.12,663.0506,726.6405,667.8852,731.9909,670.9646,725.4704,666.13,720.12"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon592" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="54"
+         x="681.5"
+         y="812.897"
+         id="text594">Contiene</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="659.685"
+         y="742.2638"
+         id="text596">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="21"
+         x="661.3998"
+         y="835.3482"
+         id="text598">108</text>
+    </g>
+    <!--reverse link Baraja to Mazo-->
+    <g
+       id="link_Baraja_Mazo">
+      <path
+         codeLine="105"
+         d="M721.9148,732.1453 C741.3548,749.6253 751.36,755.76 775.5,768 C843.14,802.29 1034.39,826.85 1107.5,847 C1152.81,859.49 1204.45,876.1 1237.47,887.04 "
+         fill="none"
+         id="Baraja-backto-Mazo"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="708.53,720.11,717.903,736.6069,725.9265,727.6837,708.53,720.11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon602" />
+    </g>
+    <!--reverse link Baraja to Pozo-->
+    <g
+       id="link_Baraja_Pozo">
+      <path
+         codeLine="106"
+         d="M726.4787,731.926 C745.4287,748.416 753.81,754.15 775.5,768 C860.99,822.61 973.07,867.23 1026.92,887.2 "
+         fill="none"
+         id="Baraja-backto-Pozo"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="712.9,720.11,722.5401,736.4523,730.4174,727.3998,712.9,720.11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon606" />
+    </g>
+    <!--reverse link Baraja to Mano-->
+    <g
+       id="link_Baraja_Mano">
+      <path
+         codeLine="107"
+         d="M604.1383,733.9659 C570.0383,775.0159 534.43,817.91 502.56,856.28 "
+         fill="none"
+         id="Baraja-backto-Mano"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="615.64,720.12,599.5229,730.132,608.7536,737.7999,615.64,720.12"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon610" />
+    </g>
+    <!--reverse link Carta to CartaColor-->
+    <g
+       id="link_Carta_CartaColor">
+      <path
+         codeLine="108"
+         d="M657.101,968.0514 C646.121,988.9914 642.37,996.18 633.64,1012.84 "
+         fill="none"
+         id="Carta-backto-CartaColor"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="665.46,952.11,651.7873,965.2651,662.4148,970.8377,665.46,952.11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon614" />
+    </g>
+    <!--reverse link Carta to CartaNegra-->
+    <g
+       id="link_Carta_CartaNegra">
+      <path
+         codeLine="109"
+         d="M727.899,968.0514 C738.879,988.9914 742.63,996.18 751.36,1012.84 "
+         fill="none"
+         id="Carta-backto-CartaNegra"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="719.54,952.11,722.5852,970.8377,733.2127,965.2651,719.54,952.11"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon618" />
+    </g>
+    <!--reverse link CartaColor to CartaEspecial-->
+    <g
+       id="link_CartaColor_CartaEspecial">
+      <path
+         codeLine="110"
+         d="M621.5,1079.22 C621.5,1097.16 621.5,1103.89 621.5,1121.83 "
+         fill="none"
+         id="CartaColor-backto-CartaEspecial"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="621.5,1061.22,615.5,1079.22,627.5,1079.22,621.5,1061.22"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon622" />
+    </g>
+    <!--reverse link Rango to Logro-->
+    <g
+       id="link_Rango_Logro">
+      <path
+         codeLine="111"
+         d="M301.5,404.58 C301.5,465.44 301.5,554.02 301.5,614.9 "
+         fill="none"
+         id="Rango-backto-Logro"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="#181818"
+         points="301.5,392.58,297.5,398.58,301.5,404.58,305.5,398.58,301.5,392.58"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon626" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="43"
+         x="302.5"
+         y="532.897"
+         id="text628">Otorga</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="294.0297"
+         y="414.7184"
+         id="text630">1</text>
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="13"
+         lengthAdjust="spacing"
+         textLength="7"
+         x="294.0078"
+         y="603.2401"
+         id="text632">1</text>
+    </g>
+    <!--reverse link Rango to Plomo-->
+    <g
+       id="link_Rango_Plomo">
+      <path
+         codeLine="112"
+         d="M235.5445,405.5302 C191.9545,449.4802 142.99,502.71 97.5,567 C80.02,591.71 64.03,622.7 54.06,643.47 "
+         fill="none"
+         id="Rango-backto-Plomo"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="248.22,392.75,231.2845,401.305,239.8046,409.7553,248.22,392.75"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon636" />
+    </g>
+    <!--reverse link Plomo to Esta?o-->
+    <g
+       id="link_Plomo_Estaño">
+      <path
+         codeLine="113"
+         d="M98.02,667.5 C109.6,667.5 103.18,667.5 114.75,667.5 "
+         fill="none"
+         id="Plomo-backto-Estaño"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="80.02,667.5,98.02,673.5,98.02,661.5,80.02,667.5"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon640" />
+    </g>
+    <!--reverse link Esta?o to Bronce-->
+    <g
+       id="link_Estaño_Bronce">
+      <path
+         codeLine="114"
+         d="M153.5,709.82 C153.5,754.02 153.5,831.48 153.5,875.46 "
+         fill="none"
+         id="Estaño-backto-Bronce"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="153.5,691.82,147.5,709.82,159.5,709.82,153.5,691.82"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon644" />
+    </g>
+    <!--reverse link Bronce to Cobre-->
+    <g
+       id="link_Bronce_Cobre">
+      <path
+         codeLine="115"
+         d="M153.5,941.79 C153.5,966.61 153.5,987.68 153.5,1012.56 "
+         fill="none"
+         id="Bronce-backto-Cobre"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="153.5,923.79,147.5,941.79,159.5,941.79,153.5,923.79"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon648" />
+    </g>
+    <!--reverse link Cobre to Plata-->
+    <g
+       id="link_Cobre_Plata">
+      <path
+         codeLine="116"
+         d="M153.5,1079.22 C153.5,1097.16 153.5,1103.89 153.5,1121.83 "
+         fill="none"
+         id="Cobre-backto-Plata"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="153.5,1061.22,147.5,1079.22,159.5,1079.22,153.5,1061.22"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon652" />
+    </g>
+    <!--reverse link Plata to Oro-->
+    <g
+       id="link_Plata_Oro">
+      <path
+         codeLine="117"
+         d="M153.5,1188.22 C153.5,1206.16 153.5,1212.89 153.5,1230.83 "
+         fill="none"
+         id="Plata-backto-Oro"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="153.5,1170.22,147.5,1188.22,159.5,1188.22,153.5,1170.22"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon656" />
+    </g>
+    <!--reverse link Oro to Platino-->
+    <g
+       id="link_Oro_Platino">
+      <path
+         codeLine="118"
+         d="M153.5,1297.22 C153.5,1315.16 153.5,1321.89 153.5,1339.83 "
+         fill="none"
+         id="Oro-backto-Platino"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="153.5,1279.22,147.5,1297.22,159.5,1297.22,153.5,1279.22"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon660" />
+    </g>
+    <!--reverse link Platino to Uranio-->
+    <g
+       id="link_Platino_Uranio">
+      <path
+         codeLine="119"
+         d="M153.5,1406.22 C153.5,1424.16 153.5,1430.89 153.5,1448.83 "
+         fill="none"
+         id="Platino-backto-Uranio"
+         style="stroke:#181818;stroke-width:1.0;" />
+      <polygon
+         fill="none"
+         points="153.5,1388.22,147.5,1406.22,159.5,1406.22,153.5,1388.22"
+         style="stroke:#181818;stroke-width:1.0;"
+         id="polygon664" />
+    </g>
+    <!--SRC=[ZLNDRjim3BxhAOoSidGfjc67mTXbJN9OiQv5rpq0xMY62aVqQ2SOclMX-WnziL6K7CkncpL0B8lyH58VVvoNKDV9vLONk5S9_yv85wPk2EXoMy0QQVec3MzUlzDq0zIODTIisg5P7-G1fmUAEyXAJRZKDrlRu47zg5Gk_eD17u7xpSqwDRRfzXkW79RwpkXDXUaI6jtfTDsmspu-XqrcW5QYcdQ8A331aQwSRrhmityXKRzqAL52mLnrF8cXt5HW6zrITdn4_wcsPVtgCu-1dw0vmO_5JKOw_T6GiKL40rfEPQsVds2WgoGNHxIHXZQzVD_m5iNlpD6N5b7vjSKD2Ch0hj765li0O_doG3zqRT2orhz4uMYYI7t4fTtnsIjjQxZNqurVmotV9clEkR7G01dic0teACIgD3a7wEkoe-J8cIlYRrWG3gh0QMx15ZWToTjDbDwzwkezXE7p6UVofJgVzw-dnkh-x3yrpzuXSvsTDuaFG-8U2M9OJ7DiaBZMXODJLViey73x4ZUuZoKkjEUdlco1xAidkI2qULzqKt8cUv9hmW72sBxi9u4rJXHezuLqeei2PnbYgS6EC2PZ8Z1cjnkUQHrhEPP8X-qiLDRgbyuRd8xG8xPMTQMv1ShzGFDT5mH3yS9vsGyZkm22-n3QB9CDnIKvgu6Z4HCiblKmdXUSI6xFzL8Vng2xHkpx2XwE-COZmHLOtCU3DJTPcAjJkzKxy4v7scSuUmyPatfxNOLom-TagfmptChPZ7pPaidxIJARpvE9dRIpT4JJJhk02BfoBY_IAodtfTL707yuj7IwSbFf9EBMCJDkn1Te-bN6uYWYn9WkU52F0eInTAdhhCJVsmZq-IyZue6auardWrUNIXKyTOeFv-SV3_IbtU4XKamyuAZ2rOtonHh9ttsQ-F9E5_p54f83Hi8MQx4WjX8G7B9OyFkkLmPIQIpL0I9LsurAijsBs_DwBMCm2NeVYfjoIfvEqCuu5LOFyYDD-IKuT7DFoRCrn3DEoTCBUCGf_dTQuzBYLo_q0qwfVm00]-->
+  </g>
+</svg>
