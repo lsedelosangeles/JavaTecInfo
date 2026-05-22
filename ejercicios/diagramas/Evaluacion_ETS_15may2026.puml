@@ -1,0 +1,123 @@
+@startuml Evaluación
+class Juego{
+    +registrarJugador():Jugador
+    +verPartidas():void
+    +verJugadores():void
+    +verTableroDePuntos():void
+}
+
+class Partida{
+        -id:int
+        -marcaDeTiempo:Date
+        -estado:int
+        -cambiarEstado(estado:int):void
+        -repartirCartas():void
+        -verJugadores():void
+        -agregarJugador(participante:Jugador):void
+        -expulsarJugador(participante:Jugador):void
+    }
+class Jugador{
+        -id:int
+        -nombre:String
+        -contraseña:String
+        -puntos:int
+        -crearPartida():Partida
+        -entrarAPartida(partida:Partida):void
+        -abandonarPartida():void
+        -iniciarSesion():Sesion
+        -cerrarSesion():void
+        -enviarMensaje(mensaje:String, destinatario:Jugador):Mensaje
+        -aplicarPuntos(puntos:int):void
+        +verLogros():void
+        +verRango():void
+    }
+class Participante{
+
+}
+
+class Mensaje{
+    -id:int
+    -marcaDeTiempo:Date
+    -mensaje:String
+    -estado:int
+    +cambiarEstado(estado:int):void
+}
+
+abstract class Rango{
+    -id:int
+    -nombre:String
+    -otorgarLogro(participante:Jugador):void
+}
+    class Plomo{}
+    class Estaño{}
+    class Cobre{}
+    class Bronce{}
+    class Plata{}
+    class Oro{}
+    class Platino{}
+    class Uranio{}
+
+class Sesion{
+        -id:int
+        -estado:boolean
+}
+
+abstract class Carta{
+    -numero:int
+    -color:int
+    *aplicarEfecto():void
+}
+    class CartaEspecial{}
+    class CartaNegra{}
+    class CartaColor{}
+
+abstract class Baraja{
+    *barajar():void
+    *sacarCarta():Carta
+    +verCantidadDeCartas():int
+}
+    class Mazo{}
+    class Pozo{}
+    class Mano{
+        -recibirCarta(nueva:Carta):void
+        +verCartas():void
+    }
+
+class Logro{
+    -id:int
+    -nombre:String
+    -descripcion:String
+}
+
+Juego "1" *-- "n" Jugador
+Juego "1" *-- "n" Partida
+Jugador "1" *-l- "1" Rango:Tiene
+Jugador "1" *-- "n" Mensaje:Envia
+Jugador "1" *-- "n" Mensaje:Recibe
+Jugador "1" *-- "n" Sesion:Inicia
+Jugador "1" *-- "n" Partida:Crea
+Jugador "1" *-- "n" Logro:Desbloquea
+Jugador <|-- Participante
+Participante "1" *-- "1" Mano
+Partida "1" *-- "2..4" Jugador:Participan
+Partida "1" *-- "1" Mazo
+Partida "1" *-- "1" Pozo
+Baraja "1" *-- "108" Carta:Contiene
+Baraja <|-- Mazo
+Baraja <|-- Pozo
+Baraja <|-- Mano
+Carta <|-- CartaColor
+Carta <|-- CartaNegra
+CartaColor <|-- CartaEspecial
+Rango "1" *-- "1" Logro:Otorga 
+Rango <|-- Plomo
+Plomo <|- Estaño
+Estaño <|-- Bronce
+Bronce <|-- Cobre
+Cobre <|-- Plata
+Plata <|-- Oro
+Oro <|-- Platino
+Platino <|-- Uranio
+
+
+@enduml
