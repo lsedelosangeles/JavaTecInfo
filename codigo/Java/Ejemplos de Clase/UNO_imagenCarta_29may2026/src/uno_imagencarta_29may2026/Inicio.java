@@ -22,10 +22,10 @@ public class Inicio extends javax.swing.JFrame {
     
     private void configurar(){
         this.setLayout(null);
-        Carta cartita = new Carta(0, 0, 0);
+        Carta cartita = new Carta(2, 0, 2);
         PanelCarta pc = new PanelCarta(cartita);
         
-        pc.setBounds(5,5,120,180);
+        
         this.getContentPane().add(pc);
         revalidate();
         repaint();

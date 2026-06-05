@@ -16,6 +16,9 @@ import javax.swing.JPanel;
  */
 public class PanelCarta extends JPanel {
     private Carta carta;
+    
+    int ancho = 40;
+    int alto = 60;
 
     public PanelCarta(Carta carta) {
         this.carta = carta;
@@ -24,20 +27,18 @@ public class PanelCarta extends JPanel {
     
     
     private void configurar(){
-        this.setSize(80, 150);
-        this.setBackground(Color.red);
+        this.setLayout(null);
+        this.setSize(ancho, alto);
         
-        int id = carta.verId();
-        int num = carta.verNumero();
-        int color = carta.verColor();
+        //this.setBackground(Color.red);
+        
+        
         String ruta = "/imagen/"
-                + id + "-" 
-                + num + "-" 
-                + color +".png";
-        
+                + carta.ruta();
+        //String ruta2 = "/imagen/0-0-0.png";
         ImageIcon imagenPNG;
         JLabel imagen;
-        
+        System.out.println(ruta);
         try {
             imagenPNG = new ImageIcon(
                     getClass().getResource(ruta)
@@ -46,11 +47,11 @@ public class PanelCarta extends JPanel {
             Image imagenPNGchica = 
                     imagenPNG.getImage().
                     getScaledInstance
-                    (120, 180, Image.SCALE_SMOOTH);
+                    (ancho, alto, Image.SCALE_SMOOTH);
             
             imagenPNG = new ImageIcon(imagenPNGchica);
-            
             imagen = new JLabel(imagenPNG);
+            imagen.setBounds(0, 0, ancho, alto);
             add(imagen);
         } 
         catch (Exception error) {

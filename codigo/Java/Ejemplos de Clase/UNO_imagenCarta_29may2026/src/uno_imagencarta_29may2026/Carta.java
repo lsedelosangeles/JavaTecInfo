@@ -14,7 +14,7 @@ public class Carta {
     private int numero = 0;
     private int color = 0;
     
-    public Carta(int numero, int color, int id){
+    public Carta(int id, int numero, int color){
         this.numero = numero;
         this.color = color;
         this.id = id;
@@ -94,4 +94,7 @@ public class Carta {
         return this.id + " - " + verCarta();
     }
     
+    public String ruta(){
+        return id+"-"+numero+"-"+color+".png";
+    }
 }
