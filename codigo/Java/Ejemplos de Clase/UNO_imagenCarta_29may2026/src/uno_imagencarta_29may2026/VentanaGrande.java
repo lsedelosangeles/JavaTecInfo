@@ -23,7 +23,8 @@ public class VentanaGrande extends JFrame{
     
     
     private void configurar(){
-        setSize(1380, 250);
+        setSize(1380, 500);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         GridLayout cuadricula = new GridLayout(4,27,2,2);
         getContentPane().setLayout(cuadricula);
         setLocationRelativeTo(null);
@@ -34,6 +35,7 @@ public class VentanaGrande extends JFrame{
             PanelCarta cartita = new PanelCarta(carta);
             getContentPane().add(cartita);
         }
+        pack();
         
     }
     
