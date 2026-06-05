@@ -20,17 +20,15 @@ public class IAita {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Escribe un número");
         
-        
-        
         int entrada = 0;//teclado.nextInt();
         
         try {
             entrada = teclado.nextInt();
             if (entrada < 10) {
-            System.out.println("Ese número es menor que 10");
-        } else {
-            System.out.println("Ese número no es menor que 10");
-        }
+                System.out.println("Ese número es menor que 10");
+            } else {
+                System.out.println("Ese número no es menor que 10");
+            }
         } catch (Exception e) {
             System.out.println("Eso no es un número");
         }
