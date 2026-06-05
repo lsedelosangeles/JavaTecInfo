@@ -29,6 +29,7 @@ public class VentanaGrande extends JFrame{
         setLocationRelativeTo(null);
         setVisible(true);
         
+        
         for (Carta carta : baraja.getCartas()) {
             PanelCarta cartita = new PanelCarta(carta);
             getContentPane().add(cartita);
