@@ -17,8 +17,8 @@ import javax.swing.JPanel;
 public class PanelCarta extends JPanel {
     private Carta carta;
     
-    int ancho = 40;
-    int alto = 60;
+    int ancho = 70;
+    int alto = 100;
 
     public PanelCarta(Carta carta) {
         this.carta = carta;
@@ -33,12 +33,11 @@ public class PanelCarta extends JPanel {
         //this.setBackground(Color.red);
         
         
-        String ruta = "/imagen/"
-                + carta.ruta();
+        String ruta = carta.ruta();
         //String ruta2 = "/imagen/0-0-0.png";
         ImageIcon imagenPNG;
         JLabel imagen;
-        System.out.println(ruta);
+        
         try {
             imagenPNG = new ImageIcon(
                     getClass().getResource(ruta)

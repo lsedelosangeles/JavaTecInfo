@@ -31,7 +31,7 @@ public class Baraja {
                     (contador, numero,color);
             } else {
                 x = new Carta
-                    (numero, Juego.COLOR_NEGRO, contador);
+                    (contador, numero, Juego.COLOR_NEGRO);
             }
 
             //Agregamos la carta a la baraja
@@ -56,7 +56,7 @@ public class Baraja {
         
         for (int i = 60; i < 108; i++) {
             Carta x = 
-               new Carta(numero, color, i);
+               new Carta(i,numero, color);
             
             if (numero < 12) {
                 numero++;

@@ -95,6 +95,6 @@ public class Carta {
     }
     
     public String ruta(){
-        return id+"-"+numero+"-"+color+".png";
+        return "/imagen/"+id+"-"+numero+"-"+color+".png";
     }
 }
