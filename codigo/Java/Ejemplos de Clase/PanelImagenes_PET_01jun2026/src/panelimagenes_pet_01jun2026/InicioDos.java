@@ -4,7 +4,6 @@
  */
 package panelimagenes_pet_01jun2026;
 
-import java.awt.HeadlessException;
 import java.awt.Image;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
