@@ -17,7 +17,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 /**
@@ -52,7 +54,12 @@ public class Ejercicio extends JFrame {
     private JLabel lblNombre;
     private JLabel lblHP;
     private JLabel lblMP;
-
+    
+    private JScrollPane pnlAreaDeJuego;
+    private JPanel pnlCuadricula;
+    
+    
+    
     public Ejercicio() {
         configurar();
     }
@@ -161,6 +168,24 @@ public class Ejercicio extends JFrame {
         btnEquipo = new JButton(agregarImagen("/imagen/potion.png", 80, 80));
         latInferiorDerBotonera.add(btnEquipo);
 
+        pnlCuadricula = new JPanel( new GridLayout(52, 52) );
+        pnlCuadricula.setPreferredSize(new Dimension(5200, 5200));//Size(5200, 5200);
+        
+        for (int i = 0; i < 52; i++) {
+            for (int j = 0; j < 52; j++) {
+                JPanel panel= new JPanel();
+                panel.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+                JLabel id = new JLabel(i + "," + j);
+                panel.add(id);
+                pnlCuadricula.add(panel);
+            }
+        }
+        pnlAreaDeJuego = new JScrollPane(pnlCuadricula);
+        pnlAreaDeJuego.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        pnlAreaDeJuego.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        
+        latDerechoJuego.add(pnlAreaDeJuego, BorderLayout.CENTER);
+        
         setMaximumSize(new Dimension(ancho, alto));
         setResizable(false);
         getContentPane().validate();
