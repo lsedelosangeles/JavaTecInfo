@@ -33,10 +33,14 @@ public class Juego extends JFrame {
      */
     public Juego(String titulo) {
         configurar();
-
+        
+        //Se evalúa el título de la ventana y se lo establece
         titulo = titulo.strip();
         if (titulo.isEmpty()) {
             setTitle("El Juego");
+        }
+        else{
+            setTitle(titulo);
         }
     }
 

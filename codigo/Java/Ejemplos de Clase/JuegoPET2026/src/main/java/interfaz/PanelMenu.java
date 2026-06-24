@@ -4,6 +4,7 @@
  */
 package interfaz;
 
+import com.ejemplo.juegopet2026.herramientas.Imagen;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -24,6 +25,8 @@ public class PanelMenu extends JPanel{
     private JButton btnUsuario;
     private Font fuente;
     
+    private Imagen imagen = new Imagen();
+    
     public PanelMenu(int alto) {
         this.alto = alto;
         configurar();
@@ -40,13 +43,20 @@ public class PanelMenu extends JPanel{
             fuente = new Font("Helvetica",Font.BOLD, 20);
         }
         
-        btnMenu = new JButton("Menú");
+        btnMenu = new JButton("Menú", imagen.agregarImagen("/imagen/menu.png", 50, 50));
         btnMenu.setFont(fuente);
-        btnPersonaje = new JButton("Personaje");
+        btnMenu.setIconTextGap(50);
+        
+        btnPersonaje = new JButton("Personaje", imagen.agregarImagen("/imagen/silueta.png", 50, 50));
+        btnPersonaje.setIconTextGap(50);
         btnPersonaje.setFont(fuente);
-        btnItems = new JButton("Items");
+        
+        btnItems = new JButton("Items", imagen.agregarImagen("/imagen/mochila.png", 50, 50));
+        btnItems.setIconTextGap(50);
         btnItems.setFont(fuente);
-        btnUsuario = new JButton("Usuario");
+        
+        btnUsuario = new JButton("Usuario", imagen.agregarImagen("/imagen/usuario.png", 50, 50));
+        btnUsuario.setIconTextGap(50);
         btnUsuario.setFont(fuente);
         
         add(btnMenu);
