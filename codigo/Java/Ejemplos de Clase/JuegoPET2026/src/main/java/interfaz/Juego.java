@@ -26,7 +26,9 @@ public class Juego extends JFrame {
     
     private JPanel pnlIzquierdo;
     private JPanel pnlDerecho;
+    
     private PanelMenu pnlMenu;
+    private PanelChat pnlChat;
 
     /**
      * Crea y configura la ventana del juego
@@ -72,7 +74,11 @@ public class Juego extends JFrame {
         //  Se agrega el panel al Content pane de este JFrame.
         getContentPane().add(pnlIzquierdo, BorderLayout.LINE_START);
         
-        pnlMenu = new PanelMenu(alto/3);
+        //Paneles personalizados
+        pnlChat = new PanelChat((int)(alto*0.7));
+        pnlIzquierdo.add(pnlChat, BorderLayout.PAGE_START);
+        
+        pnlMenu = new PanelMenu((int)(alto*0.25));
         pnlIzquierdo.add(pnlMenu, BorderLayout.PAGE_END);
         
         // Derecho: Tablero y Barra de Estado/Botonera

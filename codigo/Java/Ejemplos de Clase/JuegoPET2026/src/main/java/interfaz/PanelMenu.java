@@ -4,6 +4,7 @@
  */
 package interfaz;
 
+import com.ejemplo.juegopet2026.Fuentes;
 import com.ejemplo.juegopet2026.herramientas.Imagen;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -24,6 +25,7 @@ public class PanelMenu extends JPanel{
     private JButton btnItems;
     private JButton btnUsuario;
     private Font fuente;
+    Fuentes fuentes = new Fuentes();
     
     private Imagen imagen = new Imagen();
     
@@ -36,28 +38,21 @@ public class PanelMenu extends JPanel{
         setLayout(new GridLayout(4, 1));
         setPreferredSize( new Dimension(0, alto) );
         
-        try {
-            fuente = new Font("Arial",Font.BOLD, 20);
-        } catch (Exception e) {
-            System.err.println("ERROR de Fuente: " + e.getMessage());
-            fuente = new Font("Helvetica",Font.BOLD, 20);
-        }
-        
         btnMenu = new JButton("Menú", imagen.agregarImagen("/imagen/menu.png", 50, 50));
-        btnMenu.setFont(fuente);
+        btnMenu.setFont(fuentes.fntBotonesMd);
         btnMenu.setIconTextGap(50);
         
         btnPersonaje = new JButton("Personaje", imagen.agregarImagen("/imagen/silueta.png", 50, 50));
         btnPersonaje.setIconTextGap(50);
-        btnPersonaje.setFont(fuente);
+        btnPersonaje.setFont(fuentes.fntBotonesMd);
         
         btnItems = new JButton("Items", imagen.agregarImagen("/imagen/mochila.png", 50, 50));
         btnItems.setIconTextGap(50);
-        btnItems.setFont(fuente);
+        btnItems.setFont(fuentes.fntBotonesMd);
         
         btnUsuario = new JButton("Usuario", imagen.agregarImagen("/imagen/usuario.png", 50, 50));
         btnUsuario.setIconTextGap(50);
-        btnUsuario.setFont(fuente);
+        btnUsuario.setFont(fuentes.fntBotonesMd);
         
         add(btnMenu);
         add(btnPersonaje);
