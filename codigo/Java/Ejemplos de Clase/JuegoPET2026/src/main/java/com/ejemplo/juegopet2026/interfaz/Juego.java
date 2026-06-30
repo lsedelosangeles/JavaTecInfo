@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package interfaz;
+package com.ejemplo.juegopet2026.interfaz;
 
+import com.ejemplo.juegopet2026.juego.Partida;
+import com.ejemplo.juegopet2026.juego.Usuario;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -17,6 +19,8 @@ import javax.swing.JPanel;
  * @author sebastian
  */
 public class Juego extends JFrame {
+    
+    Partida partida = null;
 
     private Dimension resolucion = Toolkit.getDefaultToolkit().getScreenSize();
     private int alto = (int) (resolucion.height * 0.85);

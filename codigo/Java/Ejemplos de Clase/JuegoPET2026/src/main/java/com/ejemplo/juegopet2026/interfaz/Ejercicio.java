@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package interfaz;
+package com.ejemplo.juegopet2026.interfaz;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

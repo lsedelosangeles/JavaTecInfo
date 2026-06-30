@@ -2,21 +2,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package interfaz;
+package com.ejemplo.juegopet2026.interfaz;
 
 import com.ejemplo.juegopet2026.Fuentes;
 import com.ejemplo.juegopet2026.herramientas.Imagen;
+import com.ejemplo.juegopet2026.juego.Partida;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 /**
  *
  * @author sebastian
  */
 public class PanelMenu extends JPanel{
+    
+    private Partida partida;
     
     private int alto;
 
@@ -53,6 +61,14 @@ public class PanelMenu extends JPanel{
         btnUsuario = new JButton("Usuario", imagen.agregarImagen("/imagen/usuario.png", 50, 50));
         btnUsuario.setIconTextGap(50);
         btnUsuario.setFont(fuentes.fntBotonesMd);
+        btnUsuario.addActionListener(
+                new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                abrirMenuUsuario();
+            }
+                }
+        );
         
         add(btnMenu);
         add(btnPersonaje);
@@ -61,6 +77,30 @@ public class PanelMenu extends JPanel{
         
         revalidate();
         repaint();
+    }
+    
+    private void abrirMenuUsuario(){
+        //MenuUsuario mu = new MenuUsuario( (JFrame)SwingUtilities.getWindowAncestor(this) );
+        //mu.setLocationRelativeTo(this);
+        //mu.setVisible(true);
+    }
+    
+    
+    /**
+     * Chequea el estado de la partida
+     * @return 
+     */
+    private boolean chequearPartida(){
+        boolean resultado = false;
+        
+        if (partida!=null) {
+            resultado = true;
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Inicia una partida primero", "Atención", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        return resultado;
     }
     
 }
