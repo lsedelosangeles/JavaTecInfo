@@ -4,7 +4,9 @@
  */
 package com.ejemplo.juegopet2026.sistema.cliente;
 
+import com.ejemplo.juegopet2026.juego.Usuario;
 import com.ejemplo.juegopet2026.sistema.mensajes.Mensaje;
+import com.ejemplo.juegopet2026.sistema.mensajes.SolicitudesCliente;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,8 +27,11 @@ public class Cliente implements Runnable{
     private PrintWriter salida;
     private BufferedReader entrada;
     
+    private SolicitudesCliente solicitudes;
+    
     private volatile boolean activo;
     private UUID sesion;
+    private Usuario usuario;
 
     public Cliente(String urlServidor, int puertoServidor) {
         this.urlServidor = urlServidor;
@@ -68,6 +73,11 @@ public class Cliente implements Runnable{
     
     
     
+    public void login(String nombreUsuario){
+        enviarSolicitud( solicitudes.loginUsuario(nombreUsuario) );
+    }
+    
+    
     
     /**
      * Dentro del método run() se implementan las acciones que se pasan al hilo secundario, que se inician al ejecutar s
@@ -91,7 +101,6 @@ public class Cliente implements Runnable{
             System.err.println("ERROR (run): " + e.getMessage());
         }
     }
-
     
     public void desconectar() {
         activo = false;
@@ -104,6 +113,8 @@ public class Cliente implements Runnable{
             e.printStackTrace();
         }
     }
+    
+    
     
     
     /**

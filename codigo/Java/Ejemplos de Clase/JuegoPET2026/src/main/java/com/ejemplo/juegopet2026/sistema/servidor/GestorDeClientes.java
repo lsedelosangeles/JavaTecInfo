@@ -74,11 +74,13 @@ public class GestorDeClientes implements Runnable{
     }
     
     public void cerrarConexiones(){
-        Mensaje solicitud = new Mensaje();
+        System.out.println("Cerrando conexiones... cliente");
+        Mensaje solicitudC = new Mensaje();
         Informacion info = new Informacion();
+        
         info.setAccion(Informacion.LOGOUT);
-        solicitud.setDatos(info);
-        enviarMensaje(solicitud);
+        solicitudC.setDatos(info);
+        enviarMensaje(solicitudC);
         
         try {
             entrada.close();

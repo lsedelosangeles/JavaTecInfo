@@ -9,38 +9,38 @@ import com.ejemplo.juegopet2026.juego.Usuario;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.ArrayList;
+import java.util.Enumeration;
 
 /**
  *
  * @author sebastian
  */
-public class Servidor implements Runnable{
+public class Servidor implements Runnable {
+
     //Atributos del sistema de red:
     // Objetos para recibir las conexiones de clientes
     private ServerSocket conexionServidor;
     private int puerto;  // Puerto de red para recibir las conexiones
-    
+
     private volatile boolean activo = false; //  Este boolean permitirá controlar el bucle principal del servidor
     // El modificador 'volatile' asegura que el objeto sea visible entre los distintos hilos de ejecución iniciados
-    
+
     private BufferedReader entrada; // Objeto para recibir solicitudes de los clientes
     private PrintWriter salida; // Objeto para enviar las respuestas del servidor
-    
+
     private Thread hilo; // Permite derivar cada conexión a su propio hilo de ejecución
-    
+
     private Inicio ventana;   //Referencia a la ventana para visualizar los eventos del servidor
-    
+
     //Atributos del sistema del juego
     private ControladorDeJuego controlador;  // Objeto que contiene la lógica base del juego y que gestiona las acciones del jugador
-    
-    
-    
-    
-    
+
     public Servidor(int puerto, Inicio ventana) {
         //Establecemos el puerto de conexión
         this.puerto = puerto;
@@ -48,43 +48,42 @@ public class Servidor implements Runnable{
         //Iniciamos el controlador
         this.controlador = new ControladorDeJuego(this);
     }
-    
-    
+
     public void iniciar() throws IOException {
         activo = true;
-        
+
         ventana.registrarMensaje("Servidor ejecutándose en el puerto " + puerto);
+        mostrarIp();
         
         while (activo) {
             // Iniciamos las conexiones
             conexionServidor = new ServerSocket(puerto);  // Conexión del servidor a la red
             Socket conexionCliente = conexionServidor.accept();  // Conexión del cliente al servidor.
-            
+
             // Si hay una conexión...
             GestorDeClientes gestorClientes = new GestorDeClientes(conexionCliente, controlador);
-            ventana.registrarMensaje("Conexión entrante: " +  conexionCliente.getInetAddress().getCanonicalHostName());
+            ventana.registrarMensaje("Conexión entrante: " + conexionCliente.getInetAddress().getCanonicalHostName());
             
-            
+            controlador.agregarCliente(gestorClientes);
             // Creamos un hilo por cada cliente y le pasamos el controlador
             new Thread(gestorClientes).start();
         }
     }
-    
-    
+
     /**
      * Detiene el servidor
      */
-    public void detener(){
+    public void detener() {
         activo = false;
         ventana.registrarMensaje("ATENCIÓN: Cerrando el servidor");
         ventana.registrarMensaje("Cerrando conexiones a los clientes...");
-        
+
         try {
-            
+
             controlador.cerrarConexiones();
-            
+            System.out.println("Cerrando conexiones... servidor");
             ventana.registrarMensaje("Cerrando la conexión del servidor...");
-            if(conexionServidor != null){
+            if (conexionServidor != null) {
                 conexionServidor.close();
             }
             ventana.registrarMensaje("Servidor cerrado");
@@ -93,47 +92,72 @@ public class Servidor implements Runnable{
             ventana.registrarMensaje("Detalle: " + e.getMessage());
         }
     }
-    
-    
+
+    private void mostrarIp() {
+        // Source - https://stackoverflow.com/q/9481865
+        // Posted by sasidhar, modified by community. See post 'Timeline' for change history
+        // Retrieved 2026-07-03, License - CC BY-SA 3.0
+        ventana.registrarMensaje("IPs del Servidor:");
+        try {
+            Enumeration interfacesDeRed = NetworkInterface.getNetworkInterfaces();
+
+            while (interfacesDeRed.hasMoreElements()) {
+                NetworkInterface interfazDeRed = (NetworkInterface) interfacesDeRed.nextElement();
+                String nombreDeInterfaz = interfazDeRed.getDisplayName();
+                ventana.registrarMensaje(" - " + nombreDeInterfaz + ": ");
+                Enumeration listaDeIPs = interfazDeRed.getInetAddresses();
+
+                while (listaDeIPs.hasMoreElements()) {
+                    InetAddress ip = (InetAddress) listaDeIPs.nextElement();
+                    ventana.registrarMensaje("\t" + ip.getCanonicalHostName());
+                }
+            }
+        } catch (SocketException e) {
+            System.err.println("ERROR al leer interfaces de red: " + e.getLocalizedMessage());
+        }
+
+    }
+
     private void liberarRecursos() {
         ventana.registrarMensaje("Limpiando y cerrando flujos de datos...");
         try {
-            if (entrada != null) entrada.close();
-            if (salida != null) salida.close();
-            //if (socketCliente != null && !socketCliente.isClosed()) socketCliente.close();
-            if (conexionServidor != null && !conexionServidor.isClosed()) conexionServidor.close();
+            if (entrada != null) {
+                entrada.close();
+            }
+            if (salida != null) {
+                salida.close();
+            }
+           
+            if (conexionServidor != null && !conexionServidor.isClosed()) {
+                conexionServidor.close();
+            }
             System.out.println("Servidor completamente cerrado y seguro.");
         } catch (IOException e) {
             System.out.println("Error liberando recursos: " + e.getMessage());
         }
     }
-    
-   /**
-    * Redirije mensajes hacia la ventana
-    * @param mensaje 
-    */
-   public void registrarMensaje(String mensaje){
-       ventana.registrarMensaje(mensaje);
-   }
-    
+
+    /**
+     * Redirije mensajes hacia la ventana
+     *
+     * @param mensaje
+     */
+    public void registrarMensaje(String mensaje) {
+        ventana.registrarMensaje(mensaje);
+    }
+
     @Override
-    public void run(){
+    public void run() {
         try {
             iniciar();
-        } 
-        catch (SocketException se){
+        } catch (SocketException se) {
             ventana.registrarMensaje("Se ha cerrado la conexión del servidor.");
             ventana.registrarMensaje("Detalle: " + se.getMessage() + "\n" + se.getLocalizedMessage());
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             ventana.registrarMensaje("ERROR: " + ex.getMessage());
-        }
-        finally{
+        } finally {
             liberarRecursos();
         }
     }
-    
-    
-    
-    
+
 }
