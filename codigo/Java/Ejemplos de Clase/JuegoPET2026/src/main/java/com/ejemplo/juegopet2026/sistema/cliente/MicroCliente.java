@@ -21,12 +21,7 @@ public class MicroCliente {
         cliente = new Cliente("192.168.2.58", 6666);
         cliente.iniciarConexion();
         
-        Mensaje solicitud = new Mensaje();
-        Informacion info = new Informacion();
-        info.setAccion(Informacion.LOGIN);
-        solicitud.setDatos(info);
-        
-        cliente.enviarSolicitud(solicitud);
+        cliente.login("fulano");
         
         Mensaje m = new Mensaje();
         Informacion i  = new Informacion();

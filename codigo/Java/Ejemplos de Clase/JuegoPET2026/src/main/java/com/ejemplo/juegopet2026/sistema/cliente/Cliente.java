@@ -27,7 +27,7 @@ public class Cliente implements Runnable{
     private PrintWriter salida;
     private BufferedReader entrada;
     
-    private SolicitudesCliente solicitudes;
+    private SolicitudesCliente solicitudes = new SolicitudesCliente();
     
     private volatile boolean activo;
     private UUID sesion;
