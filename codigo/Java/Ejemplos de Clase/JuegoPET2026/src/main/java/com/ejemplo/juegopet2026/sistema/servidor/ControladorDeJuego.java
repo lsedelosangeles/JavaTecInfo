@@ -51,8 +51,12 @@ public class ControladorDeJuego {
                 if (usuarioCliente != null) {
                     UUID sesion = UUID.randomUUID();
                     info.setAccion(Informacion.LOGIN_OK);
-                    info.setDatos( "idSesion:"+sesion.toString() );
+                    info.setDatos( 
+                            "idSesion:" + sesion.toString() + 
+                            ":idUsuario:" + usuarioCliente.getId() +
+                            ":nombreUsuario:" + nombreUsuario);
                     cliente.setSesion(sesion);
+                    
                 }
                 else{
                     info.setAccion(Informacion.LOGIN_ERROR);

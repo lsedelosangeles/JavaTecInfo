@@ -4,6 +4,7 @@
  */
 package com.ejemplo.juegopet2026.sistema.cliente;
 
+import com.ejemplo.juegopet2026.juego.Usuario;
 import com.ejemplo.juegopet2026.sistema.mensajes.Informacion;
 import com.ejemplo.juegopet2026.sistema.mensajes.Mensaje;
 import com.google.gson.Gson;
@@ -40,8 +41,15 @@ public class InterpreteCliente {
         
         switch (accion) {
             case Informacion.LOGIN_OK:
-                String idSesion = recibido.getInformacion().getDatos().split(":")[1];
+                String[] datos = recibido.getInformacion().getDatos().split(":");
+                
+                int idUsuario = Integer.parseInt(datos[3]);
+                String nombreUsuario = datos[5];
+                cliente.setUsuario( new Usuario(nombreUsuario, idUsuario) );
+                        
+                String idSesion = datos[1];
                 UUID sesion = UUID.fromString(idSesion);
+                
                 cliente.setSesion(sesion);
                 
                 break;

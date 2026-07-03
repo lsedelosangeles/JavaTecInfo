@@ -152,6 +152,20 @@ public class Cliente implements Runnable{
         this.sesion = sesion;
         System.out.println("Sesión establecida a " + this.sesion.toString());
     }
+
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
     
     
     
