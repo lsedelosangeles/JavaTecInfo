@@ -1,0 +1,13 @@
+@startuml "Esquema de Componentes del Sistema"
+
+[Servidor] as servidor
+[Gestor de Clientes] as gestorClientes
+[Controlador de Juego] as controladorJuego
+
+servidor --> controladorJuego
+servidor --> gestorClientes
+
+
+
+
+@enduml

@@ -27,7 +27,7 @@ public class Fuentes {
         fntBotonesGd = cargarFuente("/fuentes/CarterOne-Regular.ttf", 30);
         fntChat = new Font("Arial", Font.PLAIN, 20);
         fntChatUsuario = new Font("Arial", Font.BOLD, 20);
-        fntTerminalServidor = cargarFuente("/fuentes/Lekton-Regular.ttf", 14);
+        fntTerminalServidor = cargarFuente("/fuentes/Lekton-Regular.ttf", 20);
     }
     
     private Font cargarFuente(String ruta, float tamanio){

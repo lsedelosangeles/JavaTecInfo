@@ -5,13 +5,16 @@
 package com.ejemplo.juegopet2026.interfaz.servidor;
 
 import com.ejemplo.juegopet2026.Fuentes;
-import com.ejemplo.juegopet2026.sistema.Servidor;
+import com.ejemplo.juegopet2026.sistema.servidor.Servidor;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -40,11 +43,12 @@ public class Inicio extends JFrame {
 
     public Inicio() {
         configurar();
+        registrarMensaje("Listo");
     }
 
     private void configurar() {
         setTitle("Panel de Control del Servidor");
-        setSize(600, 400);
+        setSize(800, 600);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -64,12 +68,14 @@ public class Inicio extends JFrame {
         //Panel Superior para mostrar el estado del servidor
         pnlEstado = new JPanel(new FlowLayout(FlowLayout.LEFT));
         estadoLabel = new JLabel("Estado: APAGADO");
+        estadoLabel.setFont(fuentes.fntBotonesMd);
         estadoLabel.setForeground(Color.RED);
         pnlEstado.add(estadoLabel);
         add(pnlEstado, BorderLayout.NORTH);
 
         pnlBotones = new JPanel();
         btnIniciar = new JButton("Iniciar Servidor");
+        btnIniciar.setFont(fuentes.fntBotonesCh);
         btnIniciar.addActionListener(
                 new ActionListener() {
             @Override
@@ -80,11 +86,12 @@ public class Inicio extends JFrame {
 
         btnDetener = new JButton("Detener Servidor");
         btnDetener.setEnabled(false);  //NOTA: El boton 'Detener Servidor se inicia deshabilitado ya que no tiene uso si el servidor no esta iniciado'
+        btnDetener.setFont(fuentes.fntBotonesCh);
         btnDetener.addActionListener(
                 new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                detenerServidor();
             }
         }
         );
@@ -99,9 +106,9 @@ public class Inicio extends JFrame {
      * Permite iniciar el servidor
      */
     private void iniciarServidor() {
-        //registrarMensaje("Iniciando el servidor en el puerto 6666...");
+        registrarMensaje("Iniciando el servidor...");
         // Aquí instancian e inician el hilo de su servidor
-        servidor = new Servidor(6666, Inicio.this);
+        servidor = new Servidor(6666, this);
         new Thread(servidor).start();
 
         estadoLabel.setText("Estado: EN LÍNEA");
@@ -112,7 +119,12 @@ public class Inicio extends JFrame {
     
     
     private void detenerServidor(){
-        //resgistrar
+        servidor.detener();
+        
+        estadoLabel.setText("Estado: APAGADO");
+        estadoLabel.setForeground(Color.RED);
+        btnIniciar.setEnabled(true);
+        btnDetener.setEnabled(false);
     }
 
     /**
@@ -126,7 +138,10 @@ public class Inicio extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                areaTerminal.append(mensaje + "\n");
+                LocalDateTime ahora = LocalDateTime.now();
+                DateTimeFormatter formatoTiempo = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+                String marcaDeTiempo = ahora.format(formatoTiempo);
+                areaTerminal.append(marcaDeTiempo + ": " + mensaje + "\n");
 
                 // Mueve el scroll baje automáticamente al texto nuevo que agregamos
                 areaTerminal.setCaretPosition(areaTerminal.getDocument().getLength());
