@@ -4,6 +4,7 @@
  */
 package com.ejemplo.juegopet2026.sistema.servidor;
 
+import com.ejemplo.juegopet2026.juego.Usuario;
 import com.ejemplo.juegopet2026.sistema.mensajes.Informacion;
 import com.ejemplo.juegopet2026.sistema.mensajes.Mensaje;
 import com.google.gson.Gson;
@@ -18,14 +19,15 @@ import java.util.UUID;
  * Esta clase representa a un Cliente conectado al sistema
  * @author sebastian
  */
-public class GestorDeClientes implements Runnable{
+public class ClienteConectado implements Runnable{
     private Socket conexion;
     private BufferedReader entrada;
     private PrintWriter salida;
-    private ControladorDeJuego controlador;
+    private Controlador controlador;
     private UUID sesion = null;
+    private Usuario usuario;
 
-    public GestorDeClientes(Socket conexion, ControladorDeJuego controlador) throws IOException{
+    public ClienteConectado(Socket conexion, Controlador controlador) throws IOException{
         this.conexion = conexion;
         this.controlador = controlador;
         
@@ -44,7 +46,7 @@ public class GestorDeClientes implements Runnable{
             while ( (mensajeEntrante = entrada.readLine()) != null ) {                
                 controlador.procesarSolicitud(mensajeEntrante, this);
                 System.out.println("--> " + mensajeEntrante);
-                //enviarMensaje("recibido");
+                
             }
             
         } catch (IOException e) {
@@ -56,20 +58,27 @@ public class GestorDeClientes implements Runnable{
     }
     
     /**
-     * Envía las respuestas del servidor al cliente
+     * Envía las respuestas del servidor al cliente, sin formatear a JSON
      * @param mensajeSaliente 
      */
     public void enviarMensaje(String mensajeSaliente){
         salida.println(mensajeSaliente);
     }
     
+    /**
+     * Envía las respuestas del servidor al cliente, formatéandolo a JSON 
+     * @param mensajeSaliente 
+     */
     public void enviarMensaje(Mensaje mensajeSaliente){
         String mensaje = new Gson().toJson(mensajeSaliente, Mensaje.class);
         salida.println(mensaje);
     }
     
-    
-    public String ipCliente(){
+    /**
+     * Muestra la IP desde donde se conectó el cliente
+     * @return 
+     */
+    public String verIP(){
         return conexion.getInetAddress().getCanonicalHostName();
     }
     
@@ -103,5 +112,19 @@ public class GestorDeClientes implements Runnable{
      */
     public void setSesion(UUID sesion) {
         this.sesion = sesion;
+    }
+
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

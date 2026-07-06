@@ -8,8 +8,13 @@ package com.ejemplo.juegopet2026.sistema.mensajes;
  *
  * @author sebastian
  */
-public class SolicitudesServidor {
-    
-    
-    
+public class Solicitudes {
+
+    public Mensaje crearMensaje() {
+        Mensaje msj = new Mensaje();
+        Informacion info = new Informacion();
+        msj.setDatos(info);
+        return msj;
+    }
+
 }

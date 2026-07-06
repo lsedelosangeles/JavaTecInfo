@@ -5,17 +5,12 @@
 package com.ejemplo.juegopet2026.interfaz.servidor;
 
 import com.ejemplo.juegopet2026.Fuentes;
-import com.ejemplo.juegopet2026.juego.Usuario;
-import com.ejemplo.juegopet2026.sistema.servidor.ClienteConectado;
-import com.ejemplo.juegopet2026.sistema.servidor.Servidor;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -47,7 +42,6 @@ public class Inicio extends JFrame {
     private JButton btnDetener;
     private JLabel estadoLabel;
 
-    private Servidor servidor;
     private DefaultListModel<String> listaDeUsuarios;
 
     private Fuentes fuentes = new Fuentes();
@@ -135,9 +129,7 @@ public class Inicio extends JFrame {
      */
     private void iniciarServidor() {
         registrarMensaje("Iniciando el servidor...");
-        // Aquí instancian e inician el hilo de su servidor
-        servidor = new Servidor(6666, this);
-        new Thread(servidor).start();
+
 
         estadoLabel.setText("Estado: EN LÍNEA");
         estadoLabel.setForeground(Color.BLUE);
@@ -146,7 +138,6 @@ public class Inicio extends JFrame {
     }
 
     private void detenerServidor() {
-        servidor.detener();
 
         estadoLabel.setText("Estado: APAGADO");
         estadoLabel.setForeground(Color.RED);
@@ -154,24 +145,7 @@ public class Inicio extends JFrame {
         btnDetener.setEnabled(false);
     }
 
-    /**
-     * Actualiza la lista de usuarios conectados al servidor
-     * @param clientes 
-     */
-    public void actualizarListaDeUsuarios(ArrayList<ClienteConectado> clientes) {
-        listaDeUsuarios.removeAllElements();
-
-        if (clientes.size() > 0) {
-            for (ClienteConectado cliente : clientes) {
-                listaDeUsuarios.addElement(cliente.getUsuario().getNombre());
-            }
-        }
-        else{
-            listaDeUsuarios.addElement("No hay usuarios conectados");
-        }
-
-        lstUsuarios = new JList<>(listaDeUsuarios);
-    }
+    
 
     /**
      * Permite agregar, de forma segura, los mensajes del servidor al área de

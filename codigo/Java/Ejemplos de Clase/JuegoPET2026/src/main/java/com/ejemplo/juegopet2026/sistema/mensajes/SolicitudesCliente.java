@@ -4,23 +4,48 @@
  */
 package com.ejemplo.juegopet2026.sistema.mensajes;
 
+import com.ejemplo.juegopet2026.juego.Usuario;
+
 /**
  *
  * @author sebastian
  */
-public class SolicitudesCliente {
+public class SolicitudesCliente extends Solicitudes{
+    
     
     public Mensaje loginUsuario(String nombre){
-        Mensaje msj = new Mensaje();
-        Informacion info = new Informacion();
+        Mensaje msj = crearMensaje();
         
-        info.setAccion(Informacion.LOGIN);
-        info.setDatos("usuario:"+nombre);
+        msj.getInformacion().setAccion(Informacion.LOGIN);
+        msj.getInformacion().setDatos("usuario:"+nombre);
         
-        msj.setUsuario(0);
-        msj.setDatos(info);
+        msj.setUsuario(-1);
         
         return msj;
     }
     
+    public Mensaje enviarMensaje(String mensaje, Usuario remitente){
+        Mensaje msj = crearMensaje();
+        
+        msj.setUsuario(remitente.getId());
+        msj.getInformacion().setAccion(Informacion.MENSAJE);
+        msj.getInformacion().setDatos("mensaje:"+mensaje);
+        
+        return msj;
+    }
+    
+    
+    /**
+     * Solicita el cierre de la sesión
+     * @param remitente
+     * @return 
+     */
+    public Mensaje logout(Usuario remitente){
+        Mensaje msj = crearMensaje();
+        
+        msj.setUsuario(remitente.getId());
+        msj.getInformacion().setAccion(Informacion.LOGOUT);
+        
+        return msj;
+    }
 }

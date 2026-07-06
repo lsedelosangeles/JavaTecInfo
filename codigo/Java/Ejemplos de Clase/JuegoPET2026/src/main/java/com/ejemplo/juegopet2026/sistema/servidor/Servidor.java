@@ -39,29 +39,39 @@ public class Servidor implements Runnable {
     private Inicio ventana;   //Referencia a la ventana para visualizar los eventos del servidor
 
     //Atributos del sistema del juego
-    private ControladorDeJuego controlador;  // Objeto que contiene la lógica base del juego y que gestiona las acciones del jugador
+    private Controlador controlador;  // Objeto que contiene la lógica base del juego y que gestiona las acciones del jugador
 
+    
+    /**
+     * Permite crear el servidor y establecer sus atributos
+     * @param puerto
+     * @param ventana 
+     */
     public Servidor(int puerto, Inicio ventana) {
         //Establecemos el puerto de conexión
         this.puerto = puerto;
         this.ventana = ventana;
         //Iniciamos el controlador
-        this.controlador = new ControladorDeJuego(this);
+        this.controlador = new Controlador(this);
     }
 
+    /**
+     * Inicia el servidor del juego
+     * @throws IOException 
+     */
     public void iniciar() throws IOException {
         activo = true;
 
         ventana.registrarMensaje("Servidor ejecutándose en el puerto " + puerto);
         mostrarIp();
-        
+        conexionServidor = new ServerSocket(puerto);
         while (activo) {
             // Iniciamos las conexiones
-            conexionServidor = new ServerSocket(puerto);  // Conexión del servidor a la red
+              // Conexión del servidor a la red
             Socket conexionCliente = conexionServidor.accept();  // Conexión del cliente al servidor.
 
             // Si hay una conexión...
-            GestorDeClientes gestorClientes = new GestorDeClientes(conexionCliente, controlador);
+            ClienteConectado gestorClientes = new ClienteConectado(conexionCliente, controlador);
             ventana.registrarMensaje("Conexión entrante: " + conexionCliente.getInetAddress().getCanonicalHostName());
             
             controlador.agregarCliente(gestorClientes);
@@ -93,6 +103,9 @@ public class Servidor implements Runnable {
         }
     }
 
+    /**
+     * Muestra las IPs disponibles para el servidor
+     */
     private void mostrarIp() {
         // Source - https://stackoverflow.com/q/9481865
         // Posted by sasidhar, modified by community. See post 'Timeline' for change history
@@ -118,6 +131,9 @@ public class Servidor implements Runnable {
 
     }
 
+    /**
+     * Libera los recursos y conexiones del servidor al cerrarse
+     */
     private void liberarRecursos() {
         ventana.registrarMensaje("Limpiando y cerrando flujos de datos...");
         try {
@@ -146,13 +162,21 @@ public class Servidor implements Runnable {
         ventana.registrarMensaje(mensaje);
     }
 
+    public void actualizarUsuarios(){
+        ventana.actualizarListaDeUsuarios(controlador.getClientes());
+    }
+    
+    
+    /**
+     * Arranque del hilo del servidor
+     */
     @Override
     public void run() {
         try {
             iniciar();
         } catch (SocketException se) {
             ventana.registrarMensaje("Se ha cerrado la conexión del servidor.");
-            ventana.registrarMensaje("Detalle: " + se.getMessage() + "\n" + se.getLocalizedMessage());
+            ventana.registrarMensaje("Detalle: " + se.getMessage());
         } catch (IOException ex) {
             ventana.registrarMensaje("ERROR: " + ex.getMessage());
         } finally {

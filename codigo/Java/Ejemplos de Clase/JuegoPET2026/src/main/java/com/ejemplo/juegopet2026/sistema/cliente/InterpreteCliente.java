@@ -34,8 +34,12 @@ public class InterpreteCliente {
         return recibido;
     }
     
-    public void interpretarMensaje(String mensaje){
-        Mensaje recibido = obtenerMensaje(mensaje);
+    /**
+     * Interpreta las respuestas del servidor
+     * @param respuesta 
+     */
+    public void interpretarRespuesta(String respuesta){
+        Mensaje recibido = obtenerMensaje(respuesta);
         
         String accion = recibido.getInformacion().getAccion();
         
@@ -51,7 +55,11 @@ public class InterpreteCliente {
                 UUID sesion = UUID.fromString(idSesion);
                 
                 cliente.setSesion(sesion);
+                cliente.setSesionIniciada(true);
                 
+                break;
+            case Informacion.MENSAJE:
+                //String usuario = 
                 break;
             case Informacion.LOGOUT:
                 System.out.println("Cerrando conexion por orden del servidor");

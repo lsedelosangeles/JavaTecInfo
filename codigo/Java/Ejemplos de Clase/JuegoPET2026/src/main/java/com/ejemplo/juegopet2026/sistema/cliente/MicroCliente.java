@@ -23,14 +23,7 @@ public class MicroCliente {
         
         cliente.login("fulano");
         
-        Mensaje m = new Mensaje();
-        Informacion i  = new Informacion();
-        m.setUsuario(125);
-        i.setAccion(Informacion.MENSAJE);
-        i.setDatos("mensaje:hola");
-        m.setDatos(i);
-        
-        cliente.enviarSolicitud(m);
+        cliente.enviarMensaje("hola");
     }
     
     

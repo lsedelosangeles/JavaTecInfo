@@ -30,6 +30,7 @@ public class Cliente implements Runnable{
     private SolicitudesCliente solicitudes = new SolicitudesCliente();
     
     private volatile boolean activo;
+    private volatile boolean sesionIniciada; 
     private UUID sesion;
     private Usuario usuario;
 
@@ -71,13 +72,23 @@ public class Cliente implements Runnable{
         }
     }
     
+    // SOLICITUDES DEL CLIENTE
     
-    
+    /**
+     * Inicia el proceso de login en el servidor
+     * @param nombreUsuario 
+     */
     public void login(String nombreUsuario){
         enviarSolicitud( solicitudes.loginUsuario(nombreUsuario) );
     }
     
+    public void enviarMensaje(String mensaje){
+        if (sesionIniciada) {
+           enviarSolicitud(solicitudes.enviarMensaje(mensaje, usuario)); 
+        }
+    }
     
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
     
     /**
      * Dentro del método run() se implementan las acciones que se pasan al hilo secundario, que se inician al ejecutar s
@@ -94,7 +105,7 @@ public class Cliente implements Runnable{
                 System.out.println("recibido: " + mensajeEntrante);
                 
                 //Se procesa e interpreta el mensaje recibido
-                interprete.interpretarMensaje(mensajeRecibido);
+                interprete.interpretarRespuesta(mensajeRecibido);
             }
             
         } catch (Exception e) {
@@ -104,6 +115,7 @@ public class Cliente implements Runnable{
     
     public void desconectar() {
         activo = false;
+        sesionIniciada = false;
         sesion = null;
         try {
             if (entrada != null) entrada.close();
@@ -165,6 +177,20 @@ public class Cliente implements Runnable{
      */
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    /**
+     * @return the sesionIniciada
+     */
+    public boolean isSesionIniciada() {
+        return sesionIniciada;
+    }
+
+    /**
+     * @param sesionIniciada the sesionIniciada to set
+     */
+    public void setSesionIniciada(boolean sesionIniciada) {
+        this.sesionIniciada = sesionIniciada;
     }
     
     
