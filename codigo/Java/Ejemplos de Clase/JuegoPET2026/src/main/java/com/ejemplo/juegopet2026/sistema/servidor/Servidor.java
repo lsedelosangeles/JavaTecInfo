@@ -5,7 +5,6 @@
 package com.ejemplo.juegopet2026.sistema.servidor;
 
 import com.ejemplo.juegopet2026.interfaz.servidor.Inicio;
-import com.ejemplo.juegopet2026.juego.Usuario;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,7 +13,6 @@ import java.net.NetworkInterface;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
-import java.util.ArrayList;
 import java.util.Enumeration;
 
 /**
