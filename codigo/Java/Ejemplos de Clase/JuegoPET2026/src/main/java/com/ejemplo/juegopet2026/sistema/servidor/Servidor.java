@@ -32,8 +32,6 @@ public class Servidor implements Runnable {
     private BufferedReader entrada; // Objeto para recibir solicitudes de los clientes
     private PrintWriter salida; // Objeto para enviar las respuestas del servidor
 
-    private Thread hilo; // Permite derivar cada conexión a su propio hilo de ejecución
-
     private Inicio ventana;   //Referencia a la ventana para visualizar los eventos del servidor
 
     //Atributos del sistema del juego

@@ -58,6 +58,9 @@ public class InterpreteCliente {
                 cliente.setSesionIniciada(true);
                 
                 break;
+            case Informacion.LOGIN_ERROR:
+                System.out.println("Nombre de usuario incorrecto. Intenta de nuevo.");
+                break;
             case Informacion.MENSAJE:
                 //String usuario = 
                 break;

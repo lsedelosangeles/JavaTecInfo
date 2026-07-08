@@ -1,0 +1,15 @@
+{
+    "usuario":0,
+    "datos":{
+        "accion":"",
+        "datos":""
+    }
+}
+
+{
+    "usuario":0000,
+    "datos":{
+        "accion":"MENSAJE",
+        "datos":""
+    }
+}

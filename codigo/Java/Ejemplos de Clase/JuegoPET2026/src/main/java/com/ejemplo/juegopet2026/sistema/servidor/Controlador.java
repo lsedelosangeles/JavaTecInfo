@@ -39,16 +39,19 @@ public class Controlador {
      * @param cliente
      */
     public synchronized void procesarSolicitud(String solicitud, ClienteConectado cliente) {
+        
         Mensaje solicitudP = new Gson().fromJson(solicitud, Mensaje.class);
 
         String accion = solicitudP.getInformacion().getAccion();
+        
 
         switch (accion) {
             case "LOGIN":
                 login(solicitudP, cliente);
                 break;
+            
             case Informacion.MENSAJE:
-                servidor.registrarMensaje("Mensaje enviado desde " + cliente.verIP());
+                
 
                 String nombreUsuario = solicitudP.getInformacion().getDatos().split(":")[1];
 
@@ -95,6 +98,21 @@ public class Controlador {
         cliente.enviarMensaje(respuesta);
     }
     
+    /**
+     * Maneja solicitudes de mensajes entre usuarios
+     * @param solicitud
+     * @param cliente 
+     */
+    private void mensaje(Mensaje solicitud, ClienteConectado cliente){
+        servidor.registrarMensaje("Mensaje enviado desde " + cliente.verIP());
+    }
+    
+    
+    /**
+     * Maneja solicitudes de logout
+     * @param solicitud
+     * @param cliente 
+     */
     private void logout(Mensaje solicitud, ClienteConectado cliente){
         Mensaje respuesta = null;
         

@@ -29,7 +29,7 @@ public class Cliente implements Runnable{
     
     private SolicitudesCliente solicitudes = new SolicitudesCliente();
     
-    private volatile boolean activo;
+    private volatile boolean conectado;
     private volatile boolean sesionIniciada; 
     private UUID sesion;
     private Usuario usuario;
@@ -48,7 +48,7 @@ public class Cliente implements Runnable{
             InputStreamReader lectorDeStream = new InputStreamReader(getConexion().getInputStream());               
             entrada = new BufferedReader(lectorDeStream);
             
-            activo = true;
+            setConectado(true);
             
             new Thread(this).start();
             
@@ -82,6 +82,10 @@ public class Cliente implements Runnable{
         enviarSolicitud( solicitudes.loginUsuario(nombreUsuario) );
     }
     
+    public void logout(){
+        enviarSolicitud( solicitudes.logout(usuario) );
+    }
+    
     public void enviarMensaje(String mensaje){
         if (sesionIniciada) {
            enviarSolicitud(solicitudes.enviarMensaje(mensaje, usuario)); 
@@ -99,7 +103,7 @@ public class Cliente implements Runnable{
             String mensajeEntrante;
             InterpreteCliente interprete = new InterpreteCliente(this);
             
-            while (activo && (mensajeEntrante = entrada.readLine()) != null) {
+            while (isConectado() && (mensajeEntrante = entrada.readLine()) != null) {
                 System.out.println("Esperando respuestas...");
                 final String mensajeRecibido = mensajeEntrante;
                 System.out.println("recibido: " + mensajeEntrante);
@@ -114,7 +118,7 @@ public class Cliente implements Runnable{
     }
     
     public void desconectar() {
-        activo = false;
+        setConectado(false);
         sesionIniciada = false;
         sesion = null;
         try {
@@ -182,7 +186,7 @@ public class Cliente implements Runnable{
     /**
      * @return the sesionIniciada
      */
-    public boolean isSesionIniciada() {
+    public boolean haySesion() {
         return sesionIniciada;
     }
 
@@ -191,6 +195,20 @@ public class Cliente implements Runnable{
      */
     public void setSesionIniciada(boolean sesionIniciada) {
         this.sesionIniciada = sesionIniciada;
+    }
+
+    /**
+     * @return the conectado
+     */
+    public boolean isConectado() {
+        return conectado;
+    }
+
+    /**
+     * @param conectado the conectado to set
+     */
+    public void setConectado(boolean conectado) {
+        this.conectado = conectado;
     }
     
     
