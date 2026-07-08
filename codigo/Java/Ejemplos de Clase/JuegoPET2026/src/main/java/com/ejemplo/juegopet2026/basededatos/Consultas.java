@@ -46,7 +46,7 @@ public class Consultas {
     }
     
     /**
-     * Busca un usuario en el sistema
+     * Busca un usuario en el sistema usando su nombre
      * @param nombre
      * @return 
      */
@@ -78,4 +78,37 @@ public class Consultas {
         return user;
     }
     
+    
+    /**
+     * Busca un usuario en el sistema usando su id
+     * @param nombre
+     * @return 
+     */
+    public Usuario buscarUsuario(int id){
+        Usuario user = null;
+        
+        String consulta = "SELECT id,nombre FROM usuario WHERE id=?";
+        
+        Connection conexion = Conexion.conectar();
+        
+        if (conexion != null) {
+            try {
+                PreparedStatement sentencia = conexion.prepareStatement(consulta);
+                sentencia.setInt(1, id);
+                
+                ResultSet resultados = sentencia.executeQuery();
+                
+                while(resultados.next()){
+                    String nombreU = resultados.getString("nombre");
+                    int idU = resultados.getInt("id");
+                    user = new Usuario(nombreU, idU);
+                }
+                
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, e.getMessage(),"Error SQL",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        
+        return user;
+    }
 }

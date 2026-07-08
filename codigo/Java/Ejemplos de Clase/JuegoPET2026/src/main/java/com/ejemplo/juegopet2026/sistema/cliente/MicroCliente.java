@@ -39,9 +39,11 @@ public class MicroCliente {
             cliente.login(nombreUsuario);
         }
 
+        
         String mensaje = "";
 
         while (!mensaje.equals("salir")) {
+            System.out.println("Mensaje:");
             mensaje = teclado.nextLine();
             if (!mensaje.equals("salir")) {
                 cliente.enviarMensaje("-" + mensaje);

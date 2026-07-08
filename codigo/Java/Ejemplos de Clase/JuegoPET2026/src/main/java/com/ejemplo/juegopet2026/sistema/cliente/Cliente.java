@@ -187,6 +187,12 @@ public class Cliente implements Runnable{
      * @return the sesionIniciada
      */
     public boolean haySesion() {
+        if (sesionIniciada) {
+            System.out.println("Sesión iniciada");
+        }
+        else{
+            System.out.println("Sesión cerrada");
+        }
         return sesionIniciada;
     }
 
@@ -195,12 +201,24 @@ public class Cliente implements Runnable{
      */
     public void setSesionIniciada(boolean sesionIniciada) {
         this.sesionIniciada = sesionIniciada;
+        if (sesionIniciada) {
+            System.out.println("Sesión iniciada");
+        }
+        else{
+            System.out.println("Sesión cerrada");
+        }
     }
 
     /**
      * @return the conectado
      */
     public boolean isConectado() {
+        if (conectado) {
+            System.out.println("Cliente conectado");
+        }
+        else{
+            System.out.println("Cliente desconectado");
+        }
         return conectado;
     }
 
@@ -209,6 +227,12 @@ public class Cliente implements Runnable{
      */
     public void setConectado(boolean conectado) {
         this.conectado = conectado;
+        if (conectado) {
+            System.out.println("Cliente conectado");
+        }
+        else{
+            System.out.println("Cliente desconectado");
+        }
     }
     
     

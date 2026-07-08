@@ -31,19 +31,14 @@ public class RespuestasServidor extends Solicitudes{
     
     /**
      * Respuesta a un login exitoso
-     * @param destinatario
      * @param sesion
      * @return 
      */
-    public Mensaje loginExitoso(Usuario destinatario, UUID sesion){
+    public Mensaje loginExitoso(UUID sesion){
         Mensaje msj = crearMensaje();
         
         msj.getInformacion().setAccion(Informacion.LOGIN_OK);
-        msj.getInformacion().setDatos(
-                    "idSesion:" + sesion.toString()
-                    + ":idUsuario:" + destinatario.getId()
-                    + ":nombreUsuario:" + destinatario.getNombre());
-        
+        msj.getInformacion().setDatos(sesion.toString());
         return msj;
     }
     
@@ -57,4 +52,28 @@ public class RespuestasServidor extends Solicitudes{
         return msj;
     }
     
+    
+    public Mensaje enviarIdUsuario(Usuario destinatario){
+        Mensaje msj = crearMensaje();
+        msj.getInformacion().setAccion(Informacion.USUARIO_ID);
+        msj.getInformacion().setDatos(destinatario.getId()+"");
+        return msj;
+    }
+    
+    
+    /**
+     * Crea un mensaje para el chat general
+     * @param mensaje
+     * @param usuario
+     * @return 
+     */
+    public Mensaje mensajeDeChat(String mensaje, Usuario usuario){
+        Mensaje msj = crearMensaje();
+        
+        String contenido = usuario.getNombre() + ": " + mensaje;
+        
+        msj.getInformacion().setDatos(contenido);
+        
+        return msj;
+    }
 }

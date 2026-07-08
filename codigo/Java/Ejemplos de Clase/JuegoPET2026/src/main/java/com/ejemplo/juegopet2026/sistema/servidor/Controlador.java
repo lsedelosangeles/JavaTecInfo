@@ -50,13 +50,11 @@ public class Controlador {
                 login(solicitudP, cliente);
                 break;
             
+            //
             case Informacion.MENSAJE:
                 
 
-                String nombreUsuario = solicitudP.getInformacion().getDatos().split(":")[1];
-
-                Usuario usuarioCliente = consultas.buscarUsuario(nombreUsuario);
-
+                
                 for (ClienteConectado otroCliente : getClientes()) {
                     if (!(otroCliente.getSesion().equals(cliente.getSesion()))) {
                         otroCliente.enviarMensaje(solicitudP);
@@ -80,22 +78,35 @@ public class Controlador {
         
         servidor.registrarMensaje("Solicitud de Login desde " + cliente.verIP());
         
-        String nombreUsuario = solicitud.getInformacion().getDatos().split(":")[1];
-
+        String nombreUsuario = solicitud.getInformacion().getDatos();
+        servidor.registrarMensaje("Buscando al usuario '" + nombreUsuario + "'");
+        
         Usuario usuarioCliente = consultas.buscarUsuario(nombreUsuario);
 
         if (usuarioCliente != null) {
             servidor.registrarMensaje("Login exitoso de " + usuarioCliente.getNombre());
             UUID sesion = UUID.randomUUID();
-            respuesta = respuestas.loginExitoso(usuarioCliente, sesion);
+            
             cliente.setSesion(sesion);
             cliente.setUsuario(usuarioCliente);
+            
+            //Enviamos la confirmación del login con la ID de la sesión
+            respuesta = respuestas.loginExitoso(sesion);
+            cliente.enviarMensaje(respuesta);
+            
+            //Enviamos la ID del usuario
+            respuesta = respuestas.enviarIdUsuario(usuarioCliente);
+            cliente.enviarMensaje(respuesta);
+            
             servidor.actualizarUsuarios();
+            
         } else {
+            servidor.registrarMensaje("No se encontró al usuario '" + nombreUsuario + "'");
             respuesta = respuestas.loginFallido();
+            cliente.enviarMensaje(respuesta);
         }
 
-        cliente.enviarMensaje(respuesta);
+        
     }
     
     /**
@@ -105,6 +116,21 @@ public class Controlador {
      */
     private void mensaje(Mensaje solicitud, ClienteConectado cliente){
         servidor.registrarMensaje("Mensaje enviado desde " + cliente.verIP());
+        int idUsuario = solicitud.getUsuario();
+
+        Usuario usuarioCliente = consultas.buscarUsuario(idUsuario);
+        String mensaje = solicitud.getInformacion().getDatos();
+        
+        Mensaje paraTodos = respuestas.mensajeDeChat(mensaje, usuarioCliente);
+        
+        for (ClienteConectado otroCliente : clientes) {
+            UUID sesionOtro = otroCliente.getSesion();
+            
+            if ( ! sesionOtro.equals(cliente.getSesion())) {
+                otroCliente.enviarMensaje(paraTodos);
+            }
+        }
+        
     }
     
     

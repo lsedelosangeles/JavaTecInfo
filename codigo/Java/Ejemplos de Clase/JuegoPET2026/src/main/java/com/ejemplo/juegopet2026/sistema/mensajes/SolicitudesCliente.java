@@ -17,7 +17,7 @@ public class SolicitudesCliente extends Solicitudes{
         Mensaje msj = crearMensaje();
         
         msj.getInformacion().setAccion(Informacion.LOGIN);
-        msj.getInformacion().setDatos("usuario:"+nombre);
+        msj.getInformacion().setDatos(nombre);
         
         msj.setUsuario(-1);
         
@@ -29,7 +29,7 @@ public class SolicitudesCliente extends Solicitudes{
         
         msj.setUsuario(remitente.getId());
         msj.getInformacion().setAccion(Informacion.MENSAJE);
-        msj.getInformacion().setDatos("mensaje:"+mensaje);
+        msj.getInformacion().setDatos(mensaje);
         
         return msj;
     }

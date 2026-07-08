@@ -12,51 +12,50 @@ import java.util.UUID;
 
 /**
  * Esta clase procesa e interpreta los mensajes recibidos desde el servidor
+ *
  * @author sebastian
  */
 public class InterpreteCliente {
-    
+
     private Cliente cliente;
 
     public InterpreteCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-    
-    
-    
+
     /**
-     * Procesa un String recibido y lo pasa a un objeto de tipo Mensaje para analizarse
+     * Procesa un String recibido y lo pasa a un objeto de tipo Mensaje para
+     * analizarse
+     *
      * @param mensaje
-     * @return 
+     * @return
      */
-    public Mensaje obtenerMensaje(String mensaje){
+    public Mensaje obtenerMensaje(String mensaje) {
         Mensaje recibido = new Gson().fromJson(mensaje, Mensaje.class);
         return recibido;
     }
-    
+
     /**
      * Interpreta las respuestas del servidor
-     * @param respuesta 
+     *
+     * @param respuesta
      */
-    public void interpretarRespuesta(String respuesta){
+    public void interpretarRespuesta(String respuesta) {
         Mensaje recibido = obtenerMensaje(respuesta);
-        
+
         String accion = recibido.getInformacion().getAccion();
-        
+        String datos = recibido.getInformacion().getDatos();
+
         switch (accion) {
             case Informacion.LOGIN_OK:
-                String[] datos = recibido.getInformacion().getDatos().split(":");
-                
-                int idUsuario = Integer.parseInt(datos[3]);
-                String nombreUsuario = datos[5];
-                cliente.setUsuario( new Usuario(nombreUsuario, idUsuario) );
-                        
-                String idSesion = datos[1];
-                UUID sesion = UUID.fromString(idSesion);
-                
+
+                UUID sesion = UUID.fromString(datos);
                 cliente.setSesion(sesion);
                 cliente.setSesionIniciada(true);
-                
+                System.out.println("Sesion iniciada");
+                break;
+            case Informacion.USUARIO_ID:
+                int id = 
                 break;
             case Informacion.LOGIN_ERROR:
                 System.out.println("Nombre de usuario incorrecto. Intenta de nuevo.");
@@ -71,7 +70,7 @@ public class InterpreteCliente {
             default:
                 throw new AssertionError();
         }
-        
+
     }
-    
+
 }

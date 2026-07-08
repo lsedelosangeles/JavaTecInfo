@@ -19,7 +19,8 @@ public class Informacion {
     public static final String REGISTRO_OK = "REGISTRO_OK";
     public static final String REGISTRO_ERROR = "REGISTRO_ERROR";
     public static final String MENSAJE = "MENSAJE";
-    
+    public static final String USUARIO_ID = "USUARIO_ID";
+    public static final String SESION_ID = "SESION_ID";
     
     private String accion;
     private String datos;
