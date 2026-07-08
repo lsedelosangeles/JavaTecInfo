@@ -55,7 +55,8 @@ public class InterpreteCliente {
                 System.out.println("Sesion iniciada");
                 break;
             case Informacion.USUARIO_ID:
-                int id = 
+                int id = Integer.parseInt(datos);
+                cliente.getUsuario().setId(id);
                 break;
             case Informacion.LOGIN_ERROR:
                 System.out.println("Nombre de usuario incorrecto. Intenta de nuevo.");

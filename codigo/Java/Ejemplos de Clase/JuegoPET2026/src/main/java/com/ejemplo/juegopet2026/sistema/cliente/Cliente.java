@@ -80,6 +80,7 @@ public class Cliente implements Runnable{
      */
     public void login(String nombreUsuario){
         enviarSolicitud( solicitudes.loginUsuario(nombreUsuario) );
+        this.usuario = new Usuario(nombreUsuario);
     }
     
     public void logout(){
