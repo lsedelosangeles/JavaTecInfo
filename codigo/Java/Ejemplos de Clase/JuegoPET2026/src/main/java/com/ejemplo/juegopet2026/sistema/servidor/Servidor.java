@@ -33,7 +33,8 @@ public class Servidor implements Runnable {
     private PrintWriter salida; // Objeto para enviar las respuestas del servidor
 
     private Inicio ventana;   //Referencia a la ventana para visualizar los eventos del servidor
-
+    private String nombre;    //Nombre del servidor
+    
     //Atributos del sistema del juego
     private Controlador controlador;  // Objeto que contiene la lógica base del juego y que gestiona las acciones del jugador
 
@@ -43,12 +44,14 @@ public class Servidor implements Runnable {
      * @param puerto
      * @param ventana 
      */
-    public Servidor(int puerto, Inicio ventana) {
+    public Servidor(int puerto,String nombre, Inicio ventana) {
         //Establecemos el puerto de conexión
         this.puerto = puerto;
         this.ventana = ventana;
         //Iniciamos el controlador
         this.controlador = new Controlador(this);
+        //Establecemos el nombre del servidor
+        this.nombre = nombre;
     }
 
     /**
@@ -67,12 +70,12 @@ public class Servidor implements Runnable {
             Socket conexionCliente = conexionServidor.accept();  // Conexión del cliente al servidor.
 
             // Si hay una conexión...
-            ClienteConectado gestorClientes = new ClienteConectado(conexionCliente, controlador);
+            ClienteConectado clienteNuevo = new ClienteConectado(conexionCliente, controlador);
             ventana.registrarMensaje("Conexión entrante: " + conexionCliente.getInetAddress().getCanonicalHostName());
             
-            controlador.agregarCliente(gestorClientes);
+            controlador.agregarCliente(clienteNuevo);
             // Creamos un hilo por cada cliente y le pasamos el controlador
-            new Thread(gestorClientes).start();
+            new Thread(clienteNuevo).start();
         }
     }
 
@@ -178,6 +181,20 @@ public class Servidor implements Runnable {
         } finally {
             liberarRecursos();
         }
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
 }

@@ -16,9 +16,9 @@ import java.util.UUID;
  * @author sebastian
  */
 public class InterpreteCliente {
-
+    
     private Cliente cliente;
-
+    
     public InterpreteCliente(Cliente cliente) {
         this.cliente = cliente;
     }
@@ -42,17 +42,18 @@ public class InterpreteCliente {
      */
     public void interpretarRespuesta(String respuesta) {
         Mensaje recibido = obtenerMensaje(respuesta);
-
+        
         String accion = recibido.getInformacion().getAccion();
         String datos = recibido.getInformacion().getDatos();
-
+        
         switch (accion) {
             case Informacion.LOGIN_OK:
-
+                
                 UUID sesion = UUID.fromString(datos);
                 cliente.setSesion(sesion);
                 cliente.setSesionIniciada(true);
-                System.out.println("Sesion iniciada");
+                System.out.println("Sesion iniciada\nHola, " + cliente.getUsuario().getNombre());
+                
                 break;
             case Informacion.USUARIO_ID:
                 int id = Integer.parseInt(datos);
@@ -60,18 +61,26 @@ public class InterpreteCliente {
                 break;
             case Informacion.LOGIN_ERROR:
                 System.out.println("Nombre de usuario incorrecto. Intenta de nuevo.");
+                cliente.aviso("Nombre de usuario incorrecto. Intenta de nuevo.");
                 break;
             case Informacion.MENSAJE:
                 //String usuario = 
                 break;
             case Informacion.LOGOUT:
                 System.out.println("Cerrando conexion por orden del servidor");
+                cliente.aviso("Cerrando conexiones...");
                 cliente.desconectar();
+                break;
+            case Informacion.BIENVENIDA:
+                cliente.aviso(datos);
+                break;
+            case Informacion.SERVIDOR_NOMBRE:
+                cliente.setNombreServidor(datos);
                 break;
             default:
                 throw new AssertionError();
         }
-
+        
     }
-
+    
 }

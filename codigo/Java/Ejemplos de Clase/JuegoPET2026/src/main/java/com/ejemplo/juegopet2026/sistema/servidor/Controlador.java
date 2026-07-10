@@ -46,21 +46,19 @@ public class Controlador {
         
 
         switch (accion) {
-            case "LOGIN":
+            case Informacion.LOGIN:
                 login(solicitudP, cliente);
                 break;
             
             //
             case Informacion.MENSAJE:
-                
-
-                
                 for (ClienteConectado otroCliente : getClientes()) {
                     if (!(otroCliente.getSesion().equals(cliente.getSesion()))) {
                         otroCliente.enviarMensaje(solicitudP);
                     }
                 }
                 break;
+            
             default:
                 throw new AssertionError();
         }
@@ -156,6 +154,10 @@ public class Controlador {
      */
     public void agregarCliente(ClienteConectado cliente) {
         this.getClientes().add(cliente);
+        String nombre = servidor.getNombre();
+        cliente.enviarMensaje(respuestas.darNombreServidor(nombre));
+        cliente.enviarMensaje(respuestas.bienvenida(nombre));
+        
     }
 
     public void cerrarConexiones() {

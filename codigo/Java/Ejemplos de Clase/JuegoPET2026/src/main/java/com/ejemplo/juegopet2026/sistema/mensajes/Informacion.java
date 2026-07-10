@@ -11,6 +11,7 @@ package com.ejemplo.juegopet2026.sistema.mensajes;
 public class Informacion {
     
     //Atributos con las palabras claves fijas para usar en el sistema
+    public static final String BIENVENIDA = "BIENVENIDA";
     public static final String LOGIN = "LOGIN";
     public static final String LOGIN_OK = "LOGIN_OK";
     public static final String LOGIN_ERROR = "LOGIN_ERROR";
@@ -21,6 +22,8 @@ public class Informacion {
     public static final String MENSAJE = "MENSAJE";
     public static final String USUARIO_ID = "USUARIO_ID";
     public static final String SESION_ID = "SESION_ID";
+    public static final String SERVIDOR_NOMBRE = "SERVIDOR_NOMBRE";
+    public static final String DESCONECTAR = "DESCONECTAR";
     
     private String accion;
     private String datos;

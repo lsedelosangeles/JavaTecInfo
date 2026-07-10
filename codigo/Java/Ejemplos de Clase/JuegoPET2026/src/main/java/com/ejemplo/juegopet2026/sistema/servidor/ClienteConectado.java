@@ -82,6 +82,9 @@ public class ClienteConectado implements Runnable{
         return conexion.getInetAddress().getCanonicalHostName();
     }
     
+    /**
+     * Cierra las conexiones hacia el cliente
+     */
     public void cerrarConexiones(){
         System.out.println("Cerrando conexiones... cliente");
         Mensaje solicitudC = new Mensaje();

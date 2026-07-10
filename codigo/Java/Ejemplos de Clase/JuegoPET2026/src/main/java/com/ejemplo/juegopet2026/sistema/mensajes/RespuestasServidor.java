@@ -29,6 +29,21 @@ public class RespuestasServidor extends Solicitudes{
    // }
     
     
+    public Mensaje bienvenida(String mensaje){
+        Mensaje msj = crearMensaje();
+        msj.getInformacion().setAccion(Informacion.BIENVENIDA);
+        msj.getInformacion().setDatos("Conectado a " + mensaje);
+        return msj;
+    }
+    
+    
+    public Mensaje darNombreServidor(String nombre){
+        Mensaje msj = crearMensaje();
+        msj.getInformacion().setAccion(Informacion.SERVIDOR_NOMBRE);
+        msj.getInformacion().setDatos(nombre);
+        return msj;
+    }
+    
     /**
      * Respuesta a un login exitoso
      * @param sesion

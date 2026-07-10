@@ -136,7 +136,7 @@ public class Inicio extends JFrame {
     private void iniciarServidor() {
         registrarMensaje("Iniciando el servidor...");
         // Aquí instancian e inician el hilo de su servidor
-        servidor = new Servidor(6666, this);
+        servidor = new Servidor(6666, "Sebastopol", this);
         new Thread(servidor).start();
 
         estadoLabel.setText("Estado: EN LÍNEA");
