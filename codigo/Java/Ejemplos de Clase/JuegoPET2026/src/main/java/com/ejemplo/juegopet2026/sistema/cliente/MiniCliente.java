@@ -141,6 +141,7 @@ public class MiniCliente extends JFrame {
             cliente.desconectar();
             lblServidor.setText("Desconectado");
             btnConectar.setText("Conectar");
+            cliente = null;
         }
         btnConectar.setEnabled(true);
     }

@@ -145,7 +145,10 @@ public class Controlador {
         cliente.cerrarConexiones();
 
         clientes.remove(cliente);
-        servidor.registrarMensaje(cliente.getUsuario().getNombre() + " ha salido");
+        if (cliente.getUsuario() != null) {
+            servidor.registrarMensaje(cliente.getUsuario().getNombre() + " ha salido");
+        }
+        
     }
 
     // -- --- --- --- --- --- --- --- --- --
