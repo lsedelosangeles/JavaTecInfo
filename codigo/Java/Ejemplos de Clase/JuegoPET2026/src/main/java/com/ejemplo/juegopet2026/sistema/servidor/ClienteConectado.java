@@ -25,7 +25,7 @@ public class ClienteConectado implements Runnable{
     private PrintWriter salida;
     private Controlador controlador;
     private UUID sesion = null;
-    private Usuario usuario;
+    private Usuario usuario = null;
 
     public ClienteConectado(Socket conexion, Controlador controlador) throws IOException{
         this.conexion = conexion;
@@ -87,13 +87,6 @@ public class ClienteConectado implements Runnable{
      */
     public void cerrarConexiones(){
         System.out.println("Cerrando conexiones... cliente");
-        Mensaje solicitudC = new Mensaje();
-        Informacion info = new Informacion();
-        
-        info.setAccion(Informacion.LOGOUT);
-        solicitudC.setDatos(info);
-        enviarMensaje(solicitudC);
-        
         try {
             entrada.close();
             salida.close();

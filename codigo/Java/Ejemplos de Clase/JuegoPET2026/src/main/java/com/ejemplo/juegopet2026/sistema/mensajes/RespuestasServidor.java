@@ -91,4 +91,11 @@ public class RespuestasServidor extends Solicitudes{
         
         return msj;
     }
+    
+    public Mensaje desconectar(){
+        Mensaje msj = crearMensaje();
+        
+        msj.getInformacion().setAccion(Informacion.LOGOUT);
+        return msj;
+    }
 }

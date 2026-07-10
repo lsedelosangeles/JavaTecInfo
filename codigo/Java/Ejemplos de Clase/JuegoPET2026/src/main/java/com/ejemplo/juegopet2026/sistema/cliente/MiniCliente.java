@@ -4,6 +4,7 @@
  */
 package com.ejemplo.juegopet2026.sistema.cliente;
 
+import com.ejemplo.juegopet2026.interfaz.Dialogo;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -113,8 +114,13 @@ public class MiniCliente extends JFrame {
     }
 
     //Acciones de los botones
+    
+    /**
+     * Inicia el proceso de conectar el cliente al servidor
+     */
     private void conectar() {
         btnConectar.setEnabled(false);
+        
         if (cliente == null || !cliente.isConectado()) {
             btnConectar.setText("Conectando...");
             
@@ -126,7 +132,7 @@ public class MiniCliente extends JFrame {
                     puerto = Integer.parseInt(puerto_);
                     cliente = new Cliente(servidor, puerto, this);
                     cliente.iniciarConexion();
-                    //btnConectar.setText("Desconectar");
+                    btnConectar.setText("Desconectar");
                 }
             }
         } else {
@@ -141,7 +147,8 @@ public class MiniCliente extends JFrame {
     
     //Otras funciones
     public void mostrarAviso(String mensaje) {
-        JOptionPane.showMessageDialog(this, mensaje);
+        //JOptionPane.showMessageDialog(this, mensaje);
+        Dialogo.mostrarAviso(mensaje);
     }
 
     

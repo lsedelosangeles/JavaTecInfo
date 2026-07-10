@@ -5,17 +5,14 @@
 package com.ejemplo.juegopet2026.interfaz.servidor;
 
 import com.ejemplo.juegopet2026.Fuentes;
-import com.ejemplo.juegopet2026.juego.Usuario;
 import com.ejemplo.juegopet2026.sistema.servidor.ClienteConectado;
 import com.ejemplo.juegopet2026.sistema.servidor.Servidor;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -24,6 +21,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -45,19 +43,22 @@ public class Inicio extends JFrame {
     private JPanel pnlBotones;
     private JButton btnIniciar;
     private JButton btnDetener;
+    private JButton btnNombreServidor;
     private JLabel estadoLabel;
 
     private Servidor servidor;
     private DefaultListModel<String> listaDeUsuarios;
 
     private Fuentes fuentes = new Fuentes();
+    private String nombreServidor = "JuegoServer";
 
     public Inicio() {
-        configurar();
+        configurarVentana();
+        configurarBotones();
         registrarMensaje("Listo");
     }
 
-    private void configurar() {
+    private void configurarVentana() {
         setTitle("Panel de Control del Servidor");
         setSize(800, 600);
         setVisible(true);
@@ -100,6 +101,23 @@ public class Inicio extends JFrame {
         pnlBotones = new JPanel();
         btnIniciar = new JButton("Iniciar Servidor");
         btnIniciar.setFont(fuentes.fntBotonesCh);
+        
+
+        btnDetener = new JButton("Detener Servidor");
+        btnDetener.setFont(fuentes.fntBotonesCh);
+        
+        btnNombreServidor = new JButton("Nombre del Servidor");
+        btnNombreServidor.setFont(fuentes.fntBotonesCh);
+        
+        pnlBotones.add(btnIniciar);
+        pnlBotones.add(btnDetener);
+        pnlBotones.add(btnNombreServidor);
+        add(pnlBotones, BorderLayout.SOUTH);
+
+    }
+
+    private void configurarBotones() {
+        
         btnIniciar.addActionListener(
                 new ActionListener() {
             @Override
@@ -107,10 +125,9 @@ public class Inicio extends JFrame {
                 iniciarServidor();
             }
         });
-
-        btnDetener = new JButton("Detener Servidor");
+        
+        
         btnDetener.setEnabled(false);  //NOTA: El boton 'Detener Servidor se inicia deshabilitado ya que no tiene uso si el servidor no esta iniciado'
-        btnDetener.setFont(fuentes.fntBotonesCh);
         btnDetener.addActionListener(
                 new ActionListener() {
             @Override
@@ -119,15 +136,15 @@ public class Inicio extends JFrame {
             }
         }
         );
-
-        pnlBotones.add(btnIniciar);
-        pnlBotones.add(btnDetener);
-        add(pnlBotones, BorderLayout.SOUTH);
-
-    }
-
-    private void configurarBotones() {
-
+        
+        btnNombreServidor.addActionListener(
+                new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cambiarNombreServidor();
+            }
+        }
+        );
     }
 
     /**
@@ -136,12 +153,13 @@ public class Inicio extends JFrame {
     private void iniciarServidor() {
         registrarMensaje("Iniciando el servidor...");
         // Aquí instancian e inician el hilo de su servidor
-        servidor = new Servidor(6666, "Sebastopol", this);
+        servidor = new Servidor(6666, nombreServidor, this);
         new Thread(servidor).start();
 
         estadoLabel.setText("Estado: EN LÍNEA");
         estadoLabel.setForeground(Color.BLUE);
         btnIniciar.setEnabled(false);
+        btnNombreServidor.setEnabled(false);
         btnDetener.setEnabled(true);
     }
 
@@ -151,6 +169,7 @@ public class Inicio extends JFrame {
         estadoLabel.setText("Estado: APAGADO");
         estadoLabel.setForeground(Color.RED);
         btnIniciar.setEnabled(true);
+        btnNombreServidor.setEnabled(true);
         btnDetener.setEnabled(false);
     }
 
@@ -195,6 +214,16 @@ public class Inicio extends JFrame {
         });
     }
 
+    
+    public void cambiarNombreServidor(){
+        String nombre = JOptionPane.showInputDialog("Nombre del Servidor", "JuegoServer");
+        if (nombre != null) {
+            nombreServidor = nombre;
+            registrarMensaje("Nombre del Servidor: " + nombre);
+        }
+    }
+    
+    
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             new Inicio().setVisible(true);

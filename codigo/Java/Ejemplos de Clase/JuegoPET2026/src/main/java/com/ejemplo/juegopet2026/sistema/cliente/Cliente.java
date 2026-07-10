@@ -14,7 +14,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.UUID;
-import javax.swing.JFrame;
 
 /**
  *
@@ -99,13 +98,20 @@ public class Cliente implements Runnable {
         this.usuario = new Usuario(nombreUsuario);
     }
 
+    /**
+     * Envia una solicitud de cierre de sesión
+     */
     public void logout() {
         enviarSolicitud(solicitudes.logout(usuario));
     }
 
+    /**
+     * Envía un mensaje para todos los usuarios conectados al servidor
+     * @param mensaje 
+     */
     public void enviarMensaje(String mensaje) {
         if (sesionIniciada) {
-            enviarSolicitud(solicitudes.enviarMensaje(mensaje, usuario));
+            enviarSolicitud(solicitudes.mensajePublico(mensaje, usuario));
         }
     }
 
@@ -134,7 +140,11 @@ public class Cliente implements Runnable {
         }
     }
 
+    /**
+     * Desconecta el cliente del servidor
+     */
     public void desconectar() {
+        enviarSolicitud(solicitudes.logout(usuario));
         try {
             if (entrada != null) {
                 entrada.close();
@@ -153,6 +163,10 @@ public class Cliente implements Runnable {
         sesion = null;
     }
 
+    /**
+     * Redirige un mensaje hacia la ventana
+     * @param mensaje 
+     */
     public void aviso(String mensaje) {
         if (ventana != null) {
             ventana.mostrarAviso(mensaje);
