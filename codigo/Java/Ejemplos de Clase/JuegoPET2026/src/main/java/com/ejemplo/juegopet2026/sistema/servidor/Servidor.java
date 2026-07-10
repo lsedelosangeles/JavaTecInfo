@@ -161,6 +161,9 @@ public class Servidor implements Runnable {
         ventana.registrarMensaje(mensaje);
     }
 
+    /**
+     * Solicita una actualización de la lista de usuarios en el sistema
+     */
     public void actualizarUsuarios(){
         ventana.actualizarListaDeUsuarios(controlador.getClientes());
     }

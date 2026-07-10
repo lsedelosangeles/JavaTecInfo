@@ -39,17 +39,16 @@ public class Controlador {
      * @param cliente
      */
     public synchronized void procesarSolicitud(String solicitud, ClienteConectado cliente) {
-        
+
         Mensaje solicitudP = new Gson().fromJson(solicitud, Mensaje.class);
 
         String accion = solicitudP.getInformacion().getAccion();
-        
 
         switch (accion) {
             case Informacion.LOGIN:
                 login(solicitudP, cliente);
                 break;
-            
+
             //
             case Informacion.MENSAJE:
                 for (ClienteConectado otroCliente : getClientes()) {
@@ -58,92 +57,95 @@ public class Controlador {
                     }
                 }
                 break;
-            
+            case Informacion.LOGOUT:
+                logout(cliente);
+                break;
             default:
                 throw new AssertionError();
         }
     }
 
     // ACCIONES DE RESPUESTA A LOS MENSAJES
-    
     /**
      * Respuesta a una solicitud de login
+     *
      * @param solicitud
-     * @param cliente 
+     * @param cliente
      */
     private void login(Mensaje solicitud, ClienteConectado cliente) {
         Mensaje respuesta = null;
-        
+
         servidor.registrarMensaje("Solicitud de Login desde " + cliente.verIP());
-        
+
         String nombreUsuario = solicitud.getInformacion().getDatos();
         servidor.registrarMensaje("Buscando al usuario '" + nombreUsuario + "'");
-        
+
         Usuario usuarioCliente = consultas.buscarUsuario(nombreUsuario);
 
         if (usuarioCliente != null) {
             servidor.registrarMensaje("Login exitoso de " + usuarioCliente.getNombre());
             UUID sesion = UUID.randomUUID();
-            
+
             cliente.setSesion(sesion);
             cliente.setUsuario(usuarioCliente);
-            
+
             //Enviamos la confirmación del login con la ID de la sesión
             respuesta = respuestas.loginExitoso(sesion);
             cliente.enviarMensaje(respuesta);
-            
+
             //Enviamos la ID del usuario
             respuesta = respuestas.enviarIdUsuario(usuarioCliente);
             cliente.enviarMensaje(respuesta);
-            
+
             servidor.actualizarUsuarios();
-            
+
         } else {
             servidor.registrarMensaje("No se encontró al usuario '" + nombreUsuario + "'");
             respuesta = respuestas.loginFallido();
             cliente.enviarMensaje(respuesta);
         }
 
-        
     }
-    
+
     /**
      * Maneja solicitudes de mensajes entre usuarios
+     *
      * @param solicitud
-     * @param cliente 
+     * @param cliente
      */
-    private void mensaje(Mensaje solicitud, ClienteConectado cliente){
+    private void mensaje(Mensaje solicitud, ClienteConectado cliente) {
         servidor.registrarMensaje("Mensaje enviado desde " + cliente.verIP());
         int idUsuario = solicitud.getUsuario();
 
         Usuario usuarioCliente = consultas.buscarUsuario(idUsuario);
         String mensaje = solicitud.getInformacion().getDatos();
-        
+
         Mensaje paraTodos = respuestas.mensajeDeChat(mensaje, usuarioCliente);
-        
+
         for (ClienteConectado otroCliente : clientes) {
             UUID sesionOtro = otroCliente.getSesion();
-            
-            if ( ! sesionOtro.equals(cliente.getSesion())) {
+
+            if (!sesionOtro.equals(cliente.getSesion())) {
                 otroCliente.enviarMensaje(paraTodos);
             }
         }
-        
+
     }
-    
-    
+
     /**
      * Maneja solicitudes de logout
+     *
      * @param solicitud
-     * @param cliente 
+     * @param cliente
      */
-    private void logout(Mensaje solicitud, ClienteConectado cliente){
-        Mensaje respuesta = null;
-        
+    private void logout(ClienteConectado cliente) {
         servidor.registrarMensaje("Solicitud de Logout desde " + cliente.verIP());
-        servidor.registrarMensaje(cliente.getUsuario().getNombre() + " ha salido");
+        cliente.enviarMensaje(respuestas.desconectar());
+
         cliente.cerrarConexiones();
+
         clientes.remove(cliente);
+        servidor.registrarMensaje(cliente.getUsuario().getNombre() + " ha salido");
     }
 
     // -- --- --- --- --- --- --- --- --- --
@@ -154,16 +156,35 @@ public class Controlador {
      */
     public void agregarCliente(ClienteConectado cliente) {
         this.getClientes().add(cliente);
-        String nombre = servidor.getNombre();
-        cliente.enviarMensaje(respuestas.darNombreServidor(nombre));
-        cliente.enviarMensaje(respuestas.bienvenida(nombre));
-        
+        String nombreServidor = servidor.getNombre();
+        cliente.enviarMensaje(respuestas.darNombreServidor(nombreServidor));
+        cliente.enviarMensaje(respuestas.bienvenida(nombreServidor));
     }
 
+    /**
+     * Desconecta un cliente del sistema
+     *
+     * @param cliente
+     */
+    public void quitarCliente(ClienteConectado cliente) {
+
+        servidor.registrarMensaje("Desconectando a cliente " + cliente.verIP());
+        if (cliente.getUsuario() != null) {
+            servidor.registrarMensaje("Cerrando la sesión de " + cliente.getUsuario().getNombre());
+        }
+
+        cliente.cerrarConexiones();
+        this.getClientes().remove(cliente);
+        servidor.actualizarUsuarios();
+    }
+
+    /**
+     * Cierra TODAS las conexiones de clientes con el servidor
+     */
     public void cerrarConexiones() {
         System.out.println("Cerrando conexiones... controlador");
         for (ClienteConectado cliente : getClientes()) {
-            System.out.println("Cerrando a " + cliente.verIP());
+            servidor.registrarMensaje("Cerrando a " + cliente.verIP());
             cliente.cerrarConexiones();
         }
     }
