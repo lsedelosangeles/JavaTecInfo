@@ -62,12 +62,13 @@ public class Cliente implements Runnable {
             entrada = new BufferedReader(lectorDeStream);
 
             setConectado(true);
-
+            ventana.estadoInicioSesion(true);
             new Thread(this).start();
 
         } catch (IOException e) {
             System.err.println("ERROR: " + e.getMessage());
             ventana.mostrarAviso("ERROR: " + e.getMessage());
+            ventana.estadoInicioSesion(false);
         }
 
     }
@@ -158,9 +159,10 @@ public class Cliente implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //setConectado(false);
         sesionIniciada = false;
+        setConectado(false);
         sesion = null;
+        ventana.estadoInicioSesion(false);
     }
 
     /**

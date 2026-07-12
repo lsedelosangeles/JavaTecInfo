@@ -87,6 +87,7 @@ public class MiniCliente extends JFrame {
         pnlBotonera.add(btnConectar, gbc);
 
         btnLogin = new JButton("Iniciar Sesión");
+        btnLogin.setEnabled(false);
         gbc.gridy = 1;
         pnlBotonera.add(btnLogin, gbc);
 
@@ -111,19 +112,28 @@ public class MiniCliente extends JFrame {
                 conectar();
             }
         });
+
+        btnLogin.addActionListener(
+                new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                iniciarSesion();
+            }
+        }
+        );
+
     }
 
     //Acciones de los botones
-    
     /**
      * Inicia el proceso de conectar el cliente al servidor
      */
     private void conectar() {
         btnConectar.setEnabled(false);
-        
+
         if (cliente == null || !cliente.isConectado()) {
             btnConectar.setText("Conectando...");
-            
+
             String servidor = JOptionPane.showInputDialog("Ingrese la IP del Servidor:", "localhost");
             if (servidor != null) {
                 int puerto = 0;
@@ -136,7 +146,7 @@ public class MiniCliente extends JFrame {
                 }
             }
         } else {
-            
+
             btnConectar.setText("Desconectando...");
             cliente.desconectar();
             lblServidor.setText("Desconectado");
@@ -146,19 +156,24 @@ public class MiniCliente extends JFrame {
         btnConectar.setEnabled(true);
     }
 
-    
+    public void iniciarSesion() {
+
+    }
+
     //Otras funciones
     public void mostrarAviso(String mensaje) {
         //JOptionPane.showMessageDialog(this, mensaje);
         Dialogo.mostrarAviso(mensaje);
     }
 
-    
-    public void cambiarNombreServidor(String nombre){
+    public void estadoInicioSesion(boolean habilitado) {
+        btnLogin.setEnabled(habilitado);
+    }
+
+    public void cambiarNombreServidor(String nombre) {
         lblServidor.setText(nombre);
     }
-    
-    
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             new MiniCliente().setVisible(true);
