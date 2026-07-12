@@ -157,7 +157,11 @@ public class MiniCliente extends JFrame {
     }
 
     public void iniciarSesion() {
-
+        if (! cliente.haySesion()) {
+            String nombre = JOptionPane.showInputDialog("Ingresa un nombre de usuario");
+            cliente.login(nombre);
+        } else {
+        }
     }
 
     //Otras funciones
