@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.UUID;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -27,10 +28,13 @@ public class Cliente implements Runnable {
     private PrintWriter salida;
     private BufferedReader entrada;
 
+    
     private MiniCliente ventana;
 
+    InterpreteCliente interprete;
     private SolicitudesCliente solicitudes = new SolicitudesCliente();
-
+    
+    
     private volatile boolean conectado;
     private volatile boolean sesionIniciada;
     private String nombreServidor;
@@ -62,13 +66,22 @@ public class Cliente implements Runnable {
             entrada = new BufferedReader(lectorDeStream);
 
             setConectado(true);
-            ventana.estadoInicioSesion(true);
+            SwingUtilities.invokeLater( 
+                    ()->{
+                        ventana.estadoConectado(true);
+                    }
+            );
             new Thread(this).start();
 
         } catch (IOException e) {
             System.err.println("ERROR: " + e.getMessage());
-            ventana.mostrarAviso("ERROR: " + e.getMessage());
-            ventana.estadoInicioSesion(false);
+            SwingUtilities.invokeLater( 
+                    ()->{
+                        ventana.mostrarAviso("ERROR: " + e.getMessage());
+                        ventana.estadoConectado(false);
+                    }
+            );
+            
         }
 
     }
@@ -125,7 +138,7 @@ public class Cliente implements Runnable {
     public void run() {
         try {
             String mensajeEntrante;
-            InterpreteCliente interprete = new InterpreteCliente(this);
+            interprete = new InterpreteCliente(this, ventana);
 
             while (isConectado() && (mensajeEntrante = entrada.readLine()) != null) {
                 System.out.println("Esperando respuestas...");
@@ -146,6 +159,7 @@ public class Cliente implements Runnable {
      */
     public void desconectar() {
         enviarSolicitud(solicitudes.logout(usuario));
+        
         try {
             if (entrada != null) {
                 entrada.close();
@@ -162,7 +176,12 @@ public class Cliente implements Runnable {
         sesionIniciada = false;
         setConectado(false);
         sesion = null;
-        ventana.estadoInicioSesion(false);
+        SwingUtilities.invokeLater(
+                ()->{
+                    ventana.estadoConectado(false);
+                    //ventana.
+                }
+        );
     }
 
     /**

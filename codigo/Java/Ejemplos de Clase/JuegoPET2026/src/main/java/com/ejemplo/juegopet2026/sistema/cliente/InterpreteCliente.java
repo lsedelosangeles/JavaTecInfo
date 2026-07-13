@@ -9,6 +9,7 @@ import com.ejemplo.juegopet2026.sistema.mensajes.Informacion;
 import com.ejemplo.juegopet2026.sistema.mensajes.Mensaje;
 import com.google.gson.Gson;
 import java.util.UUID;
+import javax.swing.SwingUtilities;
 
 /**
  * Esta clase procesa e interpreta los mensajes recibidos desde el servidor
@@ -18,9 +19,15 @@ import java.util.UUID;
 public class InterpreteCliente {
     
     private Cliente cliente;
+    private MiniCliente ventana;
     
     public InterpreteCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+    
+    public InterpreteCliente(Cliente cliente, MiniCliente ventana) {
+        this.cliente = cliente;
+        this.ventana = ventana;
     }
 
     /**
@@ -52,6 +59,13 @@ public class InterpreteCliente {
                 UUID sesion = UUID.fromString(datos);
                 cliente.setSesion(sesion);
                 cliente.setSesionIniciada(true);
+                
+                SwingUtilities.invokeLater(
+                        ()->{
+                           ventana.terminarEsperaLogin(true, "Sesion iniciada\nHola, " + cliente.getUsuario().getNombre());
+                        }
+                );
+                
                 System.out.println("Sesion iniciada\nHola, " + cliente.getUsuario().getNombre());
                 
                 break;
@@ -61,18 +75,35 @@ public class InterpreteCliente {
                 break;
             case Informacion.LOGIN_ERROR:
                 System.out.println("Nombre de usuario incorrecto. Intenta de nuevo.");
-                cliente.aviso("Nombre de usuario incorrecto. Intenta de nuevo.");
+                
+                SwingUtilities.invokeLater(
+                        ()->{
+                           ventana.terminarEsperaLogin(false, "Nombre de usuario incorrecto. Intenta de nuevo.");
+                        }
+                );
+                
                 break;
             case Informacion.MENSAJE:
                 //String usuario = 
                 break;
             case Informacion.LOGOUT:
                 System.out.println("Cerrando conexion por orden del servidor");
-                cliente.aviso("Cerrando conexiones...");
+                
+                SwingUtilities.invokeLater(
+                        ()->{
+                           ventana.terminarEsperaLogin(false, "Se ha cerrado la sesión.");
+                           
+                        }
+                );
+                
                 cliente.desconectar();
                 break;
             case Informacion.BIENVENIDA:
-                cliente.aviso(datos);
+                SwingUtilities.invokeLater(
+                        ()->{
+                            ventana.terminarEsperaConectar(true, datos);
+                        }
+                );
                 break;
             case Informacion.SERVIDOR_NOMBRE:
                 cliente.setNombreServidor(datos);

@@ -98,7 +98,9 @@ public class ClienteConectado implements Runnable {
             if (salida != null) {
                 salida.close();
             }
-            if(conexion != null){conexion.close();}
+            if (conexion != null) {
+                conexion.close();
+            }
         } catch (IOException e) {
             System.err.println("ERROR: " + this.getClass().getName() + ": " + e.getMessage());
         }

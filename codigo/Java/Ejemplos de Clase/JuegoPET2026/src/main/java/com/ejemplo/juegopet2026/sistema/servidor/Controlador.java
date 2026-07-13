@@ -148,7 +148,7 @@ public class Controlador {
         if (cliente.getUsuario() != null) {
             servidor.registrarMensaje(cliente.getUsuario().getNombre() + " ha salido");
         }
-        
+        servidor.actualizarUsuarios();
     }
 
     // -- --- --- --- --- --- --- --- --- --
@@ -170,12 +170,13 @@ public class Controlador {
      * @param cliente
      */
     public void quitarCliente(ClienteConectado cliente) {
+        
 
         servidor.registrarMensaje("Desconectando a cliente " + cliente.verIP());
         if (cliente.getUsuario() != null) {
             servidor.registrarMensaje("Cerrando la sesión de " + cliente.getUsuario().getNombre());
         }
-
+        cliente.enviarMensaje(respuestas.desconectar());
         cliente.cerrarConexiones();
         this.getClientes().remove(cliente);
         servidor.actualizarUsuarios();
@@ -188,7 +189,7 @@ public class Controlador {
         System.out.println("Cerrando conexiones... controlador");
         for (ClienteConectado cliente : getClientes()) {
             servidor.registrarMensaje("Cerrando a " + cliente.verIP());
-            cliente.cerrarConexiones();
+            quitarCliente(cliente);
         }
     }
 

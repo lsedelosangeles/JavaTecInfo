@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -46,6 +47,11 @@ public class MiniCliente extends JFrame {
     GridBagConstraints gbc = new GridBagConstraints();
 
     private DefaultListModel<String> listaDeUsuarios;
+
+    JDialog dialogoEspera;
+
+    private boolean hayConexion;
+    private boolean haySesion;
 
     public MiniCliente() {
 
@@ -142,46 +148,228 @@ public class MiniCliente extends JFrame {
                     puerto = Integer.parseInt(puerto_);
                     cliente = new Cliente(servidor, puerto, this);
                     cliente.iniciarConexion();
-                    btnConectar.setText("Desconectar");
+                    
+                    mostrarDialogoEspera("Conectando a " + servidor + "..."); //Se cierra con terminarEsperaConectar()
                 }
             }
         } else {
 
-            btnConectar.setText("Desconectando...");
             cliente.desconectar();
+            mostrarDialogoEspera("Desconectado..."); //Se cierra con terminarEsperaConectar()
+            
+            
             lblServidor.setText("Desconectado");
             btnConectar.setText("Conectar");
             cliente = null;
         }
-        btnConectar.setEnabled(true);
+        //btnConectar.setEnabled(true);
     }
 
+    /**
+     * Muestra el diálogo de espera con un mensaje específico
+     * NOTA: Este diálogo bloquea la interfäz y debe cerrarse con un método especial
+     * @param mensaje 
+     */
+    public void mostrarDialogoEspera(String mensaje) {
+        JOptionPane panelContenido = new JOptionPane(
+                mensaje,
+                JOptionPane.INFORMATION_MESSAGE,
+                JOptionPane.DEFAULT_OPTION,
+                null,
+                new Object[]{},
+                null
+        );
+
+        dialogoEspera = panelContenido.createDialog(this, "");
+        dialogoEspera.setModal(true);
+        dialogoEspera.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        dialogoEspera.setVisible(true);
+    }
+
+    /**
+     * Inicia el proceso de inicio o cierre de sesión
+     */
     public void iniciarSesion() {
-        if (! cliente.haySesion()) {
-            String nombre = JOptionPane.showInputDialog("Ingresa un nombre de usuario");
-            cliente.login(nombre);
+
+        //Si no hay sesión, iniciamos
+        if (!haySesion) {
+            String nombreUsuario = JOptionPane.showInputDialog(
+                    this,
+                    "Nombre de usuario:",
+                    "Inicio de Sesión",
+                    JOptionPane.QUESTION_MESSAGE
+            );
+
+            // El usuario dio click en "Cancelar"
+            if (nombreUsuario == null) {
+                return;
+            }
+
+            nombreUsuario = nombreUsuario.trim();
+
+            // El nombre de usuario debe tener algún texto. 
+            //  La función trim() elimina espacios al comienzo y al final del String
+            //  dejando solamente el contenido.
+            if (nombreUsuario.isEmpty()) {
+                mostrarAviso("El nombre de usuario no puede estar vacío.");
+                return;   //El 'return' sin parámetros provoca que se cierre el método y no continúe el proceso.
+            }
+
+            // Verificamos que el cliente este conectado antes de enviar la solicitud
+            if (cliente == null || !cliente.isConectado()) {
+                mostrarAviso("Error: No hay una conexión activa con el servidor.");
+                return;
+            }
+
+            cliente.login(nombreUsuario);
+            
+            //Creamos y mostramos un diálogo de espera
+            mostrarDialogoEspera("Iniciando sesión...");
+
+            // Si hay sesión, la cerramos
         } else {
+            cliente.logout();
+            mostrarDialogoEspera("Cerrando la sesión...");
+            haySesion = false;
         }
+
     }
 
     //Otras funciones
+    /**
+     * Cierra el diálogo de espera del login con un mensaje
+     *
+     * @param exito
+     * @param mensaje
+     */
+    public void terminarEsperaLogin(boolean exito, String mensaje) {
+
+        // Si el diálogo existe y está visible, lo cerramos 
+        if (dialogoEspera != null && dialogoEspera.isVisible()) {
+            dialogoEspera.dispose();
+            dialogoEspera = null;
+        }
+
+        // Mostramos el aviso
+        mostrarAviso(mensaje);
+
+        // Actualizamos el estado de la botonera según el resultado
+        if (exito) {
+            btnLogin.setEnabled(true);
+            btnLogin.setText("Cerrar Sesión");
+            haySesion = true;
+            btnConectar.setEnabled(false); // Evitamos desconexiones accidentales en partida
+        } else {
+            //System.out.println("terminando con falso");
+            btnLogin.setEnabled(true);
+            btnConectar.setEnabled(true);
+            btnLogin.setText("Iniciar Sesión");
+        }
+    }
+
+    /**
+     * Cierra el diálogo de espera de la conexión al servidor con un mensaje
+     *
+     * @param exito
+     * @param mensaje
+     */
+    public void terminarEsperaConectar(boolean exito, String mensaje) {
+
+        // Si el diálogo existe y está visible, lo cerramos 
+        if (dialogoEspera != null && dialogoEspera.isVisible()) {
+            dialogoEspera.dispose();
+            dialogoEspera = null;
+        }
+
+        // Mostramos el aviso
+        mostrarAviso(mensaje);
+
+        // Actualizamos el estado de la botonera según el resultado
+        if (exito) {
+            hayConexion = true;
+            btnConectar.setText("Desconectar");
+            btnConectar.setEnabled(true);
+            btnLogin.setEnabled(true);
+            btnLogin.setText("Iniciar Sesión");
+        } else {
+            System.out.println("terminando con falso");
+            hayConexion = false;
+            btnLogin.setEnabled(false);
+            btnConectar.setEnabled(true);
+            btnConectar.setText("Conectar");
+        }
+    }
+
+    /**
+     * Muestra un mensaje en un diálogo
+     *
+     * @param mensaje
+     */
     public void mostrarAviso(String mensaje) {
         //JOptionPane.showMessageDialog(this, mensaje);
-        Dialogo.mostrarAviso(mensaje);
+        SwingUtilities.invokeLater(
+                () -> {
+                    Dialogo.mostrarAviso(mensaje);
+                }
+        );
+
     }
 
+    /**
+     * Cambia el estado del botón de inicio de sesión
+     *
+     * @param habilitado
+     */
     public void estadoInicioSesion(boolean habilitado) {
-        btnLogin.setEnabled(habilitado);
+        SwingUtilities.invokeLater(
+                () -> {
+                    btnLogin.setEnabled(habilitado);
+                }
+        );
+
+    }
+    
+    /**
+     * Cambia el estado de conectado de la ventana. 
+     * NO CONECTA NI DESCONECTA. DEBE LLAMARSE PARA REFLEJAR ESE ESTADO
+     * true: el cliente esta conectado a un servidor
+     * false:  el cliente no esta conectado a un servidor
+     * @param estado 
+     */
+    public void estadoConectado(boolean estado){
+        hayConexion = estado;
+        if (estado) {
+            btnConectar.setText("Desconectar");
+        }
+        else{
+            btnConectar.setText("Conectar");
+            btnLogin.setText("Iniciar Sesión");
+            btnLogin.setEnabled(false);
+        }
     }
 
+    /**
+     * Cambia el nombre mostrado del servidor
+     *
+     * @param nombre
+     */
     public void cambiarNombreServidor(String nombre) {
-        lblServidor.setText(nombre);
+        SwingUtilities.invokeLater(
+                () -> {
+                    lblServidor.setText(nombre);
+                }
+        );
+
     }
 
+    /**
+     * Inicia el cliente
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             new MiniCliente().setVisible(true);
-            //new Inicio().setVisible(true);
         });
     }
 }
