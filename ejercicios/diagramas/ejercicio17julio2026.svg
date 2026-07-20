@@ -28,10 +28,10 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.84096521"
-     inkscape:cx="556.5034"
+     inkscape:cx="432.24142"
      inkscape:cy="242.57841"
      inkscape:window-width="1920"
-     inkscape:window-height="1048"
+     inkscape:window-height="1052"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -64,24 +64,20 @@
        style="fill:#00ff00;stroke:#000000;stroke-width:0.432765;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.3;stroke-dasharray:none;paint-order:markers fill stroke"
        d="M 72.885003,20.478027 H 231.73207 V 46.503595 H 72.885003 Z" />
     <path
-       id="path2410"
-       style="fill:#00ff00;stroke:#000000;stroke-width:0.432765;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.3;stroke-dasharray:none;paint-order:markers fill stroke"
-       d="M 72.885003,113.65445 H 231.73207 v 26.02556 H 72.885003 Z" />
-    <path
        id="rect2464"
-       style="fill:#ffff00;stroke:#000000;stroke-width:0.530022;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.3;paint-order:markers fill stroke"
-       d="M 72.885002,46.503593 H 99.343336 V 113.65445 H 72.885002 Z" />
+       style="fill:#ffff00;stroke:#000000;stroke-width:0.621024;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.3;paint-order:markers fill stroke"
+       d="M 72.930503,46.549094 H 99.297835 V 139.05671 H 72.930503 Z" />
     <path
        id="path2467"
-       style="fill:#ffff00;stroke:#000000;stroke-width:0.529989;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.3;paint-order:markers fill stroke"
-       d="m 205.2196,46.503595 h 26.45561 V 113.65309 H 205.2196 Z" />
+       style="fill:#ffff00;stroke:#000000;stroke-width:0.620878;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.3;paint-order:markers fill stroke"
+       d="m 205.26504,46.54904 h 26.36473 v 92.47336 h -26.36473 z" />
     <rect
-       style="fill:#00ffff;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.3;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="fill:#00ffff;stroke:#000000;stroke-width:0.620712;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.3;stroke-dasharray:none;paint-order:markers fill stroke"
        id="rect2469"
-       width="105.87627"
-       height="67.149498"
-       x="99.34333"
-       y="46.503593" />
+       width="105.78472"
+       height="92.47271"
+       x="99.389107"
+       y="46.549366" />
     <rect
        style="fill:#ff0000;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.3;stroke-dasharray:none;paint-order:markers fill stroke"
        id="rect2471"

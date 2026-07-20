@@ -24,6 +24,7 @@ public class Informacion {
     public static final String SESION_ID = "SESION_ID";
     public static final String SERVIDOR_NOMBRE = "SERVIDOR_NOMBRE";
     public static final String DESCONECTAR = "DESCONECTAR";
+    public static final String LISTA_USUARIOS = "LISTA_USUARIOS"; 
     
     private String accion;
     private String datos;
