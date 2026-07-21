@@ -4,7 +4,9 @@
  */
 package com.ejemplo.juegopet2026_base.sistema;
 
+import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 /**
  *
@@ -21,5 +23,20 @@ public class Servidor {
         this.nombre = nombre;
     }
     
+    public void iniciar() throws IOException{
+        activo = true;
+        conexionServidor = new ServerSocket(puerto);
+        System.out.println("Servidor iniciado");
+        while (activo) {            
+            Socket conexionCliente = 
+                    conexionServidor.accept();
+            System.out.println(
+                    "Cliente conectado desde "+
+                     conexionCliente.
+                             getInetAddress().
+                             getCanonicalHostName()
+                    );
+        }
+    }
     
 }
