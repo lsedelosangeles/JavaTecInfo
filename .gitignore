@@ -33,3 +33,7 @@ codigo/Java/Laberinto01/lib/CopyLibs
 /codigo/Java/Ejemplos de Clase/JuegoPET2026/target/
 /codigo/Java/Ejemplos de Clase/JuegoPET2026-Base01/target/
 /codigo/Java/Ejemplos de Clase/ETS_UNO_2026/target/
+/codigo/Java/Ejemplos de Clase/JuegoPET2026_base/target/
+/codigo/Java/Ejemplos de Clase/UNO_ETS_2026/target/
+*.class
+/codigo/*/*.class
