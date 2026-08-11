@@ -98,4 +98,6 @@ public class RespuestasServidor extends Solicitudes{
         msj.getInformacion().setAccion(Informacion.LOGOUT);
         return msj;
     }
+    
+    
 }
