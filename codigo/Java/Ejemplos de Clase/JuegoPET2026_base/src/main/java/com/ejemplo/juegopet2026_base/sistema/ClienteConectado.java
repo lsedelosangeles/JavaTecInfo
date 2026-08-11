@@ -38,15 +38,21 @@ public class ClienteConectado implements Runnable{
     @Override
     public void run() {
         try {
+            System.out.println("Iniciando cliente....");
             String mensajeEntrante;
             while ( 
                 (mensajeEntrante=entrada.readLine())!=null
-                    ) {                
+                    ) {
+                System.out.println("m:");
                 System.out.println("-> " + mensajeEntrante);
             }
         } catch (IOException e) {
             System.err.println
                 ("ERROR:" + e.getMessage() );
+        }
+        catch (Exception e1){
+            System.err.println
+                ("ERROR _:" + e1.getMessage() );
         }
     }
     

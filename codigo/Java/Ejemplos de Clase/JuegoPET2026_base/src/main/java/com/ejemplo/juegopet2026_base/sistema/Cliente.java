@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Scanner;
 
 /**
  *
@@ -41,10 +42,35 @@ public class Cliente {
                     )
             );
         } catch (Exception e) {
+            System.err.println("ERROR Cliente: " 
+                    + e.getMessage());
         }
     }
     
     public static void main(String[] args) {
-        new Cliente("192.168.4.105", 6666).iniciar();
+        
+        Scanner teclado = 
+                new Scanner(System.in);
+        String servidor = "";
+        System.out.println("IP del Servidor:");
+        servidor = teclado.nextLine();
+        
+        Cliente c1 = 
+                new Cliente(servidor, 6666);
+        c1.iniciar();
+        
+        String mensaje="";
+        while (! mensaje.equals("/salir")) {            
+            System.out.print(">>: ");
+            mensaje = teclado.nextLine();
+            c1.enviarMensaje(mensaje);
+        }
     }
+    
+    
+    public void enviarMensaje(String mensaje){
+        System.out.println(" ->");
+        salida.println(mensaje);
+    }
+        
 }

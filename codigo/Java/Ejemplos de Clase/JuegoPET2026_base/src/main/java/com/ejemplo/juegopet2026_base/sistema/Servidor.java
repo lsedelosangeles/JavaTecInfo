@@ -43,7 +43,7 @@ public class Servidor implements Runnable{
             ClienteConectado cliente = 
                     new ClienteConectado(conexionCliente);
             //Para agregar
-            cliente.enviarMensaje("Bienvenidos a " + nombre);
+            //cliente.enviarMensaje("Bienvenidos a " + nombre);
             //
             clientes.add(cliente);
             
